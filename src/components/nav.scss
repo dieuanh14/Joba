@@ -7,6 +7,7 @@
   background-color: #f1faee;
 }
 .nav {
+  margin-bottom: 3rem;
   img {
     height: 64px;
     width: 64px;
@@ -54,32 +55,35 @@
       }
     }
     .welcome_img {
+		height: 100%;
+		width: 100%;
+      margin-top: -3rem;
       svg {
-        position: relative;
-        height: 20rem;
-        width: 25rem;
+		position: relative;
+		height: rem;
+		width: 25rem;
       }
       img {
-        // top: 3rem;
-        right: 7rem;
-        background: none;
-        position: absolute;
-        width: 20rem;
-        height: 20rem;
+		right: 5rem;
+		background: none;
+		position: absolute;
+		width: 25rem;
+		height: 30rem;
+	
       }
     }
     .readmore_btn {
       display: flex;
       justify-content: center;
-
+      margin-top: 2rem;
       button {
         &:first-child {
           background-color: #1d3557ee;
         }
-		&:nth-child(2){
-			border-color: #1d3557;
-			color: #1d3557;
-		}
+        &:nth-child(2) {
+          border-color: #1d3557;
+          color: #1d3557;
+        }
         width: 10rem;
         height: 2.5rem;
         border-radius: 1.56rem;
@@ -88,6 +92,9 @@
       span {
         background: none;
       }
+	  .star{
+		margin-top: 2rem;
+	  }
     }
   }
 }

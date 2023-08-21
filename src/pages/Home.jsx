@@ -21,7 +21,15 @@ function Home() {
               molestias pariatur fugit exercitationem atque repellat, totam
               aliquam eaque debitis asperiores aliquid.
             </span>
+			<div className="readmore_btn">
+            <Button variant="contained">About yourself</Button>
+            <Button variant="outlined">About major</Button>
+			<img src={star} alt="" className="star" />
+
           </div>
+		  
+          </div>
+		  
           <div className="welcome_img">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -37,10 +45,7 @@ function Home() {
             </svg>
             <img src={welcome} alt="" />
           </div>
-          <div className="readmore_btn">
-            <Button variant="contained">About yourself</Button>
-            <Button variant="outlined">About major</Button>
-          </div>
+       
         </div>
       </div>
     </div>

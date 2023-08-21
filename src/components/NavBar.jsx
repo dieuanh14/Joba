@@ -64,17 +64,6 @@ function NavBar() {
           </Container>
         </StyledAppBar>
       </div>
-      {/* <div className="content">
-      <div className="container">
-        <div className="welcome">
-          <h1>Welcome to Joba</h1>
-          <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet vero eos commodi aliquam velit necessitatibus, officia ea possimus veritatis vel ipsum quo! Libero, soluta at facere quam enim molestias pariatur fugit exercitationem atque repellat, totam aliquam eaque debitis asperiores aliquid.</span>
-        </div>
-        <div className="welcome_img">
-          <img src={welcome} alt="" />
-        </div>
-        </div>
-      </div> */}
     </>
   );
 }
