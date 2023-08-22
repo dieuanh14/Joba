@@ -1,0 +1,28 @@
+@import "./variable.scss";
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+}
+.all_courses {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  .course_1,
+  .course_2,
+  .course_3 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    span {
+      margin-top: 1rem;
+      font-size: 1.3rem;
+      font-style: italic;
+      font-weight: 500;
+      line-height: normal;
+    }
+  }
+}

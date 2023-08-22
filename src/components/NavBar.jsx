@@ -6,21 +6,14 @@ const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 import { styled } from "@mui/system";
 import { Link } from "@mui/material";
-import welcome from '../assets/welcome.png'
+import { NavLink } from "react-router-dom";
+import Premium from "../pages/Premium";
+import welcome from "../assets/welcome.png";
 import "./nav.scss";
 function NavBar() {
   const StyledAppBar = styled("div")({
     // color: "darkslategray",
   });
-  // const Link = styled("div")({
-  //   // color: "#1D3557",
-  //   textDecoration: "none",
-  //   marginRight: "2rem",
-  //   marginLeft: "2rem",
-  //   fontWeight: "600",
-  //   fontFamily: "Montserrat",
-  //   fontSize: "20px",
-  // });
   return (
     <>
       <div className="nav">
@@ -28,9 +21,11 @@ function NavBar() {
           <Container className="container" maxWidth="xl">
             <img src={logo} style={{ height: "64px", width: "64px" }} />
             <Toolbar className="tool_bar">
-              <Link className="nav_content">Majors</Link>
-              <Link className="nav_content">Courses</Link>
-              <Link style={{ display: "flex" }} className="nav_content">
+              <NavLink className="nav_content" to="/major" >
+                Majors
+              </NavLink>
+              <NavLink className="nav_content" to="/course">Courses</NavLink>
+              <NavLink style={{ display: "flex" }} className="nav_content" to="/premium">
                 Try Premium
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +42,7 @@ function NavBar() {
                     fill="#FFB703"
                   />
                 </svg>
-              </Link>
+              </NavLink>
             </Toolbar>
             <Toolbar>
               <Link style={{ marginRight: "0px" }}>Sign in</Link>
