@@ -4,7 +4,7 @@ import course from "../scss/course.scss";
 import it from "../assets/it.png";
 import gd from "../assets/gd.png";
 import marketing from "../assets/marketing.png";
-
+import { BrowserRouter, Routes, Route,Link } from "react-router-dom";
 function Course() {
   return (
     <>
@@ -15,7 +15,9 @@ function Course() {
       <div className="all_courses">
           <div className="course_1">
             <img src={it} alt="" />
-			<span>Software Engeneering</span>
+			<span>
+			<Link to="/aboutSE">Software Engeneering</Link>
+			</span>
           </div>
           <div className="course_2">
             <img src={gd} alt="" />

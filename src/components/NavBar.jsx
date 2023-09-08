@@ -7,8 +7,6 @@ const settings = ["Profile", "Account", "Dashboard", "Logout"];
 import { styled } from "@mui/system";
 import { Link } from "@mui/material";
 import { NavLink } from "react-router-dom";
-import Premium from "../pages/Premium";
-import welcome from "../assets/welcome.png";
 import "./nav.scss";
 function NavBar() {
   const StyledAppBar = styled("div")({
@@ -19,13 +17,22 @@ function NavBar() {
       <div className="nav">
         <StyledAppBar position="static">
           <Container className="container" maxWidth="xl">
-            <img src={logo} style={{ height: "64px", width: "64px" }} />
+            <a href="/">
+         
+              <img src={logo} style={{ height: "64px", width: "64px" }} />
+            </a>
             <Toolbar className="tool_bar">
-              <NavLink className="nav_content" to="/major" >
+              <NavLink className="nav_content" to="/major">
                 Majors
               </NavLink>
-              <NavLink className="nav_content" to="/course">Courses</NavLink>
-              <NavLink style={{ display: "flex" }} className="nav_content" to="/premium">
+              <NavLink className="nav_content" to="/course">
+                Courses
+              </NavLink>
+              <NavLink
+                style={{ display: "flex" }}
+                className="nav_content"
+                to="/premium"
+              >
                 Try Premium
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +40,7 @@ function NavBar() {
                   height="22"
                   viewBox="0 0 22 22"
                   fill="none"
-                  style={{ marginLeft: "1rem" }}
+                  style={{ marginLeft: "4px" }}
                 >
                   <path
                     fill-rule="evenodd"
@@ -42,6 +49,9 @@ function NavBar() {
                     fill="#FFB703"
                   />
                 </svg>
+              </NavLink>
+              <NavLink className="nav_content" to="/yourself">
+                About yourself
               </NavLink>
             </Toolbar>
             <Toolbar>

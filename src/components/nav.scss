@@ -1,13 +1,13 @@
 * {
   text-decoration: none !important;
-  font-weight: 600;
+  // font-weight: 600;
   font-family: Montserrat;
   font-size: 20px;
   color: #1d3557;
   background-color: #f1faee;
 }
 .nav {
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
   img {
     height: 64px;
     width: 64px;
@@ -55,21 +55,20 @@
       }
     }
     .welcome_img {
-		height: 100%;
-		width: 100%;
+      height: 100%;
+      width: 100%;
       margin-top: -3rem;
       svg {
-		position: relative;
-		height: rem;
-		width: 25rem;
+        position: relative;
+        height: rem;
+        width: 25rem;
       }
       img {
-		right: 5rem;
-		background: none;
-		position: absolute;
-		width: 25rem;
-		height: 30rem;
-	
+        right: 5rem;
+        background: none;
+        position: absolute;
+        width: 25rem;
+        height: 30rem;
       }
     }
     .readmore_btn {
@@ -92,9 +91,9 @@
       span {
         background: none;
       }
-	  .star{
-		margin-top: 2rem;
-	  }
+      .star {
+        margin-top: 2rem;
+      }
     }
   }
 }
