@@ -6,7 +6,6 @@ h1 {
   font-weight: 600;
   line-height: normal;
   text-transform: uppercase;
-  // margin-bottom: 4.5rem;
 }
 .all_courses {
   display: grid;
@@ -17,6 +16,12 @@ h1 {
     align-items: center;
     display: flex;
     flex-direction: column;
+    a{
+
+    display: flex;
+    flex-direction: column;
+
+    }
     span {
       margin-top: 1rem;
       font-size: 1.3rem;
