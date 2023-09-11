@@ -1,3 +1,5 @@
+@import "../scss/variable";
+
 .embla {
   --slide-spacing: 1rem;
   --slide-size: 100%;
@@ -10,23 +12,33 @@
 .embla__slide__inner {
   position: relative;
 }
-.embla__slide__inner{
-  svg{
+.embla__slide__inner {
+  svg {
     left: 35%;
     position: relative;
     height: rem;
     width: 25rem;
     position: relative;
   }
-img{
-  left: 35%;
-  top: 2rem;
-  /* right: 5rem; */
-  background: none;
-  position: absolute;
-  width: 25rem;
-  height: 30rem;
+  img {
+    left: 35%;
+    top: -2rem;
+    /* right: 5rem; */
+    background: none;
+    position: absolute;
+    width: 25rem;
+    height: 30rem;
+  }
 }
+.embla__slide__detail button {
+  right: 10rem;
+  top: 20rem;
+  width: 10rem;
+  position: absolute;
+  background: #1d3557;
+  color: white;
+  padding: 6px;
+  border-radius: 8px;
 }
 .embla__slide__detail h3 {
   left: 8rem;
@@ -45,11 +57,10 @@ img{
   left: 8rem;
   top: 18rem;
   width: 10rem;
-
 }
 .embla__slide__detail span:nth-child(2) {
   right: 10rem;
-  top: 5rem;
+  top: 6rem;
   width: 10rem;
   position: absolute;
 }
@@ -58,8 +69,6 @@ img{
   top: 12rem;
   width: 10rem;
   position: absolute;
-
-
 }
 .embla__container {
   backface-visibility: hidden;
@@ -148,27 +157,27 @@ img{
   width: 65%;
   height: 65%;
 }
-.embla__dot {
-  -webkit-appearance: none;
-  background-color: transparent;
-  touch-action: manipulation;
-  display: inline-flex;
-  text-decoration: none;
-  cursor: pointer;
-  border: 0;
-  padding: 0;
-  margin: 0;
-}
-.embla__dots {
-  z-index: 1;
-  bottom: 1.6rem;
-  position: absolute;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+// .embla__dot {
+//   -webkit-appearance: none;
+//   background-color: transparent;
+//   touch-action: manipulation;
+//   display: inline-flex;
+//   text-decoration: none;
+//   cursor: pointer;
+//   border: 0;
+//   padding: 0;
+//   margin: 0;
+// }
+// .embla__dots {
+//   z-index: 1;
+//   bottom: 1.6rem;
+//   position: absolute;
+//   left: 0;
+//   right: 0;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
 
 .embla__button {
   outline: 0;
@@ -184,7 +193,7 @@ img{
   height: 30px;
   justify-content: center;
   align-items: center;
-  fill: #1bcacd;
+  fill: #1d3557;
   padding: 0;
 }
 
@@ -221,7 +230,7 @@ img{
 
 .embla__progress__bar {
   position: absolute;
-  background-color: #1bcacd;
+  background-color: red;
   width: 100%;
   top: 0;
   bottom: 0;

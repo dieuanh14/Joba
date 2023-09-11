@@ -5,6 +5,9 @@ import { mediaByIndex } from "../media";
 import "../css/embla.scss";
 
 const EmblaCarousel = ({ slides }) => {
+  if (!slides) {
+    return null; // or handle the absence of slides appropriately
+  }
   const [viewportRef, embla] = useEmblaCarousel({
     containScroll: "trimSnaps",
     dragFree: true,
@@ -40,6 +43,7 @@ const EmblaCarousel = ({ slides }) => {
   return (
     <>
       <div className="embla">
+        <h1>Software Engeneering</h1>
         <div className="embla__viewport" ref={viewportRef}>
           <div className="embla__container">
             {slides.map((slide, index) => (
@@ -48,6 +52,9 @@ const EmblaCarousel = ({ slides }) => {
                 key={index}
                 style={{ width: "100%" }}
               >
+                <span style={{ display: "flex", justifyContent: "center" }}>
+                  {slide.definition}
+                </span>
                 <div className="embla__slide__inner">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -71,6 +78,7 @@ const EmblaCarousel = ({ slides }) => {
                     <span>{slide.description1}</span>
                     <span>{slide.description2}</span>
                     <span>{slide.description3}</span>
+                    {/* <button >{slide.home}</button> */}
                   </div>
                 </div>
               </div>
