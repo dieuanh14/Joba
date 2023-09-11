@@ -1,14 +1,31 @@
-import React from 'react'
+import React from "react";
 import NavBar from "../components/NavBar";
-import EmblaCarousel from "../js/EmblaCarousel";
+import Carousel from "../components/Carousel";
+const SLIDES = [
+  {
+    definition: "Beginning",
+    title: "Bài đọc: Những điều cần biết về Kỹ thuật phần mềm",
+    description: "Bài tập: Câu hỏi thắc mắc về ngành học ",
+  },
+  {
+    definition: "Beginning",
+    title: "Bài đọc: Những điều cần biết về Kỹ thuật phần mềm",
+    description: "Bài tập: Câu hỏi thắc mắc về ngành học ",
+  },
+  {
+    definition: "Beginning",
+    title: "Bài đọc: Những điều cần biết về Kỹ thuật phần mềm",
+    description: "Bài tập: Câu hỏi thắc mắc về ngành học ",
+  },
+];
+
 function AboutCourses() {
   return (
-	<div>
-		<NavBar/>
-		<h1>About</h1>
-		<EmblaCarousel/>
-	</div>
-  )
+    <div>
+      <NavBar />
+      <Carousel slides={SLIDES} />
+    </div>
+  );
 }
 
-export default AboutCourses
+export default AboutCourses;

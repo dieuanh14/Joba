@@ -10,7 +10,7 @@ function Course() {
     <>
       <NavBar />
 
-      <h1>Courses</h1>
+      <h1 style={{padding:'2rem'}}>Courses</h1>
       <div className="container">
         <div className="all_courses">
           <div className="course_1">
