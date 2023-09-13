@@ -1,8 +1,12 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { PrevButton, NextButton } from "../js/EmblaCarouselButtons";
 import useEmblaCarousel from "embla-carousel-react";
-import { mediaByIndex } from "../media";
+import { mediaByCourse } from "../media/course";
 import "../scss/carousel.scss";
+import media2 from "../assets/img/3d-casual-life-young-man-with-laptop-computer-working-at-home-office.png";
+import media1 from "../assets/img/3d-casual-life-young-man-sitting-with-a-laptop-and-waving-his-hand.png";
+import media3 from "../assets/img/casual-life-3d-side-view-of-young-woman-sitting-and-waving-at-robot.png";
+
 const Carousel = ({ slides }) => {
   if (!slides) {
     return null; // or handle the absence of slides appropriately
@@ -45,52 +49,40 @@ const Carousel = ({ slides }) => {
         <h1>Software Engeneering</h1>
         <div className="carousel__viewport" ref={viewportRef}>
           <div className="embla__container">
-            {slides.map((slide, index) => (
+            {slides.map((slide, course) => (
               <div
                 className="embla__slide"
-                key={index}
+                // key={course}
                 style={{ width: "100%" }}
               >
                 <div className="embla__slide__inne">
-                  <img
-                    className="embla__slide__im"
-                    src={mediaByIndex(index)}
-                  />
+                  <img className="embla__slide__im" src={media1} />
                   <div className="embla__slide__detai">
-                    <h3>{slide.title}</h3>
-                    <span>{slide.description}</span>
-                    <span>{slide.description1}</span>
-                    <span>{slide.description2}</span>
-                    <span>{slide.description3}</span>
-                    {/* <button >{slide.home}</button> */}
+                    <h3>Beginning</h3>
+                    <span>Video: Giới thiệu ngành học </span>
+                    <span>Bài đọc: Những điều cần biết về Kỹ thuật phần mềm</span>
+					<span>Bài tập: Câu hỏi thắc mắc về ngành học </span>
+
+                  </div>
+                </div>
+                <div className="embla__slide__inne">
+                  <img className="embla__slide__im" src={media2} />
+                  <div className="embla__slide__detai">
+				  <h3>Overall</h3>
+                    <span>Video: Làm quen với coding </span>
+                    <span>Bài đọc: Những điều cần biết về coding và phần mềm</span>
+					<span>Bài tập: Câu hỏi thắc mắc về bài học</span>
+
                   </div>
                 </div>
 				<div className="embla__slide__inne">
-                  <img
-                    className="embla__slide__im"
-                    src={mediaByIndex(index)}
-                  />
+                  <img className="embla__slide__im" src={media1} />
                   <div className="embla__slide__detai">
-                    <h3>{slide.title}</h3>
-                    <span>{slide.description}</span>
-                    <span>{slide.description1}</span>
-                    <span>{slide.description2}</span>
-                    <span>{slide.description3}</span>
-                    {/* <button >{slide.home}</button> */}
-                  </div>
-                </div>
-				<div className="embla__slide__inne">
-                  <img
-                    className="embla__slide__im"
-                    src={mediaByIndex(index)}
-                  />
-                  <div className="embla__slide__detai">
-                    <h3>{slide.title}</h3>
-                    <span>{slide.description}</span>
-                    <span>{slide.description1}</span>
-                    <span>{slide.description2}</span>
-                    <span>{slide.description3}</span>
-                    {/* <button >{slide.home}</button> */}
+                    <h3>Beginning</h3>
+                    <span>Video: Giới thiệu ngành học </span>
+                    <span>Bài đọc: Những điều cần biết về Kỹ thuật phần mềm</span>
+					<span>Bài tập: Câu hỏi thắc mắc về ngành học </span>
+
                   </div>
                 </div>
               </div>
