@@ -8,6 +8,10 @@ h1 {
   text-transform: uppercase;
   // padding: 2rem;
 }
+a{
+  text-decoration: none;
+  color: $c1-text;
+}
 .container {
 }
 .all_courses {
@@ -56,9 +60,9 @@ h1 {
         position: absolute;
         top: -4rem;
         left: 15%;
-        &:nth-child(2){
-          filter: grayscale(100%) !important;
-        }
+      }
+      .media2,.media3 {
+        filter: grayscale(100%);
       }
       a {
         text-decoration: none;
@@ -74,6 +78,18 @@ h1 {
           text-align: center;
         }
       }
+    }
+  }
+}
+.overall__se{
+  .main__video{
+    nav{
+      color: #1D3557;
+      font-family: Montserrat;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
     }
   }
 }
