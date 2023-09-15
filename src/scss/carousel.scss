@@ -1,0 +1,41 @@
+.carousel__viewport {
+  margin-top: 5rem;
+  .embla__container {
+    // height: 30rem;
+  }
+  .embla__slide {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+    .embla__slide__inne {
+      .embla__slide__detai {
+        margin-top: 4rem;
+        padding: 4px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        gap: 1rem;
+      }
+      position: relative;
+      width: 15rem;
+      height: 20rem;
+      background-color: #a8dadc;
+      border-radius: 1rem;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      .embla__slide__im {
+        position: absolute;
+        top: -4rem;
+        // left: 10%;
+        &:nth-child(1){
+          height: 10rem;
+          width: 10rem;
+          align-items: center;
+          left: 20%;
+        }
+      }
+    }
+  }
+}

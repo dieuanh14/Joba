@@ -1,15 +1,22 @@
-* {
+
+html, body {
   text-decoration: none !important;
   // font-weight: 600;
   font-family: Montserrat;
   font-size: 20px;
   color: #1d3557;
   background-color: #f1faee;
+  height: 100%; /* Set the height to 100% of the viewport height */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  overflow: hidden; /* Prevent vertical scrolling if content overflows */
 }
+
 .active {
-  color: blue !important;
+  color: #457B9D !important;
 }
 .nav {
+  margin-bottom: 1rem;
   img {
     height: 64px;
     width: 64px;

@@ -8,6 +8,7 @@ import Course from "./pages/Course";
 import Premium from "./pages/Premium";
 import AboutSE from "./pages/AboutSE";
 import AboutCourses from "./pages/AboutCourses";
+import OverallSE from "./pages/OverallSE";
 
 // import EmblaCarousel from "../src/js/EmblaCarousel";
 // const SLIDE_COUNT = 12;
@@ -23,6 +24,8 @@ function App() {
         <Route path="/premium" element={<Premium />} />
         <Route path="/aboutSE" element={<AboutSE />} />
         <Route path="/aboutCourse" element={<AboutCourses />} />
+        <Route path="/aboutCourse/overallSE" element={<OverallSE />} />
+
 
       </Routes>
     </>
