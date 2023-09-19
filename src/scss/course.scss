@@ -6,9 +6,11 @@ h1 {
   font-weight: 600;
   line-height: normal;
   text-transform: uppercase;
+  text-shadow: 1px 1px 2px grey;
   // padding: 2rem;
 }
-a{
+a {
+  cursor: pointer;
   text-decoration: none;
   color: $c1-text;
 }
@@ -61,7 +63,8 @@ a{
         top: -4rem;
         left: 15%;
       }
-      .media2,.media3 {
+      .media2,
+      .media3 {
         filter: grayscale(100%);
       }
       a {
@@ -81,15 +84,39 @@ a{
     }
   }
 }
-.overall__se{
-  .main__video{
-    nav{
-      color: #1D3557;
+.overall__se {
+  h1 {
+    color:  #1d3557;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+  .main__video {
+    nav {
+      color: #1d3557;
       font-family: Montserrat;
       font-size: 16px;
       font-style: normal;
       font-weight: 400;
       line-height: normal;
+    }
+    .link__ytb {
+      margin-top: 1rem;
+      gap: 1rem;
+      display: flex;
+      flex-direction: column;
+   
+      span {
+        &:nth-child(2) {
+          color: blue;
+          text-decoration: underline;
+          font-style: italic;
+        }
+      }
     }
   }
 }

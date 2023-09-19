@@ -2,15 +2,11 @@ import React from "react";
 import NavBar from "../components/NavBar";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import Typography from "@mui/material/Typography";
-import Link from "@mui/material/Link";
+import { Link } from "react-router-dom";
 import Container from "@mui/material/Container";
-import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import "../scss/course.scss";
-function handleClick(event) {
-  event.preventDefault();
-  console.info("You clicked a breadcrumb.");
-}
-
+import NavigateNextIcon from "@mui/icons-material/NavigateNext";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 function OverallSE() {
   return (
     <div className="overall__se">
@@ -32,6 +28,35 @@ function OverallSE() {
             </Link>
             <Typography color="textPrimary">Video</Typography>
           </Breadcrumbs>
+          <h1>Introduction to Software Engeneering</h1>
+          <iframe
+            style={{
+              margin: "0 auto",
+              height: "25rem",
+              width: "60rem",
+              display: "flex",
+              borderRadius: "8px",
+            }}
+            src="https://www.youtube.com/embed/tgbNymZ7vqY"
+          ></iframe>
+          <div style={{ display: "flex", justifyContent: "space-around" }}>
+            <div className="link__ytb">
+              <span>If the video above does not work, try this link !</span>
+              <span>https://youtu.be/fgt0xpPfq1U</span>
+            </div>
+
+            <Link
+              to="/aboutCourse/overallSE/definitionSE"
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                marginTop: "1.5rem",
+              }}
+            >
+              <ArrowForwardIcon style={{ height: "3rem", width: "3rem" }} />
+            </Link>
+          </div>
         </div>
       </Container>
     </div>
