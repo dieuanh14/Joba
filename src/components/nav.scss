@@ -1,8 +1,7 @@
-
-html, body {
+html,
+body {
   text-decoration: none !important;
-  // font-weight: 600;
-  font-family: Montserrat;
+  font-family: "Montserrat", sans-serif;
   font-size: 20px;
   color: #1d3557;
   background-color: #f1faee;
@@ -13,7 +12,7 @@ html, body {
 }
 
 .active {
-  color: #457B9D !important;
+  color: #457b9d !important;
 }
 .nav {
   margin-bottom: 1rem;

@@ -24,7 +24,6 @@ function NavBar() {
               <NavLink
                 className="nav_content"
                 to="/major"
-                // activeClassName="active-link"
               >
                 Majors
               </NavLink>
