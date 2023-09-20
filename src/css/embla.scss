@@ -13,10 +13,12 @@
   position: relative;
 }
 .embla__slide__inner {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   svg {
     left: 35%;
     position: relative;
-    height: rem;
+    height: 20rem;
     width: 25rem;
     position: relative;
   }
@@ -27,7 +29,7 @@
     background: none;
     position: absolute;
     width: 25rem;
-    height: 30rem;
+    height: 20rem;
   }
 }
 .embla__slide__detail button {
