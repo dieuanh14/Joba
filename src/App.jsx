@@ -1,4 +1,3 @@
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Major from "./pages/Major";
@@ -9,6 +8,12 @@ import AboutCourses from "./pages/AboutCourses";
 import OverallSE from "./pages/OverallSE";
 import DefinitionSE from "./pages/DefinitionSE";
 import HomeWork from "./pages/HomeWork";
+import AboutYourself from "./pages/AboutYourself";
+import Register from "./pages/Register";
+import TestYourself from "./pages/testYourself/TestYourself";
+import TestYourself1 from "./pages/testYourself/TestYourself1";
+import TestResult from "./pages/testYourself/TestResult";
+
 function App() {
   return (
     <>
@@ -18,12 +23,21 @@ function App() {
         <Route path="/course" element={<Course />} />
         <Route path="/premium" element={<Premium />} />
         <Route path="/aboutSE" element={<AboutSE />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/yourself" element={<AboutYourself />} />
+        <Route path="/testYourself" element={<TestYourself />} />
+        <Route path="/testYourself1" element={<TestYourself1 />} />
+        <Route path="/testResult" element={<TestResult />} />
         <Route path="/aboutCourse" element={<AboutCourses />} />
         <Route path="/aboutCourse/overallSE" element={<OverallSE />} />
-        <Route path="/aboutCourse/overallSE/definitionSE" element={<DefinitionSE />} />
-        <Route path="/aboutCourse/overallSE/definitionSE/homework" element={<HomeWork />} />
-
-
+        <Route
+          path="/aboutCourse/overallSE/definitionSE"
+          element={<DefinitionSE />}
+        />
+        <Route
+          path="/aboutCourse/overallSE/definitionSE/homework"
+          element={<HomeWork />}
+        />
       </Routes>
     </>
   );

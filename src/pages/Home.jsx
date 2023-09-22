@@ -4,7 +4,7 @@ import welcome from "../assets/welcome.png";
 import star from "../assets/star.png";
 import "../components/nav.scss";
 import Button from "@mui/material/Button";
-
+import { Link } from "react-router-dom";
 function Home() {
   return (
     <div>
@@ -22,7 +22,9 @@ function Home() {
               aliquam eaque debitis asperiores aliquid.
             </span>
             <div className="readmore_btn">
-              <Button variant="contained">About yourself</Button>
+              <Button variant="contained">
+                <Link to="/yourself"> About yourself</Link>
+              </Button>
               <Button variant="outlined">About major</Button>
               <img src={star} alt="" className="star" />
             </div>

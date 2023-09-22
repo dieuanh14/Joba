@@ -16,6 +16,7 @@ body {
 }
 .nav {
   // margin-bottom: 1rem;
+
   img {
     height: 64px;
     width: 64px;
@@ -67,9 +68,10 @@ body {
       width: 100%;
       margin-top: -3rem;
       svg {
+        // margin-left: 4rem;
         position: relative;
-        height: rem;
-        width: 25rem;
+        // height: 11px !important;
+        width: 25px;
       }
       img {
         right: 5rem;
@@ -84,6 +86,11 @@ body {
       justify-content: center;
       margin-top: 2rem;
       button {
+        a {
+          font-size: 12px;
+          display: flex;
+          color: white;
+        }
         &:first-child {
           background-color: #1d3557ee;
         }

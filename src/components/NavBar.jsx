@@ -44,7 +44,7 @@ function NavBar() {
                   height="45"
                   viewBox="0 0 45 45"
                   fill="none"
-                  style={{ height: "30px", width: "30px" }}
+                  style={{ height: "25px", width: "30px" }}
                 >
                   <path
                     fill-rule="evenodd"
@@ -65,6 +65,7 @@ function NavBar() {
             <Toolbar>
               <Link style={{ marginRight: "0px" }}>Sign in</Link>
               <Link
+              className="signup__btn"
                 style={{
                   padding: "6px",
                   border: "1px solid #1D3557",
