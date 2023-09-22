@@ -1,0 +1,74 @@
+@import "./variable.scss";
+.about__yourself {
+  //   display: flex;
+  //   flex-direction: column;
+  background-image: url("../assets/img/bg.jpg");
+  height: 50rem;
+  a {
+    color: $c4 !important;
+  }
+  h1 {
+    color: $c4;
+  }
+  .signup__btn {
+    border: 2px solid $c4 !important;
+  }
+  .main__content {
+    // flex: 1;
+    border-radius: 8px;
+    margin: 0 auto;
+    background-color: $c5;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 60rem;
+    height: 37rem;
+    .left__side {
+      .media {
+        position: relative;
+        height: 30rem;
+        width: 30rem;
+        margin-top: 7rem;
+      }
+      .media1 {
+        position: absolute;
+        left: 16%;
+        top: 45%;
+        width: 8rem;
+        height: 8rem;
+      }
+      .media2 {
+        position: absolute;
+        left: 38%;
+        top: 33%;
+        width: 8rem;
+        height: 8rem;
+      }
+      .media3 {
+        position: absolute;
+        left: 26%;
+        top: 26%;
+        width: 8rem;
+        height: 8rem;
+      }
+    }
+    .right__side {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      span {
+        font-style: italic;
+        font-weight: 500;
+        margin-bottom: 1rem;
+        font-size: 1.25rem;
+      }
+      .register__btn {
+        background-color: $c1-text;
+        margin: 0 auto;
+        width: 8rem;
+        border-radius: 2rem;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}
