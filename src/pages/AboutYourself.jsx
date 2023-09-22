@@ -14,11 +14,10 @@ function AboutYourself() {
       <h1>Finding yourself </h1>
       <div className="main__content">
         <div className="left__side">
-          <img src={media} alt="" className="media"/>
-          <img src={media1} alt="" className="media1"/>
-		  <img src={media2} alt="" className="media2"/>
-		  <img src={media3} alt="" className="media3"/>
-
+          <img src={media} alt="" className="media" />
+          <img src={media1} alt="" className="media1" />
+          <img src={media2} alt="" className="media2" />
+          <img src={media3} alt="" className="media3" />
         </div>
         <div className="right__side">
           <span>
@@ -27,8 +26,8 @@ function AboutYourself() {
           </span>
 
           <Button variant="contained" className="register__btn">
-			<Link to='/register'>Register</Link>
-		  </Button>
+            <Link to="/testYourself">Register</Link>
+          </Button>
         </div>
       </div>
     </div>
