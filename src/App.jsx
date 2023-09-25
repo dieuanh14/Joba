@@ -13,6 +13,7 @@ import Register from "./pages/Register";
 import TestYourself from "./pages/testYourself/TestYourself";
 import TestYourself1 from "./pages/testYourself/TestYourself1";
 import TestResult from "./pages/testYourself/TestResult";
+import Login from "./pages/Login";
 
 function App() {
   return (
@@ -24,6 +25,8 @@ function App() {
         <Route path="/premium" element={<Premium />} />
         <Route path="/aboutSE" element={<AboutSE />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+
         <Route path="/yourself" element={<AboutYourself />} />
         <Route path="/testYourself" element={<TestYourself />} />
         <Route path="/testYourself1" element={<TestYourself1 />} />
