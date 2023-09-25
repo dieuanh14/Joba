@@ -94,10 +94,10 @@ body {
         &:first-child {
           background-color: #1d3557ee;
         }
-        &:nth-child(2) {
-          border-color: #1d3557;
-          color: #1d3557;
-        }
+        // &:nth-child(2) {
+        //   border-color: #1d3557 !important;
+        //   color: #1d3557;
+        // }
         width: 10rem;
         height: 2.5rem;
         border-radius: 1.56rem;

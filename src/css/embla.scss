@@ -18,18 +18,18 @@
   svg {
     left: 35%;
     position: relative;
-    height: 20rem;
-    width: 25rem;
+    height: 25rem;
+    width: 30rem;
     position: relative;
   }
   img {
-    left: 35%;
-    top: -2rem;
+    left: 37%;
+    top: 0rem;
     /* right: 5rem; */
     background: none;
     position: absolute;
     width: 25rem;
-    height: 20rem;
+    height: 22rem;
   }
 }
 .embla__slide__detail button {
@@ -43,31 +43,39 @@
   border-radius: 8px;
 }
 .embla__slide__detail h3 {
-  left: 8rem;
+  font-size: 20px;
+  left: 12rem;
   width: 10rem;
   top: 4rem;
   position: absolute;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 .embla__slide__detail span:nth-child(3) {
   position: absolute;
-  left: 8rem;
+  left: 12rem;
+  font-size: 20px;
   top: 12rem;
   width: 10rem;
 }
 .embla__slide__detail span:nth-child(4) {
   position: absolute;
-  left: 8rem;
+  font-size: 20px;
+
+  left: 12rem;
   top: 18rem;
   width: 10rem;
 }
 .embla__slide__detail span:nth-child(2) {
-  right: 10rem;
+  right: 12rem;
+  font-size: 20px;
+
   top: 6rem;
   width: 10rem;
   position: absolute;
 }
 .embla__slide__detail span:nth-child(5) {
-  right: 10rem;
+  right: 12rem;
   top: 12rem;
   width: 10rem;
   position: absolute;
@@ -238,12 +246,12 @@
   bottom: 0;
   left: -100%;
 }
-.btn__finish{
-  button{
-    &:hover{
-      background-color: #1D3557;
-      a{
-      color: white;
+.btn__finish {
+  button {
+    &:hover {
+      background-color: #1d3557;
+      a {
+        color: white;
       }
     }
   }

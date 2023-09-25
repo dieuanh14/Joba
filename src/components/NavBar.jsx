@@ -5,7 +5,8 @@ import logo from "../assets/logo.png";
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 import { styled } from "@mui/system";
-import { Link } from "@mui/material";
+import { Button } from "@mui/material";
+import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import "./nav.scss";
 function NavBar() {
@@ -21,10 +22,7 @@ function NavBar() {
               <img src={logo} style={{ height: "64px", width: "64px" }} />
             </a>
             <Toolbar className="tool_bar">
-              <NavLink
-                className="nav_content"
-                to="/major"
-              >
+              <NavLink className="nav_content" to="/major">
                 Majors
               </NavLink>
               <NavLink className="nav_content" to="/course">
@@ -63,12 +61,15 @@ function NavBar() {
               </NavLink>
             </Toolbar>
             <Toolbar>
-              <Link style={{ marginRight: "0px" }}>Sign in</Link>
+              <Link style={{ marginRight: "0px" }} to="/signin">
+                Sign in
+              </Link>
               <Link
-              className="signup__btn"
+                to="/register"
+                className="signup__btn"
                 style={{
                   padding: "6px",
-                  border: "1px solid #1D3557",
+                  border: "2px solid #1D3557",
                   borderRadius: "1.5rem",
                 }}
               >
