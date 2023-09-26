@@ -64,7 +64,9 @@ function Register() {
             </div>
           </div>
         </div>
-        <Link to="/login">Login</Link>
+        <div className="to__login">
+          <Link to="/login">Login</Link>
+        </div>
       </div>
     </>
   );

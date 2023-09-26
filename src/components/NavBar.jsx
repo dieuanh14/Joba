@@ -61,7 +61,7 @@ function NavBar() {
               </NavLink>
             </Toolbar>
             <Toolbar>
-              <Link style={{ marginRight: "0px" }} to="/signin">
+              <Link style={{ marginRight: "0px" }} to="/login">
                 Sign in
               </Link>
               <Link

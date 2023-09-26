@@ -43,7 +43,9 @@ function Login() {
             </div>
           </div>
         </div>
-        <Link to="/register">Register</Link>
+        <div className="to__register">
+          <Link to="/register">Register</Link>
+        </div>
       </div>
     </>
   );

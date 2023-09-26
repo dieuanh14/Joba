@@ -22,10 +22,13 @@ function Home() {
               aliquam eaque debitis asperiores aliquid.
             </span>
             <div className="readmore_btn">
-              <Button variant="contained">
+              <Button variant="contained" className="btn__yourself">
                 <Link to="/yourself"> About yourself</Link>
               </Button>
-              <Button variant="outlined">About major</Button>
+              <Button variant="outlined" className="btn__major">
+              <Link to="/major"> About major</Link>
+
+              </Button>
               <img src={star} alt="" className="star" />
             </div>
           </div>
