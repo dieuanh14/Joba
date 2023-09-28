@@ -1,3 +1,4 @@
+@import "../scss/variable.scss";
 html,
 body {
   text-decoration: none !important;
@@ -85,19 +86,19 @@ body {
       display: flex;
       justify-content: center;
       margin-top: 2rem;
-      button {
+      .btn__yourself {
+        font-size: 12px;
+        display: flex;
+        background-color: #1d3557ee;
+
         a {
-          font-size: 12px;
-          display: flex;
           color: white;
         }
-        &:first-child {
-          background-color: #1d3557ee;
-        }
-        // &:nth-child(2) {
-        //   border-color: #1d3557 !important;
-        //   color: #1d3557;
-        // }
+      }
+      .btn__major {
+        border: 1px solid $c1-text;
+      }
+      button {
         width: 10rem;
         height: 2.5rem;
         border-radius: 1.56rem;

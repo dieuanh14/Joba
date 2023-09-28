@@ -108,4 +108,42 @@
       width: 9rem;
     }
   }
+
+  .to__login {
+    background: $c1-text;
+    display: inline-block;
+    padding: 16px 32px;
+    position: relative;
+	left: 35%;
+    bottom: 50%;
+    margin: 15px 0px;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+a{
+	color: $c4 !important;
+}
+    &::before {
+      content: "";
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background: $c1-text;
+      right: 0;
+      top: 0;
+      transform: translateY(-100%);
+      clip-path: path("M 15 15 L 15 0 C 15 7 7 15 0 15");
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background: $c1-text;
+      right: 0;
+      bottom: 0;
+      transform: translateY(100%);
+      clip-path: path("M 15 0 L 0 0 C 7 0 15 7 15 15");
+    }
+  }
 }
