@@ -102,7 +102,8 @@
     }
     .register__btn {
       background-color: $c1;
-      color: $c2;
+      color: $c4;
+      display: flex;
       border-radius: 17px;
       height: 2rem;
       width: 9rem;

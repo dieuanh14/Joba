@@ -5,9 +5,10 @@ import logo from "../assets/logo.png";
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 import { styled } from "@mui/system";
-import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux"; // If using Redux
+
 import "./nav.scss";
 function NavBar() {
   const StyledAppBar = styled("div")({
@@ -77,6 +78,7 @@ function NavBar() {
               </Link>
             </Toolbar>
           </Container>
+          
         </StyledAppBar>
       </div>
     </>

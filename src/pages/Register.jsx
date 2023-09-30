@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import "../scss/register.scss";
 import TextField from "@mui/material/TextField";
 import media from "../assets/img/morphis-reviewing-resumes-of-candidates.png";
@@ -6,7 +6,16 @@ import media1 from "../assets/img/morphis-blurred-red-star-in-glass.png";
 import media2 from "../assets/img/morphis-blurred-blue-star-in-glass.png";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
 function Register() {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+
+  const dispatch = useDispatch();
+  const handleRegister = () => {
+    console.log(name, email, password);
+  };
   return (
     <>
       <div className="register__page">
@@ -25,40 +34,43 @@ function Register() {
               <TextField
                 className="user__name"
                 required
-                id="outlined-required"
+                id="username"
                 label="Username"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
               />
 
-              <TextField
+              {/* <TextField
                 className="date"
                 id="outlined-password-input"
                 type="date"
                 autoComplete="current-password"
                 min="2023-09-25"
                 max="2023-12-31"
-              />
+              /> */}
               <TextField
                 className="email"
-                id="outlined-password-input"
+                id="email"
                 label="Email"
                 type="email"
-                autoComplete="current-password"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
               <TextField
                 className="password"
-                id="outlined-password-input"
+                id="password"
                 label="Password"
                 type="password"
                 autoComplete="current-password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
               />
-              <TextField
-                className="re__password"
-                id="outlined-password-input"
-                label="Enter again"
-                type="password"
-                autoComplete="current-password"
-              />
-              <Button type="submit" className="register__btn">
+
+              <Button
+                type="submit"
+                className="register__btn"
+                onClick={handleRegister}
+              >
                 Register
               </Button>
             </div>
