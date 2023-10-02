@@ -20,11 +20,11 @@ function Course() {
             </Link>
           </div>
           <div className="course_2">
-            <img src={gd} alt="" />
+            <img src={gd} alt="" style={{filter: 'grayscale(100%)'}} />
             <span>Graphic Design</span>
           </div>
           <div className="course_3">
-            <img src={marketing} alt="" />
+            <img src={marketing} alt="" style={{filter: 'grayscale(100%)'}}/>
             <span>Digital Marketing</span>
           </div>
         </div>

@@ -26,7 +26,7 @@ function AboutYourself() {
           </span>
 
           <Button variant="contained" className="register__btn">
-            <Link to="/testYourself">Register</Link>
+            <Link to="/yourself1">Start</Link>
           </Button>
         </div>
       </div>

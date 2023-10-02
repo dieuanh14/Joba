@@ -11,7 +11,7 @@ function Major() {
     <>
       <NavBar />
       <div className="container">
-      <h1 style={{ textAlign: "center",padding:'2rem' }}>Majors</h1>
+        <h1 style={{ textAlign: "center", padding: "2rem" }}>Majors</h1>
         <div className="all_courses">
           <div className="course_1">
             <Link to="/aboutSE">

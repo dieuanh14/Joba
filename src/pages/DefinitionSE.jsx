@@ -36,7 +36,7 @@ const SLIDES = [
     description6: "- Thiết kế hệ thống thông tin",
     description7: "- Chuyên viên phân tích",
     description8: "- Thiết kế dữ liệu",
-    description8: "- Giám đốc kỹ thuật",
+    description9: "- Giám đốc kỹ thuật",
   },
 ];
 function DefinitionSE() {
