@@ -360,7 +360,7 @@ function Premium() {
               Full 7 advanced moocs
             </li>
             <Button className="btn__pay">
-              <Link to="/pay">Pay now</Link>
+              <Link to="/payment ">Pay now</Link>
             </Button>
           </ul>
         </div>

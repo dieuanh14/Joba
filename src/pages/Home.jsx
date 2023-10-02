@@ -14,20 +14,28 @@ function Home() {
           <div className="welcome">
             <img src={star} alt="" className="star" />
             <h1>Welcome to Joba</h1>
-            <span>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet vero
-              eos commodi aliquam velit necessitatibus, officia ea possimus
-              veritatis vel ipsum quo! Libero, soluta at facere quam enim
-              molestias pariatur fugit exercitationem atque repellat, totam
-              aliquam eaque debitis asperiores aliquid.
-            </span>
+            <div
+              className="content__home"
+              style={{ display: "grid", gridTemplateRows: "1fr 1fr " }}
+            >
+              <span>
+                Are you a high school student about to graduate? Do you find it
+                difficult to orient yourself in the future? Do you have a
+                headache because you don't know where to start?
+              </span>
+              <span>
+                We - JOBA are here to help you better define the field of study
+                that you are interested in. Besides, JOBA also provides you with
+                courses from basic to advanced so you can comfortably experience
+                the lessons you are about to learn in the future.
+              </span>
+            </div>
             <div className="readmore_btn">
               <Button variant="contained" className="btn__yourself">
                 <Link to="/yourself"> About yourself</Link>
               </Button>
               <Button variant="outlined" className="btn__major">
-              <Link to="/major"> About major</Link>
-
+                <Link to="/major"> About major</Link>
               </Button>
               <img src={star} alt="" className="star" />
             </div>
