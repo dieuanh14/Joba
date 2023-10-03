@@ -1,9 +1,8 @@
 import React from "react";
-import NavBar from "../components/NavBar";
+import NavBar from "../../components/NavBar";
 // import "../scss/yourself.scss";
-import { Button } from "@mui/material";
-import media from "../assets/img/florid-teamwork.gif";
-import media1 from "../assets/img/florid-remote-workflow (1).gif";
+import media from "../../assets/img/florid-teamwork.gif";
+import media1 from "../../assets/img/florid-remote-workflow (1).gif";
 import { Link } from "react-router-dom";
 function AboutYourself1() {
   return (
@@ -19,6 +18,7 @@ function AboutYourself1() {
             gridTemplateColumns: "1fr 1fr",
           }}
         >
+        <Link to='overallMajor'>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="376"
@@ -42,15 +42,17 @@ function AboutYourself1() {
             src={media}
             alt=""
             className="media"
-            style={{ position: "absolute", top: "12%" }}
+            style={{ position: "absolute", top: "12%",left:'15%' }}
           />
-          <div style={{position:'relative'}}>
+          </Link>
+          <div style={{position:'relative',cursor:'not-allowed'}}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="40"
               height="40"
               viewBox="0 0 40 40"
               fill="none"
+			  style={{position:'absolute',top:'24%'}}
             >
               <path
                 fill-rule="evenodd"
@@ -68,7 +70,7 @@ function AboutYourself1() {
               style={{
                 position: "relative",
                 left: "8%",
-                top: "20%",
+                top: "16%",
                 height: "23rem",
                 width: "25rem",
               }}
@@ -87,8 +89,8 @@ function AboutYourself1() {
                 height: "23rem",
                 width: "22rem",
                 position: "absolute",
-                top: "20%",
-                left: "20%",
+                top: "2%",
+                left: "15%",
               }}
             />
           </div>
