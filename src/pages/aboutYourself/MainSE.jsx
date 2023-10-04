@@ -36,7 +36,7 @@ function MainSE() {
               </Link>
             </div>
             <div className="">
-              <Link to='/yourself1/overallMajor/mainSE/majorBA'>
+              <Link to='/yourself1/overallMajor/mainSE/majorMobile'>
                 <img src={media} alt="" className="media" />
                 <span
                   style={{
@@ -50,7 +50,7 @@ function MainSE() {
               </Link>
             </div>
             <div className="">
-              <Link>
+              <Link to='/yourself1/overallMajor/mainSE/majorSE'>
                 <img src={media2} alt="" className="media" />
                 <span
                   style={{

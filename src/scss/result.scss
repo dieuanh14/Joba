@@ -1,0 +1,36 @@
+@import "./variable";
+.result {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  .result__content {
+    color: $c5;
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      li {
+        list-style-type: none;
+      }
+    }
+  }
+  .img__result {
+    .media {
+      left: 12%;
+    }
+  }
+}
+.result__btn {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  .btn__course {
+    border: 1px solid $c4;
+    border-radius: 18px;
+  }
+  .btn__home {
+    border: 1px solid $c1;
+    width: 8rem;
+    border-radius: 18px;
+    background-color: $c1;
+  }
+}

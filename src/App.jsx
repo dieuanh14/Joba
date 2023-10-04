@@ -18,7 +18,10 @@ import Login from "./pages/Login";
 import Payment from "./pages/Payment";
 import OverallMajor from "./pages/aboutYourself/OverallMajor";
 import MainSE from "./pages/aboutYourself/MainSE";
+import MajorMobile from "./pages/aboutYourself/MajorMobile";
 import MajorBA from "./pages/aboutYourself/MajorBA";
+import MajorSE from "./pages/aboutYourself/MajorSE";
+
 function App() {
   return (
     <>
@@ -36,7 +39,19 @@ function App() {
         <Route path="/testYourself1" element={<TestYourself1 />} />
         <Route path="/testResult" element={<TestResult />} />
         <Route path="/yourself1/overallMajor/mainSE" element={<MainSE />} />
-        <Route path="/yourself1/overallMajor/mainSE/majorBA" element={<MajorBA />} />
+        <Route
+          path="/yourself1/overallMajor/mainSE/majorMobile"
+          element={<MajorMobile />}
+        />
+        <Route
+          path="/yourself1/overallMajor/mainSE/majorBA"
+          element={<MajorBA />}
+        />
+        <Route
+          path="/yourself1/overallMajor/mainSE/majorSE"
+          element={<MajorSE />}
+        />
+
         <Route path="/payment" element={<Payment />} />
         <Route path="/yourself1/overallMajor" element={<OverallMajor />} />
         <Route path="/aboutCourse" element={<AboutCourses />} />
