@@ -1,15 +1,17 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import "../scss/register.scss";
 import { TextField, Button } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { registerUser } from "../store/features/UserSlice";
 import { useNavigate } from "react-router-dom";
-
+import media from "../assets/img/morphis-reviewing-resumes-of-candidates.png";
+import media1 from "../assets/img/morphis-blurred-red-star-in-glass.png";
+import media2 from "../assets/img/morphis-blurred-blue-star-in-glass.png";
 function Register() {
   const [Username, setUsername] = useState("");
   const [Password, setPassword] = useState("");
   const [Email, setEmail] = useState("");
-  const [Birthday, setBirthday] = useState(new Date());
+  const [Birthday, setBirthday] = useState("");
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -21,15 +23,14 @@ function Register() {
       Username,
       Email,
       Password,
-      Birthday
+      Birthday,
     };
-
+    console.log(Birthday);
     try {
       const result = await dispatch(registerUser(userData));
-      console.log(result);
       if (registerUser.fulfilled.match(result)) {
         console.log("Registration successful");
-        navigate("/login"); // Redirect to login page after successful registration
+        navigate("/login");
       }
     } catch (error) {
       console.error("Registration Error:", error);
@@ -40,47 +41,58 @@ function Register() {
     <>
       <div className="register__page">
         <div className="main__register">
-          {/* Rest of the code */}
+          <div className="left__register">
+            <img src={media} alt="" className="main__img" />
+            <img src={media1} alt="" className="media__img" />
+            <img src={media2} alt="" className="media__img1" />
+            <img src={media1} alt="" className="media__img2" />
+            <img src={media2} alt="" className="media__img3" />
+          </div>
+
           <div className="right__register">
             <h3>Register</h3>
             <div className="input__grp">
-              <form onSubmit={handleRegister}>
-                <TextField
+              <form onSubmit={handleRegister} style={{display:'flex'}}>
+                <input
+                  className="user__name"
                   required
                   fullWidth
-                  label="Username"
+                  placeholder="Username"
                   value={Username}
                   onChange={(e) => setUsername(e.target.value)}
                 />
 
-                <TextField
+                <input
+                  className="user__name"
+                  required
                   fullWidth
                   type="date"
-                  label="Date"
                   value={Birthday}
                   onChange={(e) => setBirthday(e.target.value)}
                 />
 
-                <TextField
+                <input
+                  className="email"
                   required
                   fullWidth
-                  label="Email"
+                  placeholder="Email"
                   type="email"
                   value={Email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
 
-                <TextField
+                <input
+                  className="password"
                   required
                   fullWidth
-                  label="Password"
+                  placeholder="Password"
                   type="password"
                   autoComplete="current-password"
                   value={Password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
 
-                <Button type="submit" className="register__btn">
+                <Button type="submit" className="register__btn" style={{margin:'0 auto'}}> 
                   Register
                 </Button>
               </form>

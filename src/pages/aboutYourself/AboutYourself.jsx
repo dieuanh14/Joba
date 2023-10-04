@@ -1,11 +1,11 @@
 import React from "react";
-import NavBar from "../components/NavBar";
-import "../scss/yourself.scss";
+import NavBar from "../../components/NavBar";
+import "../../scss/yourself.scss";
 import { Button } from "@mui/material";
-import media from "../assets/img/florid-teamwork.gif";
-import media1 from "../assets/img/morphis-megaphone-for-online-marketing.png";
-import media2 from "../assets/img/morphis-smartphone-settings-and-options.png";
-import media3 from "../assets/img/morphis-digital-art-online-learning.png";
+import media from "../../assets/img/florid-teamwork.gif";
+import media1 from "../../assets/img/morphis-megaphone-for-online-marketing.png";
+import media2 from "../../assets/img/morphis-smartphone-settings-and-options.png";
+import media3 from "../../assets/img/morphis-digital-art-online-learning.png";
 import { Link } from "react-router-dom";
 function AboutYourself() {
   return (

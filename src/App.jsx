@@ -8,14 +8,19 @@ import AboutCourses from "./pages/AboutCourses";
 import OverallSE from "./pages/OverallSE";
 import DefinitionSE from "./pages/DefinitionSE";
 import HomeWork from "./pages/HomeWork";
-import AboutYourself from "./pages/AboutYourself";
-import AboutYourself1 from "./pages/AboutYourself1";
+import AboutYourself from "./pages/aboutYourself/AboutYourself";
+import AboutYourself1 from "./pages/aboutYourself/AboutYourself1";
 import Register from "./pages/Register";
 import TestYourself from "./pages/testYourself/TestYourself";
 import TestYourself1 from "./pages/testYourself/TestYourself1";
 import TestResult from "./pages/testYourself/TestResult";
 import Login from "./pages/Login";
 import Payment from "./pages/Payment";
+import OverallMajor from "./pages/aboutYourself/OverallMajor";
+import MainSE from "./pages/aboutYourself/MainSE";
+import MajorMobile from "./pages/aboutYourself/MajorMobile";
+import MajorBA from "./pages/aboutYourself/MajorBA";
+import MajorSE from "./pages/aboutYourself/MajorSE";
 
 function App() {
   return (
@@ -33,7 +38,22 @@ function App() {
         <Route path="/testYourself" element={<TestYourself />} />
         <Route path="/testYourself1" element={<TestYourself1 />} />
         <Route path="/testResult" element={<TestResult />} />
+        <Route path="/yourself1/overallMajor/mainSE" element={<MainSE />} />
+        <Route
+          path="/yourself1/overallMajor/mainSE/majorMobile"
+          element={<MajorMobile />}
+        />
+        <Route
+          path="/yourself1/overallMajor/mainSE/majorBA"
+          element={<MajorBA />}
+        />
+        <Route
+          path="/yourself1/overallMajor/mainSE/majorSE"
+          element={<MajorSE />}
+        />
+
         <Route path="/payment" element={<Payment />} />
+        <Route path="/yourself1/overallMajor" element={<OverallMajor />} />
         <Route path="/aboutCourse" element={<AboutCourses />} />
         <Route path="/aboutCourse/overallSE" element={<OverallSE />} />
         <Route

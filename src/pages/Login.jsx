@@ -172,8 +172,8 @@ const Login = () => {
                   {loading ? "Loading..." : "Login"}
                 </Button>
                 <span>
-                  <Link style={{ color: "white", textAlign: "center" }}>
-                    Forgot your password?
+                  <Link style={{ color: "white", textAlign: "center" }} to='/register'>
+                    Don't have account yet? Create one
                   </Link>
                 </span>
               </form>
