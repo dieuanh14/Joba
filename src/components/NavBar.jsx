@@ -85,6 +85,7 @@ function NavBar() {
                   </Link>
                 </>
               ) : (
+                <>
                 <Link
                   style={{
                     padding: "6px",
@@ -95,6 +96,17 @@ function NavBar() {
                 >
                   Sign in
                 </Link>
+                <Link
+                  // style={{
+                  //   padding: "6px",
+                  //   border: "2px solid #1D3557",
+                  //   borderRadius: "1.5rem",
+                  // }}
+                  to="/register"
+                >
+                  Sign up
+                </Link>
+                </>
               )}
             </Toolbar>
           </Container>

@@ -6,16 +6,6 @@ $c3: #D9D9D9;
 $c4:white;
 $c5:#F1FAEE;
 $c6:#751e25;
-// $color-gray-100: #c2d0da;
-// $color-yellow-300: #ffc600;
-// $color-black-100: #000;
-// $color-black-300: #282828;
-// $color-black-400: #232212;
-// $color-black-500: #232220;
-// $color-white-100: #fff;
-// $color-white-110: #f7f7f7;
-// $color-orange-300: #ff6600;
-// $color-200: rgba(22, 28, 45, 0.7);
 @mixin font-text($font-family, $font-size, $font-weight, $color) {
     font-family: $font-family;
     font-size: $font-size;
@@ -23,11 +13,4 @@ $c6:#751e25;
     color: $color;
 }
 
-// @mixin button($br, $pd, $bg, $b, $c, $fw) {
-//     border-radius: $br;
-//     padding: $pd;
-//     background: $bg;
-//     border: $b;
-//     color: $c;
-//     font-weight: $fw;
-// }
+

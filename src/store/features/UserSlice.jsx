@@ -1,6 +1,6 @@
-// authSlice.js
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
+
 export const loginUser = createAsyncThunk(
   "user/loginUser",
   async (userCredentials) => {
@@ -30,9 +30,34 @@ export const registerUser = createAsyncThunk(
     }
   }
 );
+export const loginWithGoogle = createAsyncThunk(
+  "user/loginWithGoogle",
+  async (googleIdToken) => {
+    console.log("googleIdToken:", googleIdToken); // Add this line to check the value
+    try {
+      const response = await axios.post(
+        "https://exe-backend.azurewebsites.net/api/v1/User/LoginWithGoogle",
+        {
+          provider: "google",
+          idToken: googleIdToken,
+        }
+      );
+      console.log(idToken);
+      const userData = response.data;
+      console.log(userData);
+
+      return userData;
+    } catch (error) {
+      throw error;
+    }
+  }
+);
+
 const userSlice = createSlice({
   name: "user",
   initialState: {
+    role: null,
+    permissions: {},
     loading: false,
     user: {
       email: null,
@@ -43,6 +68,11 @@ const userSlice = createSlice({
     registrationError: null,
   },
   reducers: {
+    setUser: (state, action) => {
+      const user = action.payload;
+      state.role = user.role;
+      state.permissions = user.permissions;
+    },
     loginSuccess: (state) => {
       state.isLoggedIn = true;
       console.log(state.isLoggedIn);
@@ -88,8 +118,30 @@ const userSlice = createSlice({
       .addCase(registerUser.rejected, (state, action) => {
         state.registrationLoading = false;
         state.registrationError = action.error.message;
+      })
+      .addCase(loginWithGoogle.pending, (state) => {
+        state.loading = true;
+        state.user = null;
+        state.error = null;
+      })
+      .addCase(loginWithGoogle.fulfilled, (state, action) => {
+        state.loading = false;
+        state.user = action.payload;
+        console.log(action.payload);
+        state.error = null;
+        state.isLoggedIn = true;
+      })
+      .addCase(loginWithGoogle.rejected, (state, action) => {
+        state.loading = false;
+        state.user = null;
+        if (action.error.message === "Request failed with status 401") {
+          state.error = "access denied! Invalid user";
+        } else {
+          state.error = action.error.message;
+        }
       });
   },
 });
-export const { loginSuccess, logoutSuccess } = userSlice.actions;
+export const { loginSuccess, logoutSuccess,setUser } = userSlice.actions;
+export const selectUser = state => state.user;
 export default userSlice.reducer;

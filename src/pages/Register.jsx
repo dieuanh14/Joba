@@ -52,7 +52,10 @@ function Register() {
           <div className="right__register">
             <h3>Register</h3>
             <div className="input__grp">
-              <form onSubmit={handleRegister} style={{display:'flex'}}>
+              <form
+                onSubmit={handleRegister}
+                style={{ display: "flex", flexDirection: "column" }}
+              >
                 <input
                   className="user__name"
                   required
@@ -92,7 +95,11 @@ function Register() {
                   onChange={(e) => setPassword(e.target.value)}
                 />
 
-                <Button type="submit" className="register__btn" style={{margin:'0 auto'}}> 
+                <Button
+                  type="submit"
+                  className="register__btn"
+                  style={{ margin: "0 auto" }}
+                >
                   Register
                 </Button>
               </form>

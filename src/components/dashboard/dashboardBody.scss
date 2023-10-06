@@ -1,0 +1,20 @@
+@import "../../scss/variable";
+.main__body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 4rem;
+  .chart__body {
+    gap: 2rem;
+    flex-direction: column;
+    display: flex;
+    .total {
+      width: 20rem;
+      border: 1px solid transparent; /* Set a transparent border */
+      box-shadow: 0 0 10px $c1; /* Apply a box shadow with a blur effect */
+      background-color: $c5;
+      border-radius: 20px;
+      padding: 2rem;
+ 
+    }
+  }
+}
