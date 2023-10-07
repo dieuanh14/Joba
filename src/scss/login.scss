@@ -98,6 +98,7 @@
           height: 2.7rem;
           margin-bottom: 2rem;
           border: 1px solid $c1-text;
+          padding: 4px;
         }
         .css-1jy569b-MuiFormLabel-root-MuiInputLabel-root {
           top: -8px;
@@ -118,45 +119,10 @@
       margin-bottom: 10px;
     }
   }
-  // .to__register {
-  //   background: $c1-text;
-  //   display: inline-block;
-  //   padding: 16px 32px;
-  //   position: relative;
-  //   left: 34%;
-  //   bottom: 50%;
-  //   margin: 15px 0px;
-  //   border-top-left-radius: 1rem;
-  //   border-bottom-left-radius: 1rem;
-  //   a {
-  //     color: $c4 !important;
-  //   }
-  //   &::before {
-  //     content: "";
-  //     position: absolute;
-  //     width: 15px;
-  //     height: 15px;
-  //     background: $c1-text;
-  //     right: 0;
-  //     top: 0;
-  //     transform: translateY(-100%);
-  //     clip-path: path("M 15 15 L 15 0 C 15 7 7 15 0 15");
-  //   }
-
-  //   &::after {
-  //     content: "";
-  //     position: absolute;
-  //     width: 15px;
-  //     height: 15px;
-  //     background: $c1-text;
-  //     right: 0;
-  //     bottom: 0;
-  //     transform: translateY(100%);
-  //     clip-path: path("M 15 0 L 0 0 C 7 0 15 7 15 15");
-  //   }
-  // }
   .btn__gg{
     margin: 0 auto;
+    border-radius: 20px;
+    // border: 1px solid $c4;
   }
   span{
     display: flex;

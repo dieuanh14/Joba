@@ -21,12 +21,22 @@ import MainSE from "./pages/aboutYourself/MainSE";
 import MajorMobile from "./pages/aboutYourself/MajorMobile";
 import MajorBA from "./pages/aboutYourself/MajorBA";
 import MajorSE from "./pages/aboutYourself/MajorSE";
+import Dasboard from "./pages/dashboard/Dashboard";
+import { gapi } from "gapi-script";
+import { useEffect } from "react";
+import Income from "./pages/dashboard/Income";
+import Accessibility from "./pages/dashboard/Accessibility";
 
 function App() {
+ 
   return (
     <>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/dashboard" element={<Dasboard />} />
+        <Route path="/dashboard/income" element={<Income />} />
+        <Route path="/dashboard/accessibility" element={<Accessibility />} />
+
         <Route path="/major" element={<Major />} />
         <Route path="/course" element={<Course />} />
         <Route path="/premium" element={<Premium />} />
