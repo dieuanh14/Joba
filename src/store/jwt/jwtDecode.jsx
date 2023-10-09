@@ -1,16 +1,18 @@
-// // jwtDecode.js
-// import jwt from "jsonwebtoken";
-// require("dotenv").config(); // Load environment variables
+// decodeJwtToken.js
+import jwt from "jsonwebtoken";
+import { setUser } from "../features/AuthSlice";
 
-// const secretKey = 'da';
+export const decodeJwtToken = () => (dispatch) => {
+  const token = localStorage.getItem("accessToken"); // Replace 'accessToken' with your actual key
 
-// export const jwtDecode = (accessToken) => {
-//   try {
-//     const decoded = jwt.verify(accessToken, secretKey);
-//     return decoded;
-//   } catch (error) {
-//     // Handle token verification errors
-//     console.error("Token verification error:", error);
-//     return null;
-//   }
-// };
+  try {
+    const decodedToken = jwt.decode(token);
+    const userRole =
+      decodedToken[
+        "http://schemas.microsoft.com/ws/2008/06/identity/claims/role"
+      ];
+    dispatch(setUser({ role: userRole, permissions: {} }));
+  } catch (error) {
+    console.error("JWT Decoding Error:", error);
+  }
+};

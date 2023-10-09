@@ -38,15 +38,14 @@ export const loginWithGoogle = createAsyncThunk(
       const response = await axios.post(
         "https://exe-backend.azurewebsites.net/api/v1/User/LoginWithGoogle",
         {
-          provider: "google",
-          idToken: googleIdToken,
+          externalAuthDto: {
+            idToken: googleIdToken, // Add the ID token here
+          },
         }
       );
-      console.log(idToken);
-      const userData = response.data;
-      console.log(userData);
+      console.log(response.data); // Log the response data
 
-      return userData;
+      return response.data; // Return the response data
     } catch (error) {
       throw error;
     }
@@ -142,6 +141,6 @@ const userSlice = createSlice({
       });
   },
 });
-export const { loginSuccess, logoutSuccess,setUser } = userSlice.actions;
-export const selectUser = state => state.user;
+export const { loginSuccess, logoutSuccess, setUser } = userSlice.actions;
+export const selectUser = (state) => state.user;
 export default userSlice.reducer;
