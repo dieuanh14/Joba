@@ -37,12 +37,21 @@ function OverallSE() {
               display: "flex",
               borderRadius: "8px",
             }}
-            src="https://www.youtube.com/embed/tgbNymZ7vqY"
+            src="https://www.youtube.com/embed/fgt0xpPfq1U?si=t_aeZNf3jyXaEyJW"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
           ></iframe>
           <div style={{ display: "flex", justifyContent: "space-around" }}>
             <div className="link__ytb">
               <span>If the video above does not work, try this link !</span>
-              <span>https://youtu.be/fgt0xpPfq1U</span>
+              <a
+                style={{ textDecoration: "underline" }}
+                href="https://www.youtube.com/watch?v=fgt0xpPfq1U"
+              >
+                https://www.youtube.com/watch?v=fgt0xpPfq1U
+              </a>
             </div>
 
             <Link

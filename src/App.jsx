@@ -11,8 +11,8 @@ import HomeWork from "./pages/HomeWork";
 import AboutYourself from "./pages/aboutYourself/AboutYourself";
 import AboutYourself1 from "./pages/aboutYourself/AboutYourself1";
 import Register from "./pages/Register";
-import TestYourself from "./pages/testYourself/TestYourself";
-import TestYourself1 from "./pages/testYourself/TestYourself1";
+import TestYourself from "./pages/testYourself/TestYourselfCarousel";
+import TestYourself1 from "./pages/testYourself/TestYourself";
 import TestResult from "./pages/testYourself/TestResult";
 import Login from "./pages/Login";
 import Payment from "./pages/Payment";
@@ -24,19 +24,17 @@ import MajorSE from "./pages/aboutYourself/MajorSE";
 import Dasboard from "./pages/dashboard/Dashboard";
 import { gapi } from "gapi-script";
 import { useEffect } from "react";
-import Income from "./pages/dashboard/Income";
 import Accessibility from "./pages/dashboard/Accessibility";
+import TestYourselfCarousel from "./pages/testYourself/TestYourselfCarousel";
 
 function App() {
- 
+
   return (
     <>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/dashboard" element={<Dasboard />} />
-        <Route path="/dashboard/income" element={<Income />} />
         <Route path="/dashboard/accessibility" element={<Accessibility />} />
-
         <Route path="/major" element={<Major />} />
         <Route path="/course" element={<Course />} />
         <Route path="/premium" element={<Premium />} />
@@ -46,7 +44,7 @@ function App() {
         <Route path="/yourself" element={<AboutYourself />} />
         <Route path="/yourself1" element={<AboutYourself1 />} />
         <Route path="/testYourself" element={<TestYourself />} />
-        <Route path="/testYourself1" element={<TestYourself1 />} />
+        <Route path="/testYourselfCarousel" element={<TestYourselfCarousel />} />
         <Route path="/testResult" element={<TestResult />} />
         <Route path="/yourself1/overallMajor/mainSE" element={<MainSE />} />
         <Route

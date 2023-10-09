@@ -61,6 +61,7 @@
     margin-top: 3rem;
   }
   .small__title {
+    margin-bottom: 3rem;
     background: $c6;
     color: $c4;
     padding: 8px;
@@ -71,9 +72,10 @@
     width: fit-content;
   }
 }
-// .signup__btn {
-//   border: 2px solid $c4;
-// }
+
+.carousel .control-dots {
+  bottom: 20% !important;
+}
 .test__result {
   background-image: url("../assets/img/bg.jpg");
   height: 50rem;

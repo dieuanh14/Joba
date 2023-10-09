@@ -30,8 +30,8 @@
     border-radius: 20px;
     margin-left: 2rem;
     width: 11rem;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    background-color: $c5 !important;
+    border: 1px solid transparent; /* Set a transparent border */
+    box-shadow: 0 0 10px $c1; /* Apply a box shadow with a blur effect */
     a {
       height: 1.5rem;
       display: flex;
