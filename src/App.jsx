@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Major from "./pages/Major";
 import Course from "./pages/Course";
@@ -12,7 +12,6 @@ import AboutYourself from "./pages/aboutYourself/AboutYourself";
 import AboutYourself1 from "./pages/aboutYourself/AboutYourself1";
 import Register from "./pages/Register";
 import TestYourself from "./pages/testYourself/TestYourselfCarousel";
-import TestYourself1 from "./pages/testYourself/TestYourself";
 import TestResult from "./pages/testYourself/TestResult";
 import Login from "./pages/Login";
 import Payment from "./pages/Payment";
@@ -22,13 +21,13 @@ import MajorMobile from "./pages/aboutYourself/MajorMobile";
 import MajorBA from "./pages/aboutYourself/MajorBA";
 import MajorSE from "./pages/aboutYourself/MajorSE";
 import Dasboard from "./pages/dashboard/Dashboard";
-import { gapi } from "gapi-script";
-import { useEffect } from "react";
 import Accessibility from "./pages/dashboard/Accessibility";
 import TestYourselfCarousel from "./pages/testYourself/TestYourselfCarousel";
-
+import FailureResult from "./pages/testYourself/FailureResult";
+import ReactGA from 'react-ga'
 function App() {
-
+  const TRACKING_ID = 'UA-288460125-1'; 
+  ReactGA.initialize(TRACKING_ID);
   return (
     <>
       <Routes>
@@ -44,8 +43,13 @@ function App() {
         <Route path="/yourself" element={<AboutYourself />} />
         <Route path="/yourself1" element={<AboutYourself1 />} />
         <Route path="/testYourself" element={<TestYourself />} />
-        <Route path="/testYourselfCarousel" element={<TestYourselfCarousel />} />
+        <Route
+          path="/testYourselfCarousel"
+          element={<TestYourselfCarousel />}
+        />
         <Route path="/testResult" element={<TestResult />} />
+        <Route path="/failureResult" element={<FailureResult />} />
+
         <Route path="/yourself1/overallMajor/mainSE" element={<MainSE />} />
         <Route
           path="/yourself1/overallMajor/mainSE/majorMobile"

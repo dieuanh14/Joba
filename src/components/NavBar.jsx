@@ -1,26 +1,15 @@
 import { useSelector, useDispatch } from "react-redux";
 import { Toolbar } from "@mui/material";
 import { Link } from "react-router-dom";
-import { logoutSuccess } from "../store/features/UserSlice";
-import { Button } from "@mui/material";
 import * as React from "react";
 import Container from "@mui/material/Container";
 import logo from "../assets/logo.png";
-const pages = ["Products", "Pricing", "Blog"];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
 import { NavLink } from "react-router-dom";
 import "./nav.scss";
 import { styled } from "@mui/system";
 
 function NavBar() {
   const isLoggedIn = useSelector((state) => state.user.isLoggedIn);
-  const email = useSelector((state) => state.user.email);
-  const dispatch = useDispatch();
-
-  const handleLogout = () => {
-    dispatch(logoutSuccess());
-    localStorage.removeItem("user");
-  };
   const StyledAppBar = styled("div")({});
   return (
     <>
@@ -87,6 +76,7 @@ function NavBar() {
               ) : (
                 <>
                 <Link
+                className="signin__btn"
                   style={{
                     padding: "6px",
                     border: "2px solid #1D3557",

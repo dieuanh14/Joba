@@ -3,6 +3,8 @@ import NavBar from "../../components/NavBar";
 import SliderComponent from "../../components/Slider";
 import Questions from "./questions.json";
 import "../../scss/slider.scss";
+import { Button } from "@mui/material";
+
 const valueToIcon = {
   0: "😵‍💫",
   25: "😕",
@@ -10,11 +12,16 @@ const valueToIcon = {
   75: " 🥰",
 };
 
-function TestYourself({ question }) {
+function TestYourself(props) { // Pass props as an argument
+  const { question } = props; // Destructure question from props
   const [value, setValue] = useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
+    props.setUserAnswers((prevUserAnswers) => ({
+      ...prevUserAnswers,
+      [question.id]: newValue,
+    }));
   };
 
   return (
@@ -22,7 +29,6 @@ function TestYourself({ question }) {
       <NavBar />
       <h1 className="title">Understanding yourself</h1>
       <span className="small__title ">{question.question}</span>{" "}
-      {/* Display the question here */}
       <div className="icon__container">
         <h2>{valueToIcon[value]}</h2>
       </div>

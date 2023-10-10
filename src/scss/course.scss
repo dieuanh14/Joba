@@ -7,7 +7,6 @@ h1 {
   line-height: normal;
   text-transform: uppercase;
   text-shadow: 1px 1px 2px grey;
-  // padding: 2rem;
 }
 a {
   cursor: pointer;
@@ -36,6 +35,10 @@ a {
       font-weight: 500;
       line-height: normal;
     }
+  }
+  .course_2,
+  .course_3 {
+    filter: grayscale(100%);
   }
 }
 .about__course {
@@ -86,7 +89,7 @@ a {
 }
 .overall__se {
   h1 {
-    color:  #1d3557;
+    color: #1d3557;
     text-align: center;
     font-family: Montserrat;
     font-size: 1.5rem;
@@ -109,7 +112,7 @@ a {
       gap: 1rem;
       display: flex;
       flex-direction: column;
-   
+
       span {
         &:nth-child(2) {
           color: blue;

@@ -14,6 +14,7 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { loading, error } = useSelector((state) => state.user);
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // Initialize isLoggedIn as false
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const baseUrl = `https://exe-backend.azurewebsites.net/api/v1/User/LoginWithGoogle`;
@@ -31,43 +32,38 @@ const Login = () => {
       });
       console.log(response1);
       if (response.ok) {
+        setIsLoggedIn(true); // Set isLoggedIn to true
         const responseData = await response.json();
         if (responseData.status === 0) {
           await Swal.fire({
             icon: "error",
             title: "Oops...",
-            text: "Something went wrong! Your account has been suspened",
+            text: "Something went wrong! Your account has been suspended",
           });
           window.location.reload();
         } else {
           localStorage.setItem("user", JSON.stringify(responseData));
-          navigate("/");
+          if (responseData.roleName === "Admin") {
+            navigate('/dashboard'); 
+          } else {
+            navigate('/');
+          }
         }
         console.log("login data", responseData);
         console.log("response", response);
       } else {
-        console.log("login failed");
+        await Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Something went wrong! Your account has been suspended",
+        });
+        window.location.reload();
       }
     } catch (error) {
       console.error("Error calling API:", error);
     }
   };
-  // function handleSignOut(event) {
-  //   setUser({});
-  //   document.getElementById("signInDiv").hidden = false;
-  // }
-  // useEffect(() => {
-  //   google.accounts.id.initialize({
-  //     client_id:
-  //       "711165076072-c7eela8r74om166rj4k879nse3a8v1c4.apps.googleusercontent.com",
-  //     callback: handleCallbackResponse,
-  //   });
-  //   google.accounts.id.renderButton(document.getElementById("signInDiv"), {
-  //     theme: "outline",
-  //     size: "large",
-  //   });
-  //   google.accounts.id.prompt(); // also display the One Tap dialog
-  // }, []);
+  
   const handleLogin = async (e) => {
     e.preventDefault();
     let userCredentials = {
@@ -79,13 +75,21 @@ const Login = () => {
       if (loginUser.fulfilled.match(result)) {
         setEmail("");
         setPassword("");
-
-        navigate("/");
+        const userResponse = result.payload; 
+        console.log("userResponse:", userResponse);
+        if (userResponse.roleName === "Admin") {
+          console.log("Admin role detected"); 
+          navigate("/dashboard"); 
+        } else {
+          console.log("Non-admin role detected"); 
+          navigate("/"); 
+        }
       }
     } catch (error) {
       console.error("Login Error:", error);
     }
   };
+  
 
   return (
     <>
@@ -122,22 +126,30 @@ const Login = () => {
                   onChange={(e) => setPassword(e.target.value)}
                 />
                 <div className="gg__btn">
-                <GoogleLogin
-                  onSuccess={handleCallbackResponse}
-                  onError={() => {
-                    console.log("Login Failed");
-                  }}
-                />
+                  <GoogleLogin
+                    onSuccess={handleCallbackResponse}
+                    onError={() => {
+                      console.log("Login Failed");
+                    }}
+                  />
                 </div>
                 <Button type="submit" className="register__btn">
                   {loading ? "Loading..." : "Login"}
                 </Button>
                 <span>
                   <Link
-                    style={{ color: "white", textAlign: "center" }}
+                    style={{ color: "#F1FAEE", textAlign: "center" }}
                     to="/register"
                   >
                     Don't have account yet? Create one
+                  </Link>
+                </span>
+                <span>
+                  <Link
+                    style={{ color: "#F1FAEE", textAlign: "center" }}
+                    to="/"
+                  >
+                    Forgot password
                   </Link>
                 </span>
               </form>

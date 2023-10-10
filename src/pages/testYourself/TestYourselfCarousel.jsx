@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import TestYourself from "./TestYourself";
-
+import { Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 const questions = [
   {
     id: 1,
@@ -47,37 +48,81 @@ const questions = [
       "Bạn có quyết tâm để theo đuổi ngành học đầy cạnh tranhh này chứ?",
   },
 ];
-
 function TestYourselfCarousel() {
+  const [isLastSlide, setIsLastSlide] = useState(false);
+  const [userAnswers, setUserAnswers] = useState({}); // Define userAnswers state
+  const navigate = useNavigate();
+
+  const handleSlideChange = (index) => {
+    // Check if the current slide is the last slide
+    setIsLastSlide(index === questions.length - 1);
+  };
+  const handleSubmission = () => {
+    const answeredQuestions = Object.keys(userAnswers).length;
+    const fiftyPercentCount = Object.values(userAnswers).filter(
+      (value) => value === 50
+    ).length;
+    console.log(answeredQuestions);
+    console.log(fiftyPercentCount);
+    if (answeredQuestions === 10 && fiftyPercentCount >= 8) {
+      console.log("User met the criteria.");
+      navigate("/testResult");
+    } else {
+      console.log("User did not meet the criteria.");
+      navigate('/failureResult')
+    }
+  };
   return (
-    <Carousel
-      renderIndicator={(onClickHandler, isSelected, index, label) => {
-        const defStyle = { marginLeft: 20, color: "white", cursor: "pointer" };
-        const style = isSelected
-          ? { ...defStyle, color: "red" }
-          : { ...defStyle };
-        return (
-          <span
-            style={style}
-            onClick={onClickHandler}
-            onKeyDown={onClickHandler}
-            value={index}
-            key={index}
-            role="button"
-            tabIndex={0}
-            aria-label={`${label} ${index + 1}`}
-          >
-            {"." + index}
-          </span>
-        );
-      }}
-    >
-      {questions.map((question) => (
-        <div key={question.id}>
-          <TestYourself question={question} />
-        </div>
-      ))}
-    </Carousel>
+    <div>
+      <Carousel
+        renderIndicator={(onClickHandler, isSelected, index, label) => {
+          const defStyle = {
+            marginLeft: 20,
+            color: "white",
+            cursor: "pointer",
+          };
+          const style = isSelected
+            ? { ...defStyle, color: "red" }
+            : { ...defStyle };
+
+          return (
+            <span
+              style={style}
+              onClick={onClickHandler}
+              onKeyDown={onClickHandler}
+              value={index}
+              key={index}
+              role="button"
+              tabIndex={0}
+              aria-label={`${label} ${index + 1}`}
+            >
+              {"." + index}
+            </span>
+          );
+        }}
+        onChange={handleSlideChange} // Track slide changes
+      >
+        {questions.map((question) => (
+          <div key={question.id}>
+            <TestYourself question={question} setUserAnswers={setUserAnswers} />
+          </div>
+        ))}
+      </Carousel>
+      {isLastSlide && ( // Render submit button if it's the last slide
+        <Button
+          type="submit"
+          style={{
+            position: "absolute",
+            bottom: "40%",
+            left: "50%",
+            background: "white",
+          }}
+          onClick={handleSubmission}
+        >
+          Submit
+        </Button>
+      )}
+    </div>
   );
 }
 
