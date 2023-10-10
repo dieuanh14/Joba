@@ -1,18 +1,20 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-export const loginUser = createAsyncThunk(
-  "user/loginUser",
-  async (userCredentials) => {
-    const request = await axios.post(
+export const loginUser = createAsyncThunk("user/loginUser", async (userCredentials) => {
+  try {
+    const response = await axios.post(
       "https://exe-backend.azurewebsites.net/api/v1/User/Login",
       userCredentials
     );
-    const response = await request.data.data;
-    localStorage.setItem("user", JSON.stringify(response));
-    return response;
+    console.log("API Response:", response.data); // Add this line to inspect the response structure
+    localStorage.setItem("user", JSON.stringify(response.data));
+    return response.data;
+  } catch (error) {
+    throw error;
   }
-);
+});
+
 export const registerUser = createAsyncThunk(
   "user/registerUser",
   async (userData) => {
@@ -25,27 +27,6 @@ export const registerUser = createAsyncThunk(
       const responseData = response.data.data;
       localStorage.setItem("user", JSON.stringify(responseData));
       return responseData;
-    } catch (error) {
-      throw error;
-    }
-  }
-);
-export const loginWithGoogle = createAsyncThunk(
-  "user/loginWithGoogle",
-  async (googleIdToken) => {
-    console.log("googleIdToken:", googleIdToken); // Add this line to check the value
-    try {
-      const response = await axios.post(
-        "https://exe-backend.azurewebsites.net/api/v1/User/LoginWithGoogle",
-        {
-          externalAuthDto: {
-            idToken: googleIdToken, // Add the ID token here
-          },
-        }
-      );
-      console.log(response.data); // Log the response data
-
-      return response.data; // Return the response data
     } catch (error) {
       throw error;
     }
@@ -67,11 +48,7 @@ const userSlice = createSlice({
     registrationError: null,
   },
   reducers: {
-    setUser: (state, action) => {
-      const user = action.payload;
-      state.role = user.role;
-      state.permissions = user.permissions;
-    },
+
     loginSuccess: (state) => {
       state.isLoggedIn = true;
       console.log(state.isLoggedIn);
@@ -79,9 +56,7 @@ const userSlice = createSlice({
     logoutSuccess: (state) => {
       state.isLoggedIn = false;
     },
-    authSuccess: (state) => {
-      state.isLoggedIn = true;
-    },
+
   },
   extraReducers: (builder) => {
     builder
@@ -118,29 +93,28 @@ const userSlice = createSlice({
         state.registrationLoading = false;
         state.registrationError = action.error.message;
       })
-      .addCase(loginWithGoogle.pending, (state) => {
-        state.loading = true;
-        state.user = null;
-        state.error = null;
-      })
-      .addCase(loginWithGoogle.fulfilled, (state, action) => {
-        state.loading = false;
-        state.user = action.payload;
-        console.log(action.payload);
-        state.error = null;
-        state.isLoggedIn = true;
-      })
-      .addCase(loginWithGoogle.rejected, (state, action) => {
-        state.loading = false;
-        state.user = null;
-        if (action.error.message === "Request failed with status 401") {
-          state.error = "access denied! Invalid user";
-        } else {
-          state.error = action.error.message;
-        }
-      });
+      // .addCase(loginWithGoogle.pending, (state) => {
+      //   state.loading = true;
+      //   state.user = null;
+      //   state.error = null;
+      // })
+      // .addCase(loginWithGoogle.fulfilled, (state, action) => {
+      //   state.loading = false;
+      //   state.user = action.payload;
+      //   console.log(action.payload);
+      //   state.error = null;
+      //   state.isLoggedIn = true;
+      // })
+      // .addCase(loginWithGoogle.rejected, (state, action) => {
+      //   state.loading = false;
+      //   state.user = null;
+      //   if (action.error.message === "Request failed with status 401") {
+      //     state.error = "access denied! Invalid user";
+      //   } else {
+      //     state.error = action.error.message;
+      //   }
+      // });
   },
 });
-export const { loginSuccess, logoutSuccess, setUser } = userSlice.actions;
-export const selectUser = (state) => state.user;
+export const { loginSuccess, logoutSuccess } = userSlice.actions;
 export default userSlice.reducer;

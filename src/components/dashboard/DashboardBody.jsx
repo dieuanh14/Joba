@@ -1,7 +1,7 @@
 import { Container } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
 import "./dashboardBody.scss";
-import 'react-calendar/dist/Calendar.css';
+import "react-calendar/dist/Calendar.css";
 import {
   Chart as ChartJs,
   BarElement,
@@ -12,9 +12,14 @@ import {
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
 import Calendar from "react-calendar";
+import ReactGA from 'react-ga'
 
 ChartJs.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 function DashboardBody() {
+useEffect(()=>{
+ReactGA.pageview(window.location.pathname)
+})
+
   const data = {
     labels: [
       "Monday",
@@ -65,7 +70,7 @@ function DashboardBody() {
           </div>
         </div>
         <div className="calendar__body">
-    <Calendar/>
+          <Calendar />
         </div>
       </div>
     </Container>
