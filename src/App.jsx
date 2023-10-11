@@ -24,14 +24,18 @@ import Dasboard from "./pages/dashboard/Dashboard";
 import Accessibility from "./pages/dashboard/Accessibility";
 import TestYourselfCarousel from "./pages/testYourself/TestYourselfCarousel";
 import FailureResult from "./pages/testYourself/FailureResult";
-import ReactGA from 'react-ga'
+import ReactGA from "react-ga";
+import ForgotPwd from "./pages/forgotPwd/ForgotPwd";
+import ResetPwd from "./pages/forgotPwd/ResetPwd";
 function App() {
-  const TRACKING_ID = 'UA-288460125-1'; 
+  const TRACKING_ID = "UA-288460125-1";
   ReactGA.initialize(TRACKING_ID);
   return (
     <>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/forgotPwd" element={<ForgotPwd />} />
+        <Route path="/resetPwd" element={<ResetPwd />} />
         <Route path="/dashboard" element={<Dasboard />} />
         <Route path="/dashboard/accessibility" element={<Accessibility />} />
         <Route path="/major" element={<Major />} />

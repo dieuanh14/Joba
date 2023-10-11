@@ -49,8 +49,6 @@ const Login = () => {
             navigate('/');
           }
         }
-        console.log("login data", responseData);
-        console.log("response", response);
       } else {
         await Swal.fire({
           icon: "error",
@@ -81,7 +79,6 @@ const Login = () => {
           console.log("Admin role detected"); 
           navigate("/dashboard"); 
         } else {
-          console.log("Non-admin role detected"); 
           navigate("/"); 
         }
       }
@@ -147,7 +144,7 @@ const Login = () => {
                 <span>
                   <Link
                     style={{ color: "#F1FAEE", textAlign: "center" }}
-                    to="/"
+                    to="/forgotPwd"
                   >
                     Forgot password
                   </Link>
