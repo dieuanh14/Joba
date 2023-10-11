@@ -43,46 +43,24 @@ a {
 }
 .about__course {
   .main__courses {
-    margin-top: 4.5rem;
-    position: relative;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
-    .inner__course {
-      position: relative;
-      height: 22rem;
-      width: 15rem;
-      background: $c2;
-      border-radius: 1rem;
-      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-      &:nth-child(2) {
-        background-color: $c3;
-      }
-      &:nth-child(3) {
-        background-color: $c3;
-      }
-      img {
-        position: absolute;
-        top: -4rem;
-        left: 15%;
-      }
-      .media2,
-      .media3 {
-        filter: grayscale(100%);
-      }
-      a {
-        text-decoration: none;
-        color: $c1-text;
-      }
-      .slide__detail {
-        margin-top: 5rem;
+    grid-template-rows: 0.2fr 1fr 0.2fr 1fr;
+
+    .free__course,
+    .premium__course {
+      color: $c1-text;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      .course__container {
         display: flex;
         flex-direction: column;
-        padding: 8px;
-        gap: 1rem;
-        h3 {
-          text-align: center;
+        gap: 10px;
+        svg {
+          margin-right: 4px;
         }
+      }
+      .course__fee{
+        
       }
     }
   }

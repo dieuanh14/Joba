@@ -1,10 +1,10 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Major from "./pages/Major";
-import Course from "./pages/Course";
+import Course from "./pages/courses/Course";
 import Premium from "./pages/Premium";
 import AboutSE from "./pages/AboutSE";
-import AboutCourses from "./pages/AboutCourses";
+import AboutCourses from "./pages/courses/AboutCourses";
 import OverallSE from "./pages/OverallSE";
 import DefinitionSE from "./pages/DefinitionSE";
 import HomeWork from "./pages/HomeWork";

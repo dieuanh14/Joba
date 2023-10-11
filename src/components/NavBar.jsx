@@ -11,6 +11,7 @@ import { styled } from "@mui/system";
 function NavBar() {
   const isLoggedIn = useSelector((state) => state.user.isLoggedIn);
   const StyledAppBar = styled("div")({});
+
   return (
     <>
       <div className="nav">
@@ -40,12 +41,17 @@ function NavBar() {
                   height="45"
                   viewBox="0 0 45 45"
                   fill="none"
-                  style={{ height: "25px", width: "30px" }}
+                  style={{
+                    height: "30px",
+                    width: "30px",
+                    marginTop: "1rem",
+                    marginLeft: "2px",
+                  }}
                 >
                   <path
                     fill-rule="evenodd"
                     clip-rule="evenodd"
-                    d="M22.5 45C34.9264 45 45 34.9264 45 22.5C45 10.0736 34.9264 0 22.5 0C10.0736 0 0 10.0736 0 22.5C0 34.9264 10.0736 45 22.5 45ZM10.2271 11.6334L12.9544 27.1021H32.0453L34.7726 11.6334L27.2726 18.6646L22.4998 10.2271L17.7271 18.6646L10.2271 11.6334ZM30.6817 32.7271C31.4998 32.7271 32.0453 32.1646 32.0453 31.3209V29.9146H12.9544V31.3209C12.9544 32.1646 13.4998 32.7271 14.318 32.7271H30.6817Z"
+                    d="M11 22C17.0751 22 22 17.0751 22 11C22 4.92487 17.0751 0 11 0C4.92487 0 0 4.92487 0 11C0 17.0751 4.92487 22 11 22ZM5 5.6875L6.33333 13.25H15.6667L17 5.6875L13.3333 9.125L11 5L8.66667 9.125L5 5.6875ZM15 16C15.4 16 15.6667 15.725 15.6667 15.3125V14.625H6.33333V15.3125C6.33333 15.725 6.6 16 7 16H15Z"
                     fill="#FFB703"
                   />
                 </svg>
@@ -60,42 +66,31 @@ function NavBar() {
             </Toolbar>
             <Toolbar>
               {isLoggedIn ? (
-                <>
-                  <Link
-                    to="/login"
-                    style={{
-                      padding: "6px",
-                      border: "2px solid #1D3557",
-                      borderRadius: "1.5rem",
-                    }}
-                  >
-                    {" "}
-                    Logout
-                  </Link>
-                </>
-              ) : (
-                <>
                 <Link
-                className="signin__btn"
+                  to="/login"
+                  className="logout__btn"
                   style={{
                     padding: "6px",
                     border: "2px solid #1D3557",
                     borderRadius: "1.5rem",
                   }}
-                  to="/login"
                 >
-                  Sign in
+                  Logout
                 </Link>
-                <Link
-                  // style={{
-                  //   padding: "6px",
-                  //   border: "2px solid #1D3557",
-                  //   borderRadius: "1.5rem",
-                  // }}
-                  to="/register"
-                >
-                  Sign up
-                </Link>
+              ) : (
+                <>
+                  <Link
+                    className="signin__btn"
+                    style={{
+                      padding: "6px",
+                      border: "2px solid #1D3557",
+                      borderRadius: "1.5rem",
+                    }}
+                    to="/login"
+                  >
+                    Sign in
+                  </Link>
+                  <Link to="/register">Sign up</Link>
                 </>
               )}
             </Toolbar>
