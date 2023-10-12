@@ -21,19 +21,17 @@ function AboutCourses() {
           <div className="free__course">
             {courses.slice(0, 4).map((course) => (
               <div key={course.id} className="course__container">
-                <iframe
-                  style={{
-                    height: "130px",
-                    width: "260px",
-                    borderRadius: "8px",
-                  }}
-                  src={course.trailer}
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                ></iframe>
-                <span>{course.courseName}</span>
+                <Link to="/courseContent">
+                  <img
+                    style={{
+                      height: "130px",
+                      width: "260px",
+                      borderRadius: "8px",
+                    }}
+                    src={course.trailer}
+                  />
+                </Link>
+                <span>{course.courseName.name}</span>
                 <span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -57,22 +55,20 @@ function AboutCourses() {
           <div className="premium__course">
             {premiumCourses.slice(0, 4).map((premium) => (
               <div key={premium.id} className="course__container">
-                <iframe
-                  style={{
-                    height: "130px",
-                    width: "260px",
-                    borderRadius: "8px",
-                  }}
-                  src={premium.trailer}
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                ></iframe>
+                <Link to="/courseContent">
+                  <img
+                    style={{
+                      height: "130px",
+                      width: "260px",
+                      borderRadius: "8px",
+                    }}
+                    src={premium.trailer}
+                  />
+                </Link>
                 <span>{premium.courseName}</span>
                 <div className="course__fee">
-                <span>{premium.discountfee}</span>
-                <span>{premium.fee}</span>
+                  <span>{premium.discountfee}</span>
+                  <span>{premium.fee}</span>
                 </div>
               </div>
             ))}

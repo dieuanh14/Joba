@@ -45,7 +45,8 @@ a {
   .main__courses {
     display: grid;
     grid-template-rows: 0.2fr 1fr 0.2fr 1fr;
-
+    h4 {
+    }
     .free__course,
     .premium__course {
       color: $c1-text;
@@ -59,8 +60,17 @@ a {
           margin-right: 4px;
         }
       }
-      .course__fee{
-        
+      .course__fee {
+        display: flex;
+        span {
+          &:first-child {
+            color: red;
+          }
+          &:nth-child(2) {
+            margin-left: 2rem;
+            text-decoration: line-through;
+          }
+        }
       }
     }
   }
@@ -75,6 +85,7 @@ a {
     font-weight: 600;
     line-height: normal;
     text-transform: uppercase;
+    text-shadow: 1px 1px 2px grey;
   }
   .main__video {
     nav {
