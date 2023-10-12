@@ -1,30 +1,50 @@
 [
   {
-    "courseName": "Lập trình C++ cơ bản, nâng cao",
+    "courseName": {
+      "name": "Kiến Thức Nhập Môn IT 7",
+      "date": "2023-10-18",
+      "content": "Course content for Kiến Thức Nhập Môn IT 2."
+    },
     "fee": "500.000VND",
     "discountfee": "299.000VND",
     "trailer": "https://upload.wikimedia.org/wikipedia/commons/1/15/Cat_August_2010-4.jpg"
   },
   {
-    "courseName": "Lập trình C++ cơ bản, nâng cao",
+    "courseName": {
+      "name": "Kiến Thức Nhập Môn IT 7",
+      "date": "2023-10-18",
+      "content": "Course content for Kiến Thức Nhập Môn IT 2."
+    },
     "fee": "500.000VND",
     "discountfee": "299.000VND",
     "trailer": "https://upload.wikimedia.org/wikipedia/commons/1/15/Cat_August_2010-4.jpg"
   },
   {
-    "courseName": "Lập trình C++ cơ bản, nâng cao",
+    "courseName": {
+      "name": "Kiến Thức Nhập Môn IT 7",
+      "date": "2023-10-18",
+      "content": "Course content for Kiến Thức Nhập Môn IT 2."
+    },
     "fee": "500.000VND",
     "discountfee": "299.000VND",
     "trailer": "https://upload.wikimedia.org/wikipedia/commons/1/15/Cat_August_2010-4.jpg"
   },
   {
-    "courseName": "Lập trình C++ cơ bản, nâng cao",
+    "courseName": {
+      "name": "Kiến Thức Nhập Môn IT 7",
+      "date": "2023-10-18",
+      "content": "Course content for Kiến Thức Nhập Môn IT 2."
+    },
     "fee": "500.000VND",
     "discountfee": "299.000VND",
     "trailer": "https://upload.wikimedia.org/wikipedia/commons/1/15/Cat_August_2010-4.jpg"
   },
   {
-    "courseName": "Lập trình C++ cơ bản, nâng cao",
+    "courseName": {
+      "name": "Kiến Thức Nhập Môn IT 7",
+      "date": "2023-10-18",
+      "content": "Course content for Kiến Thức Nhập Môn IT 2."
+    },
     "fee": "500.000VND",
     "discountfee": "299.000VND",
     "trailer": "https://upload.wikimedia.org/wikipedia/commons/1/15/Cat_August_2010-4.jpg"

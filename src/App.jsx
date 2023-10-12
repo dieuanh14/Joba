@@ -27,7 +27,10 @@ import FailureResult from "./pages/testYourself/FailureResult";
 import ReactGA from "react-ga";
 import ForgotPwd from "./pages/forgotPwd/ForgotPwd";
 import ResetPwd from "./pages/forgotPwd/ResetPwd";
-import CourseContent from "./pages/courses/CourseContent";
+import { CourseContent } from "./pages/courses/CourseContent";
+import courses from "./pages/courses/courses.json";
+import premiumCourses from "./pages/courses/premiumCourses.json";
+
 function App() {
   const TRACKING_ID = "UA-288460125-1";
   ReactGA.initialize(TRACKING_ID);
@@ -55,7 +58,6 @@ function App() {
         />
         <Route path="/testResult" element={<TestResult />} />
         <Route path="/failureResult" element={<FailureResult />} />
-
         <Route path="/yourself1/overallMajor/mainSE" element={<MainSE />} />
         <Route
           path="/yourself1/overallMajor/mainSE/majorMobile"
@@ -69,10 +71,14 @@ function App() {
           path="/yourself1/overallMajor/mainSE/majorSE"
           element={<MajorSE />}
         />
-
         <Route path="/payment" element={<Payment />} />
         <Route path="/yourself1/overallMajor" element={<OverallMajor />} />
-        <Route path="/aboutCourse" element={<AboutCourses />} />
+        <Route
+          path="/aboutCourse"
+          element={
+            <AboutCourses courses={courses} premiumCourses={premiumCourses} />
+          }
+        />
         <Route path="/aboutCourse/overallSE" element={<OverallSE />} />
         <Route
           path="/aboutCourse/overallSE/definitionSE"

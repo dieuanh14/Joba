@@ -44,34 +44,15 @@ a {
 .about__course {
   .main__courses {
     display: grid;
-    grid-template-rows: 0.2fr 1fr 0.2fr 1fr;
     h4 {
+      font-size: 16px;
+      text-shadow: 1px 1px 2px grey;
     }
     .free__course,
     .premium__course {
       color: $c1-text;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      .course__container {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        svg {
-          margin-right: 4px;
-        }
-      }
-      .course__fee {
-        display: flex;
-        span {
-          &:first-child {
-            color: red;
-          }
-          &:nth-child(2) {
-            margin-left: 2rem;
-            text-decoration: line-through;
-          }
-        }
-      }
+ 
+
     }
   }
 }
