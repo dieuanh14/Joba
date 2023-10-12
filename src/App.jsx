@@ -1,10 +1,10 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Major from "./pages/Major";
-import Course from "./pages/Course";
+import Course from "./pages/courses/Course";
 import Premium from "./pages/Premium";
 import AboutSE from "./pages/AboutSE";
-import AboutCourses from "./pages/AboutCourses";
+import AboutCourses from "./pages/courses/AboutCourses";
 import OverallSE from "./pages/OverallSE";
 import DefinitionSE from "./pages/DefinitionSE";
 import HomeWork from "./pages/HomeWork";
@@ -24,18 +24,24 @@ import Dasboard from "./pages/dashboard/Dashboard";
 import Accessibility from "./pages/dashboard/Accessibility";
 import TestYourselfCarousel from "./pages/testYourself/TestYourselfCarousel";
 import FailureResult from "./pages/testYourself/FailureResult";
-import ReactGA from 'react-ga'
+import ReactGA from "react-ga";
+import ForgotPwd from "./pages/forgotPwd/ForgotPwd";
+import ResetPwd from "./pages/forgotPwd/ResetPwd";
+import CourseContent from "./pages/courses/CourseContent";
 function App() {
-  const TRACKING_ID = 'UA-288460125-1'; 
+  const TRACKING_ID = "UA-288460125-1";
   ReactGA.initialize(TRACKING_ID);
   return (
     <>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/forgotPwd" element={<ForgotPwd />} />
+        <Route path="/resetPwd" element={<ResetPwd />} />
         <Route path="/dashboard" element={<Dasboard />} />
         <Route path="/dashboard/accessibility" element={<Accessibility />} />
         <Route path="/major" element={<Major />} />
         <Route path="/course" element={<Course />} />
+        <Route path="/courseContent" element={<CourseContent />} />
         <Route path="/premium" element={<Premium />} />
         <Route path="/aboutSE" element={<AboutSE />} />
         <Route path="/register" element={<Register />} />

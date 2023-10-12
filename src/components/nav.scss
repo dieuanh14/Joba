@@ -16,8 +16,6 @@ body {
   color: #457b9d !important;
 }
 .nav {
-  // margin-bottom: 1rem;
-
   img {
     height: 64px;
     width: 64px;
@@ -53,6 +51,8 @@ body {
         font-weight: 600;
         line-height: normal;
         text-transform: uppercase;
+        text-shadow: 1px 1px 2px grey;
+
       }
       span {
         color: #1d3557;

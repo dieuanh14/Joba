@@ -1,0 +1,47 @@
+[
+  {
+    "courseName": {
+      "name": "Kiến Thức Nhập Môn IT 1",
+      "date": "2023-10-15",
+      "content": "Course content for Kiến Thức Nhập Môn IT 1."
+    },
+    "access": "120.312k",
+    "trailer": "https://www.example.com/trailer1.jpg"
+  },
+  {
+    "courseName": {
+      "name": "Kiến Thức Nhập Môn IT 2",
+      "date": "2023-10-18",
+      "content": "Course content for Kiến Thức Nhập Môn IT 2."
+    },
+    "access": "95.732k",
+    "trailer": "https://www.example.com/trailer2.jpg"
+  },
+  {
+    "courseName": {
+      "name": "Kiến Thức Nhập Môn IT 2",
+      "date": "2023-10-18",
+      "content": "Course content for Kiến Thức Nhập Môn IT 2."
+    },
+    "access": "95.732k",
+    "trailer": "https://www.example.com/trailer2.jpg"
+  },
+  {
+    "courseName": {
+      "name": "Kiến Thức Nhập Môn IT 2",
+      "date": "2023-10-18",
+      "content": "Course content for Kiến Thức Nhập Môn IT 2."
+    },
+    "access": "95.732k",
+    "trailer": "https://www.example.com/trailer2.jpg"
+  },
+  {
+    "courseName": {
+      "name": "Kiến Thức Nhập Môn IT 2",
+      "date": "2023-10-18",
+      "content": "Course content for Kiến Thức Nhập Môn IT 2."
+    },
+    "access": "95.732k",
+    "trailer": "https://www.example.com/trailer2.jpg"
+  }
+]

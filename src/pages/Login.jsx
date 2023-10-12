@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import "../scss/login.scss";
 import media from "../assets/img/morphis-reviewing-resumes-of-candidates.png";
 import media1 from "../assets/img/morphis-blurred-red-star-in-glass.png";
@@ -9,12 +9,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { loginUser } from "../store/features/UserSlice";
 import { Link } from "react-router-dom";
 import { GoogleLogin } from "@react-oauth/google";
+import { setLoggedIn } from "../store/features/UserSlice";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { loading, error } = useSelector((state) => state.user);
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // Initialize isLoggedIn as false
+  const [isLoggedIn, setIsLoggedIn] = useState(false); 
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const baseUrl = `https://exe-backend.azurewebsites.net/api/v1/User/LoginWithGoogle`;
@@ -32,7 +33,7 @@ const Login = () => {
       });
       console.log(response1);
       if (response.ok) {
-        setIsLoggedIn(true); // Set isLoggedIn to true
+        dispatch(setLoggedIn(true));
         const responseData = await response.json();
         if (responseData.status === 0) {
           await Swal.fire({
@@ -63,6 +64,7 @@ const Login = () => {
       console.error("Error calling API:", error);
     }
   };
+
   
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -76,12 +78,10 @@ const Login = () => {
         setEmail("");
         setPassword("");
         const userResponse = result.payload; 
-        console.log("userResponse:", userResponse);
         if (userResponse.roleName === "Admin") {
           console.log("Admin role detected"); 
           navigate("/dashboard"); 
         } else {
-          console.log("Non-admin role detected"); 
           navigate("/"); 
         }
       }
@@ -146,8 +146,8 @@ const Login = () => {
                 </span>
                 <span>
                   <Link
-                    style={{ color: "#F1FAEE", textAlign: "center" }}
-                    to="/"
+                    style={{ color: "#F1FAEE", textAlign: "center",textDecoration:'underline',marginTop:'4px' }}
+                    to="/forgotPwd"
                   >
                     Forgot password
                   </Link>
