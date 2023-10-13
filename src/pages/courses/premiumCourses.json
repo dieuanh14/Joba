@@ -7,7 +7,7 @@
     },
     "fee": "500.000VND",
     "discountfee": "299.000VND",
-    "trailer": "https://upload.wikimedia.org/wikipedia/commons/1/15/Cat_August_2010-4.jpg"
+    "trailer": "src/assets/img/z4778395317768_221677d2d7c20790522f11ec8d23c344.jpg"
   },
   {
     "courseName": {
@@ -17,7 +17,7 @@
     },
     "fee": "500.000VND",
     "discountfee": "299.000VND",
-    "trailer": "https://upload.wikimedia.org/wikipedia/commons/1/15/Cat_August_2010-4.jpg"
+    "trailer": "src/assets/img/z4778395331877_f7d671cc721b6eaecbd4c7967e5c0fa6.jpg"
   },
   {
     "courseName": {
@@ -27,7 +27,7 @@
     },
     "fee": "500.000VND",
     "discountfee": "299.000VND",
-    "trailer": "https://upload.wikimedia.org/wikipedia/commons/1/15/Cat_August_2010-4.jpg"
+    "trailer": "src/assets/img/z4778395343965_f9b55b357ac6b3de90e74bac73d10923.jpg"
   },
   {
     "courseName": {
@@ -37,7 +37,7 @@
     },
     "fee": "500.000VND",
     "discountfee": "299.000VND",
-    "trailer": "https://upload.wikimedia.org/wikipedia/commons/1/15/Cat_August_2010-4.jpg"
+    "trailer": "src/assets/img/z4778395343964_9f9e578a96f51f311e2c50a53bf6bba2.jpg"
   },
   {
     "courseName": {
@@ -47,6 +47,6 @@
     },
     "fee": "500.000VND",
     "discountfee": "299.000VND",
-    "trailer": "https://upload.wikimedia.org/wikipedia/commons/1/15/Cat_August_2010-4.jpg"
+    "trailer": "src/assets/img/z4778395343964_9f9e578a96f51f311e2c50a53bf6bba2.jpg"
   }
 ]

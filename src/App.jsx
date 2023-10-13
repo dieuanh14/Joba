@@ -30,6 +30,7 @@ import ResetPwd from "./pages/forgotPwd/ResetPwd";
 import { CourseContent } from "./pages/courses/CourseContent";
 import courses from "./pages/courses/courses.json";
 import premiumCourses from "./pages/courses/premiumCourses.json";
+import ReadingCourse from "./pages/courses/ReadingCourse";
 
 function App() {
   const TRACKING_ID = "UA-288460125-1";
@@ -45,6 +46,7 @@ function App() {
         <Route path="/major" element={<Major />} />
         <Route path="/course" element={<Course />} />
         <Route path="/courseContent" element={<CourseContent />} />
+        <Route path="/readingCourse" element={<ReadingCourse />} />
         <Route path="/premium" element={<Premium />} />
         <Route path="/aboutSE" element={<AboutSE />} />
         <Route path="/register" element={<Register />} />

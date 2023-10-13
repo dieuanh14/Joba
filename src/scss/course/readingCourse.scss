@@ -1,0 +1,37 @@
+@import "../variable";
+.reading__course {
+  color: $c1-text;
+  h2 {
+    text-align: center;
+  }
+  .back__icon {
+    display: flex;
+    .btn__back {
+      color: red;
+    }
+    svg {
+      height: 1rem;
+    }
+  }
+  .main__reading {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 2fr 0.75fr;
+    .reading__right {
+      border-radius: 10px;
+      box-shadow: 0px 8px 24px #a8dadc;
+      padding: 8px;
+	  display: flex;
+	  flex-direction: column;
+	  gap: 8px;
+	  svg{
+		margin-right: 1rem;
+	  }
+      hr {
+        margin-top: 8px;
+        margin-bottom: 8px;
+        width: 14rem;
+      }
+    }
+  }
+}

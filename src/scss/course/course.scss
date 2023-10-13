@@ -1,4 +1,4 @@
-@import "./variable.scss";
+@import "../variable";
 h1 {
   text-align: center;
   font-size: 2rem;
@@ -42,7 +42,6 @@ a {
   }
 }
 .about__course {
-  .main__courses {
     display: grid;
     h4 {
       font-size: 16px;
@@ -51,10 +50,12 @@ a {
     .free__course,
     .premium__course {
       color: $c1-text;
- 
+ p{
+  font-size: 14px;
+ }
 
     }
-  }
+  
 }
 .overall__se {
   h1 {

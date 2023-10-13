@@ -2,7 +2,7 @@ import React from "react";
 import NavBar from "../components/NavBar";
 import welcome from "../assets/welcome.png";
 import star from "../assets/star.png";
-import "../components/nav.scss";
+import "../scss/nav.scss";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 function Home() {

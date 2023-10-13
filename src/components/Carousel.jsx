@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { PrevButton, NextButton } from "../js/EmblaCarouselButtons";
+import { PrevButton, NextButton } from "./EmblaCarouselButtons";
 import useEmblaCarousel from "embla-carousel-react";
 import { mediaByIndex } from "../media/media";
-import "../css/embla.scss";
+import "../scss/embla.scss";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 const Carousel = ({ slides }) => {

@@ -1,0 +1,57 @@
+@import "../variable";
+.course__page {
+  color: $c1-text;
+  .course__title {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    .left__title {
+      p {
+        letter-spacing: 0.7px;
+        line-height: 1.5rem;
+      }
+    }
+    .right__title {
+      display: grid;
+      grid-template-columns: 0.5fr 0.75fr;
+      img {
+        height: 120px;
+        width: 240px;
+      }
+      .right__title__content {
+        list-style-type: none;
+        li {
+          svg {
+            margin-right: 6px;
+          }
+          display: flex;
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
+  .course__content {
+    .course__source {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+	  gap: 2rem;
+      .left__course,.right__course {
+		svg{
+			margin-right: 6px;
+		}
+        .course__intro {
+          margin-top: 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          box-shadow: 0px 8px 24px #a8dadc;
+          border-radius: 8px;
+          height: 2rem;
+          width: 100%;
+          padding: 4px;
+        }
+      }
+    }
+  }
+}

@@ -1,12 +1,16 @@
 [
   {
     "courseName": {
-      "name": "Kiến Thức Nhập Môn IT 1",
+      "name": "Kiến Thức Nhập Môn IT ",
       "date": "2023-10-15",
-      "content": "Course content for Kiến Thức Nhập Môn IT 1."
+      "level": "Basic",
+      "video": 4,
+      "reading": 2,
+      "time": "2 hours",
+      "content": "Ở 4 chương mở đầu này, JOBA sẽ cung cấp cho bạn những thông tin tổng quan nhất về ngành IT nói chung và lập trình web nói riêng  "
     },
     "access": "120.312k",
-    "trailer": "https://www.thesprucepets.com/thmb/uQnGtOt9VQiML2oG2YzAmPErrHo=/5441x0/filters:no_upscale():strip_icc()/all-about-tabby-cats-552489-hero-a23a9118af8c477b914a0a1570d4f787.jpg"
+    "trailer": "src/assets/img/z4778395347812_feed06e2b1e6ea1969881322e3d70b66.jpg"
   },
   {
     "courseName": {
@@ -15,7 +19,7 @@
       "content": "Course content for Kiến Thức Nhập Môn IT 2."
     },
     "access": "95.732k",
-    "trailer": "https://www.thesprucepets.com/thmb/uQnGtOt9VQiML2oG2YzAmPErrHo=/5441x0/filters:no_upscale():strip_icc()/all-about-tabby-cats-552489-hero-a23a9118af8c477b914a0a1570d4f787.jpg"
+    "trailer": "src/assets/img/z4778395338144_6d51cfe132c8750b234cb0ef131972f5.jpg"
   },
   {
     "courseName": {
@@ -24,7 +28,7 @@
       "content": "Course content for Kiến Thức Nhập Môn IT 2."
     },
     "access": "95.732k",
-    "trailer": "https://www.thesprucepets.com/thmb/uQnGtOt9VQiML2oG2YzAmPErrHo=/5441x0/filters:no_upscale():strip_icc()/all-about-tabby-cats-552489-hero-a23a9118af8c477b914a0a1570d4f787.jpg"
+    "trailer": "src/assets/img/z4778395342876_1a68bb10f2b4ec1d34623b0f6f25c9c3.jpg"
   },
   {
     "courseName": {
@@ -33,7 +37,7 @@
       "content": "Course content for Kiến Thức Nhập Môn IT 2."
     },
     "access": "95.732k",
-    "trailer": "https://www.thesprucepets.com/thmb/uQnGtOt9VQiML2oG2YzAmPErrHo=/5441x0/filters:no_upscale():strip_icc()/all-about-tabby-cats-552489-hero-a23a9118af8c477b914a0a1570d4f787.jpg"
+    "trailer": "src/assets/img/z4778395343762_8ae9ee2fdeffcc357337d1479d674175.jpg"
   },
   {
     "courseName": {
@@ -42,9 +46,8 @@
       "content": "Course content for Kiến Thức Nhập Môn IT 2."
     },
     "access": "95.732k",
-    "trailer": "https://www.thesprucepets.com/thmb/uQnGtOt9VQiML2oG2YzAmPErrHo=/5441x0/filters:no_upscale():strip_icc()/all-about-tabby-cats-552489-hero-a23a9118af8c477b914a0a1570d4f787.jpg"
-  }
-  ,
+    "trailer": "src/assets/img/z4778395343189_d11f8308126f238d9b847d125644e6c9.jpg"
+  },
   {
     "courseName": {
       "name": "Kiến Thức Nhập Môn IT 6",
@@ -52,9 +55,8 @@
       "content": "Course content for Kiến Thức Nhập Môn IT 2."
     },
     "access": "95.732k",
-    "trailer": "https://www.thesprucepets.com/thmb/uQnGtOt9VQiML2oG2YzAmPErrHo=/5441x0/filters:no_upscale():strip_icc()/all-about-tabby-cats-552489-hero-a23a9118af8c477b914a0a1570d4f787.jpg"
-  }
-  ,
+    "trailer": "src/assets/img/z4778395342877_5752a242307c93528c8d7027838e9b54.jpg"
+  },
   {
     "courseName": {
       "name": "Kiến Thức Nhập Môn IT 7",
@@ -62,9 +64,8 @@
       "content": "Course content for Kiến Thức Nhập Môn IT 2."
     },
     "access": "95.732k",
-    "trailer": "https://www.thesprucepets.com/thmb/uQnGtOt9VQiML2oG2YzAmPErrHo=/5441x0/filters:no_upscale():strip_icc()/all-about-tabby-cats-552489-hero-a23a9118af8c477b914a0a1570d4f787.jpg"
-  }
-  ,
+    "trailer": "src/assets/img/z4778395342876_1a68bb10f2b4ec1d34623b0f6f25c9c3.jpg"
+  },
   {
     "courseName": {
       "name": "Kiến Thức Nhập Môn IT 8",
@@ -72,9 +73,8 @@
       "content": "Course content for Kiến Thức Nhập Môn IT 2."
     },
     "access": "95.732k",
-    "trailer": "https://www.thesprucepets.com/thmb/uQnGtOt9VQiML2oG2YzAmPErrHo=/5441x0/filters:no_upscale():strip_icc()/all-about-tabby-cats-552489-hero-a23a9118af8c477b914a0a1570d4f787.jpg"
-  }
-  ,
+    "trailer": "src/assets/img/z4778395331088_8a3a042c4e8ade60c543fd1b9674c79c.jpg"
+  },
   {
     "courseName": {
       "name": "Kiến Thức Nhập Môn IT 9",
@@ -82,6 +82,6 @@
       "content": "Course content for Kiến Thức Nhập Môn IT 2."
     },
     "access": "95.732k",
-    "trailer": "https://www.thesprucepets.com/thmb/uQnGtOt9VQiML2oG2YzAmPErrHo=/5441x0/filters:no_upscale():strip_icc()/all-about-tabby-cats-552489-hero-a23a9118af8c477b914a0a1570d4f787.jpg"
+    "trailer": "src/assets/img/z4778395338780_bb863178799bbbfaf32f79de2849ff20.jpg"
   }
 ]

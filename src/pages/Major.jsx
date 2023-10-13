@@ -1,6 +1,6 @@
 import React from "react";
 import NavBar from "../components/NavBar";
-import course from "../scss/course.scss";
+import course from "../scss/course/course.scss";
 import it from "../assets/it.png";
 import gd from "../assets/gd.png";
 import { Link } from "react-router-dom";

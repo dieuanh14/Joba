@@ -64,6 +64,7 @@ function ResetPwd() {
             <input
               className="user__name"
               required
+              placeholder="Code"
               type="text"
               value={code}
               onChange={(e) => setCode(e.target.value)}
@@ -71,6 +72,7 @@ function ResetPwd() {
             <input
               className="user__name"
               type="password"
+              placeholder="New Password"
               value={newPassword}
               onChange={(e) => setNewPassword(e.target.value)}
             />
@@ -78,6 +80,7 @@ function ResetPwd() {
             <input
               className="user__name"
               type="password"
+              placeholder="Confirm new password"
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
             />
