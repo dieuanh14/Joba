@@ -1,4 +1,3 @@
-// passwordResetSlice.js
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 export const resetPassword = createAsyncThunk(
@@ -39,7 +38,6 @@ export const resetPassword = createAsyncThunk(
   }
 );
 
-// Create the password reset slice
 const passwordResetSlice = createSlice({
   name: 'passwordReset',
   initialState: { status: 'idle', error: null },

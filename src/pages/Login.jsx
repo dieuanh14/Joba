@@ -7,10 +7,12 @@ import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { loginUser } from "../store/features/UserSlice";
+import { setAccessToken } from "../store/features/AuthSlice";
+
 import { Link } from "react-router-dom";
 import { GoogleLogin } from "@react-oauth/google";
 import { setLoggedIn } from "../store/features/UserSlice";
-
+import Swal from "sweetalert2";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -30,17 +32,15 @@ const Login = () => {
           provider: "google",
           idToken: response1.credential,
         }),
-      });
-      console.log(response1);
+      });     
       if (response.ok) {
         dispatch(setLoggedIn(true));
+        Swal.fire({
+          icon: 'success',
+          text: 'Login Successfully!',
+        })
         const responseData = await response.json();
         if (responseData.status === 0) {
-          await Swal.fire({
-            icon: "error",
-            title: "Oops...",
-            text: "Something went wrong! Your account has been suspended",
-          });
           window.location.reload();
         } else {
           localStorage.setItem("user", JSON.stringify(responseData));
@@ -50,8 +50,6 @@ const Login = () => {
             navigate('/');
           }
         }
-        console.log("login data", responseData);
-        console.log("response", response);
       } else {
         await Swal.fire({
           icon: "error",

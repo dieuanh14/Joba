@@ -9,57 +9,385 @@
       "time": "2 hours",
       "content": "Ở 4 chương mở đầu này, JOBA sẽ cung cấp cho bạn những thông tin tổng quan nhất về ngành IT nói chung và lập trình web nói riêng  "
     },
+    "tutorial": [
+      {
+        "session": "1. Khái niệm kỹ thuật",
+        "tutorialName": " Mô Hình Client - Server",
+        "time": "10 mins",
+        "video": {
+          "url": "https://www.youtube.com/embed/zoELAirXMJY?si=QvXxrBf7lI54LPD4",
+          "date": "2023-10-20",
+          "description": "là mô hình mạng máy tính trong đó các máy tính con được đóng vai trò như một máy khách, chúng làm nhiệm vụ gửi yêu cầu đến các máy chủ. Để máy chủ xử lý yêu cầu và trả kết quả về cho máy khách đó.",
+          "operation": " server chấp nhận tất cả các yêu cầu hợp lệ từ mọi nơi khác nhau trên Internet, sau đó trả kết quả về máy tính đã gửi yêu cầu đó. Máy tính được coi là máy khách khi chúng làm nhiệm vụ gửi yêu cầu đến các máy chủ và đợi câu trả lời được gửi về.  Để máy khách và máy chủ có thể giao tiếp được với nhau thì giữa chúng phải có một chuẩn nhất định, và chuẩn đó được gọi là giao thức.    Một số giao thức được sử dụng phổ biến hiện nay như: HTTPS, TCP/IP, FTP,...     ",
+          "advantage": "Giúp chúng ta có thể làm việc trên bất kì một máy tính nào có hỗ trợ giao thức truyền thông.",
+          "advantage1": "Có thể có nhiều server cùng làm một dịch vụ",
+          "advantage2": "Hỗ trợ người dùng nhiều dịch vụ đa dạng và sự tiện dụng",
+          "advantage3": "Cung cấp một nền tảng lý tưởng, cho phép cung cấp tích hợp các kỹ thuật hiện đại như mô hình thiết kế hướng đối tượng",
+          "disadvantage": "Vấn đề bảo mật dữ liệu thông tin đôi khi còn chưa được an toàn lắm. "
+        }
+      },
+      {
+        "tutorialName": "Domain - tên miền",
+        "time": "12 mins",
+        "video": {
+          "url": "https://www.youtube.com/embed/M62l1xA5Eu8?si=HUnRhK3yMX7qFVBX",
+          "date": "2023-10-21",
+          "description": "second",
+          "operation": " sddddddddderver chấp nhận tất cả các yêu cầu hợp lệ từ mọi nơi khác nhau trên Internet, sau đó trả kết quả về máy tính đã gửi yêu cầu đó. Máy tính được coi là máy khách khi chúng làm nhiệm vụ gửi yêu cầu đến các máy chủ và đợi câu trả lời được gửi về.  Để máy khách và máy chủ có thể giao tiếp được với nhau thì giữa chúng phải có một chuẩn nhất định, và chuẩn đó được gọi là giao thức.    Một số giao thức được sử dụng phổ biến hiện nay như: HTTPS, TCP/IP, FTP,...     ",
+          "advantage": "Giúp chúng ta có thể làm việc trên bất kì một máy tính nào có hỗ trợ giao thức truyền thông.",
+          "advantage1": "Có thể có nhiều server cùng làm một dịch vụ",
+          "advantage2": "Hỗ trợ người dùng nhiều dịch vụ đa dạng và sự tiện dụng",
+          "advantage3": "Cung cấp một nền tảng lý tưởng, cho phép cung cấp tích hợp các kỹ thuật hiện đại như mô hình thiết kế hướng đối tượng",
+          "disadvantage": "Vấn đề bảo mật dữ liệu thông tin đôi khi còn chưa được an toàn lắm. "
+        }
+      },
+      {
+        "session": "2. Môi trường, con người IT",
+        "time": "1 hour",
+        "tutorialName": "Những điều cần biết về IT",
+        "video": {
+          "url": "https://www.youtube.com/embed/CyZ_O7v62h4?si=Maj3BI66zXjAwsdn",
+          "date": "2023-10-21",
+          "description": "Description for Tutorial 2."
+        }
+      },
+      {
+        "tutorialName": "Học IT cần tố chất gì?",
+        "time": "25 mins",
+
+        "video": {
+          "url": "https://www.youtube.com/embed/CyZ_O7v62h4?si=Maj3BI66zXjAwsdn",
+          "date": "2023-10-21",
+          "description": "Description for Tutorial 3."
+        }
+      },
+      {
+        "session": "3. Định hướng tương lai",
+        "time": "25 mins",
+        "tutorialName": "Làm sao để có thu nhập cao",
+
+        "video": {
+          "url": "https://www.youtube.com/embed/oF7isq9IjZM?si=XInc7DA7KP5JGLiO",
+          "date": "2023-10-21",
+          "description": "Tuong lai."
+        }
+      },
+      {
+        "tutorialName": "Học IT xong ra làm gì? ",
+        "time": "1 hour",
+        "video": {
+          "url": "https://www.youtube.com/embed/zoELAirXMJY?si=TecWOpgoy9yO1zKU",
+          "date": "2023-10-21",
+          "description": "Description for Tutorial 2."
+        }
+      },
+      {
+        "session": "4. Thực tập ứng tuyển",
+        "time": "35 mins",
+        "tutorialName": "Sinh viên thực tập, ứng tuyển          ",
+        "video": {
+          "url": "https://www.youtube.com/embed/YH-E4Y3EaT4?si=vJav7olIGRRjy-Xx",
+          "date": "2023-10-21",
+          "description": "Sv"
+        }
+      },
+      {
+        "tutorialName": "Ứng tuyển, xin việc làm",
+        "time": "1 hour",
+        "video": {
+          "url": "https://youtu.be/M62l1xA5Eu8?si=9fOpI_SQwTj7vzja",
+          "date": "2023-10-21",
+          "description": "Description for Tutorial 2."
+        }
+      }
+    ],
     "access": "120.312k",
     "trailer": "src/assets/img/z4778395347812_feed06e2b1e6ea1969881322e3d70b66.jpg"
   },
+
   {
     "courseName": {
-      "name": "Kiến Thức Nhập Môn IT 2",
-      "date": "2023-10-18",
-      "content": "Course content for Kiến Thức Nhập Môn IT 2."
+      "name": "Web Responsive with Grid System ",
+      "date": "2023-10-15",
+      "level": "Basic",
+      "video": 4,
+      "reading": 2,
+      "time": "2 hours",
+      "content": "Trong khóa này, JOBA sẽ hướng dẫn cho bạn cách xây dựng giao diện web responsive với Grid System, tương tự với Bootstrap 4."
     },
-    "access": "95.732k",
-    "trailer": "src/assets/img/z4778395338144_6d51cfe132c8750b234cb0ef131972f5.jpg"
-  },
-  {
-    "courseName": {
-      "name": "Kiến Thức Nhập Môn IT 3",
-      "date": "2023-10-18",
-      "content": "Course content for Kiến Thức Nhập Môn IT 2."
-    },
-    "access": "95.732k",
-    "trailer": "src/assets/img/z4778395342876_1a68bb10f2b4ec1d34623b0f6f25c9c3.jpg"
-  },
-  {
-    "courseName": {
-      "name": "Kiến Thức Nhập Môn IT 4",
-      "date": "2023-10-18",
-      "content": "Course content for Kiến Thức Nhập Môn IT 2."
-    },
-    "access": "95.732k",
-    "trailer": "src/assets/img/z4778395343762_8ae9ee2fdeffcc357337d1479d674175.jpg"
-  },
-  {
-    "courseName": {
-      "name": "Kiến Thức Nhập Môn IT 5",
-      "date": "2023-10-18",
-      "content": "Course content for Kiến Thức Nhập Môn IT 2."
-    },
-    "access": "95.732k",
+    "tutorial": [
+      {
+        "session": "1. Bắt đầu",
+        "tutorialName": "Responsive là gì? ",
+        "duration": "20 mins",
+        "video": {
+          "url": "https://www.youtube.com/embed/uz5LIP85J5Y?si=JehPsTKfBaZ_zIsh",
+          "date": "2023-10-16",
+          "description": "Responsive là một khái niệm trong thiết kế và phát triển trang web, nó đề cập đến khả năng của một trang web hoặc ứng dụng web thích nghi với các kích thước màn hình khác nhau và các thiết bị đa dạng. Mục tiêu của thiết kế responsive là đảm bảo rằng trang web sẽ hiển thị và hoạt động tốt trên cả máy tính, máy tính bảng và điện thoại di động, cũng như trên các loại màn hình khác. ",
+          "operation":"Thiết kế responsive giúp đảm bảo rằng người dùng có trải nghiệm tốt trên mọi loại thiết bị và kích thước màn hình khác nhau, đồng thời cải thiện tối ưu hóa cho công cụ tìm kiếm (SEO) và tạo ra trải nghiệm người dùng thân thiện hơn. "
+       
+        }
+      },
+      {
+        "tutorialName": "Chúng ta sẽ làm gì?",
+        "duration": " 65 mins",
+        "video": {
+          "url": "https://www.youtube.com/embed/5QT0aeovTTY?si=Y2_sjYZgfJEW3CJv",
+          "date": "2023-10-16",
+          "description": ""
+        }
+      },
+
+      {
+        "session": "2 .Viewport, @media, breakpoint",
+        "tutorialName": "Khái niệm Viewport",
+        "duration": "20 mins",
+
+        "video": {
+          "url": "https://youtu.be/XJiq_d0vGCQ?si=OTX2CvdcYl0o-zeD",
+          "date": "2023-02-07",
+          "description": "dhdhhdf"
+        }
+      },
+      {
+        "tutorialName": "Media query (@media)",
+        "duration": "20 mins",
+        "video": {
+          "url": "https://youtu.be/YgkzJkmDP3U?si=cY__1zLI9mPNJr2S",
+          "date": "2023-02-13",
+          "description": "dhdhhdf"
+        }
+      },
+
+      {
+        "session": "3. Grid System",
+        "tutorialName": "Khái niệm Breakpoints?",
+        "duration": "23 mins",
+        "video": {
+          "url": "https://youtu.be/0i37IU0wjlI?si=i2fbD3TeRI4KVYat",
+          "date": "2023-02-10",
+          "description": "dhdhhdf"
+        }
+      },
+      {
+        "tutorialName": "Hệ thống lưới (Grid system) ",
+        "duration": "10 mins",
+        "video": {
+          "url": "https://youtu.be/lvD5K50TZPk?si=eyqofRyGmyTiNm_n",
+          "date": "2023-02-10",
+          "description": "dhdhhdf"
+        }
+      },
+
+      {
+        "session": "4. Áp dụng thực tế",
+        "duration": "28 mins",
+        "tutorialName": "Tạo thư viện? ",
+        "video": {
+          "url": "https://youtu.be/ScZaj1eG7DQ?si=YninL1aRcYK7A9NL",
+          "date": "2023-02-10",
+          "description": "dhdhhdf"
+        }
+      },
+      {
+        "duration": "13 mins 50s",
+        "tutorialName": "Tạo đối tượng Grid ",
+        "video": {
+          "url": "https://youtu.be/SZXvXXb_7aA?si=ZpyVGwz4BGWsf8YP",
+          "date": "2023-02-10",
+          "description": "dhdhhdf"
+        }
+      }
+    ],
+    "access": "120.312k",
     "trailer": "src/assets/img/z4778395343189_d11f8308126f238d9b847d125644e6c9.jpg"
   },
   {
     "courseName": {
-      "name": "Kiến Thức Nhập Môn IT 6",
-      "date": "2023-10-18",
-      "content": "Course content for Kiến Thức Nhập Môn IT 2."
+      "name": "Lập trình C++ cơ bản",
+      "date": "2023-10-15",
+      "level": "Hard",
+      "video": 4,
+      "reading": 2,
+      "time": "2 hours",
+      "content": "Mục tiêu của khóa học này nhằm giúp các bạn nắm được các khái niệm căn cơ của lập trình, giúp các bạn có nền tảng vững chắc để chinh phục con đường trở thành một lập trình viên."
     },
-    "access": "95.732k",
-    "trailer": "src/assets/img/z4778395342877_5752a242307c93528c8d7027838e9b54.jpg"
+    "tutorial": [
+      {
+        "session": "1 . Giới thiệu ",
+        "tutorialName": "Giới thiệu khóa học ",
+        "video": {
+          "url": "https://www.youtube.com/embed/Da1tpV9TMU0?si=EdKmbjhjkcw6HS9m",
+          "date": "2023-10-16",
+          "description": "Nó là một ngôn ngữ bậc trung, kết hợp các tính năng của ngôn ngữ bậc cao và bậc thấp. C++ là một ngôn ngữ đa dụng, được sử dụng để phát triển nhiều loại ứng dụng khác nhau, bao gồm hệ điều hành, ứng dụng máy tính để bàn, ứng dụng di động, trò chơi điện tử, phần mềm kỹ thuật và khoa học. ",
+          "operation": "C++ là một ngôn ngữ lập trình mạnh mẽ và linh hoạt, hỗ trợ lập trình hướng đối tượng, một mô hình lập trình dựa trên các đối tượng. Điều này giúp lập trình viên tổ chức mã một cách hiệu quả hơn và dễ bảo trì hơn.          ",
+          "advantage": "Giúp chúng ta có thể làm việc trên bất kì một máy tính nào có hỗ trợ giao thức truyền thông.",
+          "advantage1": "Hiệu suất cao",
+          "advantage2": "Định hướng đối tượng",
+          "advantage3": "Tính đa năng",
+          "disadvantage": "Không thân thiện với người dùng: C++ không phải là một ngôn ngữ thân thiện với người dùng như các ngôn ngữ lập trình cấp cao khác.",
+          "disadvantage1": "Có thể gây lỗi: C++ cho phép lập trình viên truy cập và kiểm soát bộ nhớ hệ thống trực tiếp, điều này có thể làm tăng nguy cơ lỗi."
+        }
+      },
+      {
+        "tutorialName": "Hướng dẫn cài đặt và sử dụng Dev - C++",
+        "video": {
+          "url": "https://www.youtube.com/embed/vFhKEYRBmVY?si=DTijO94dUsNQESOp",
+          "date": "2023-02-07",
+          "description": "là một môi trường phát triển tích hợp (IDE) miễn phí và mã nguồn mở được sử dụng để lập trình trong C và C++. Nó được phát triển bởi Colin Laplace và được phát hành lần đầu tiên vào năm 1998.",
+          "advantage": "Trình soạn thảo mã tích hợp với hỗ trợ cú pháp và hoàn thành mã",
+          "advantage1": "Trình biên dịch tích hợp dựa trên GCC",
+          "advantage2": "Trình gỡ lỗi tích hợp",
+          "advantage3": "Hỗ trợ cho các thư viện và tiện ích bổ sung của bên thứ ba"
+        }
+      },
+
+      {
+        "session": "2 .Biến và kiểu dữ liệu",
+        "tutorialName": "Biến và nhập dữ liệu",
+        "video": {
+          "url": "https://www.youtube.com/embed/vFhKEYRBmVY?si=DTijO94dUsNQESOp",
+          "date": "2023-02-07",
+          "description": "Biến và nhập xuất dữ liệu là hai khái niệm cơ bản trong lập trình C++. Biến được sử dụng để lưu trữ dữ liệu, trong khi nhập xuất dữ liệu được sử dụng để giao tiếp với người dùng và thế giới bên ngoài."
+        }
+      },
+
+      {
+        "tutorialName": "Toán tử gán và toán tử số học - Toán tử quan hệ và logic",
+        "video": {
+          "url": "https://www.youtube.com/embed/THAJMtm53ZQ?si=PoLguDi3VZfcgo_6",
+          "date": "2023-02-09",
+          "description": "Toán tử gán được sử dụng để gán giá trị cho biến. Trong hầu hết các ngôn ngữ lập trình, toán tử gán thường là dấu =. Nó có nhiệm vụ gán giá trị bên phải của biểu thức cho biến bên trái của nó. Toán tử số học được sử dụng để thực hiện các phép tính số học trên các giá trị số.  "
+        }
+      },
+
+      {
+        "session": "3 .Cấu trúc điều khiển và vòng lặp",
+        "tutorialName": "Cấu trức if else và vòng lặp",
+        "video": {
+          "url": "https://www.youtube.com/embed/1ppDCzoB03k?si=ii9GolK_ZvsM3KBM",
+          "date": "2023-02-10",
+          "description": "Cấu trúc If Else là một cấu trúc điều khiển cơ bản được sử dụng trong nhiều ngôn ngữ lập trình, bao gồm C++. Cấu trúc này cho phép lập trình viên kiểm tra một điều kiện và thực thi một hành động nếu điều kiện đó là đúng, hoặc thực thi một hành động khác nếu điều kiện đó là sai."
+        }
+      },
+      {
+        "tutorialName": "Toán tử 3 ngôi ",
+        "video": {
+          "url": "https://www.youtube.com/embed/YKeKmpcMcQY?si=6RZaGLfbviU9EbYh",
+          "date": "2023-02-10",
+          "description": "hay còn gọi là toán tử điều kiện trong C++, là một toán tử được cấu tạo bởi ba đối số gồm biểu thức điều kiện, kết quả khi điều kiện đúng và kết quả khi điều kiện sai. Kết quả ở đây có thể là một giá trị được trả về, cũng có thể là một xử lý sẽ thực hiện sau đó tùy thuộc vào điều kiện chỉ định là đúng hay sai."
+        }
+      },
+      {
+        "session": "4 .Làm việc với file",
+        "tutorialName": "Làm việc với file text ",
+        "video": {
+          "url": "https://www.youtube.com/embed/LekUWlASyMY?si=t5jRdQT2HSlf6rcB",
+          "date": "2023-02-25",
+          "description": " liệu thường sẽ được sinh ra sẵn và đặt trong một file text nào đó. Nhiệm vụ của người làm bài là nhận dữ liệu từ file text đó, thiết kế thuật toán sau đó đưa kết quả ra một file text tương đương (hoặc vẫn đưa kết quả ra cửa sổ thực thi - tùy vào yêu cầu bài toán). Rất may mắn là ngôn ngữ C/C++ cung cấp những cú pháp rất đơn giản để thực hiện nhập - xuất dữ liệu bằng file. "
+        }
+      },
+      {
+        "tutorialName": "Làm việc với file nhận phân ",
+        "video": {
+          "url": "https://www.youtube.com/embed/UvNdzdhkDJQ?si=zqvBU9IGWSGASSAF",
+          "date": "2023-02-27",
+          "description": "File nhị phân là file chứa nội dung không nhất thiết phải là ASCII text"
+        }
+      }
+    ],
+    "access": "120.312k",
+    "trailer": "src/assets/img/z4778395343762_8ae9ee2fdeffcc357337d1479d674175.jpg"
   },
   {
     "courseName": {
-      "name": "Kiến Thức Nhập Môn IT 7",
+      "name": "HTML CSS từ Zero đến Hero",
+      "date": "2023-10-15",
+      "level": "Basic",
+      "video": 4,
+      "reading": 2,
+      "time": "2 hours",
+      "content": "Đây được xem là bước đầu cho các kỹ năng xây dựng trang web với ngôn ngữ HTML, CSS. Kết thúc khoá học, các bạn có thể tạo được trang web cơ bản. "
+    },
+    "tutorial": [
+      {
+        "session": "1. Bắt đầu",
+        "tutorialName": "Tìm hiều về HTML và CSS",
+        "video": {
+          "url": "https://youtu.be/4J6d8cr0X48?si=aym4IM04JT0Ksu8V",
+          "date": "2023-02-07",
+          "description": "dhdhhdf"
+        }
+      },
+      {
+        "tutorialName": "Sử dụng CSS cơ bản trong HTML",
+        "video": {
+          "url": "https://youtu.be/hzn_VKpGdTg?si=eqU2H_G5_OFcMurm",
+          "date": "2023-02-09",
+          "description": "dhdhhdf"
+        }
+      },
+      {
+        "session": "2. Làm quen với HTML",
+        "tutorialName": "Cấu trúc của 1 file HTML ",
+        "video": {
+          "url": "https://youtu.be/LYnrFSGLCl8?si=PCeL1RN0-W9uaqT2",
+          "date": "2023-10-16",
+          "description": "dhdhhdf"
+        }
+      },
+
+      {
+        "tutorialName": "Các thẻ HTML thông dụng",
+        "video": {
+          "url": "https://youtu.be/AzmdwZ6e_aM?si=h7hyOsoQhn10Q9P6",
+          "date": "2023-10-16",
+          "description": "dhdhhdf"
+        }
+      },
+
+      {
+        "session": "3. Làm quen với CSS",
+        "tutorialName": "ID và Class",
+        "video": {
+          "url": "https://youtu.be/4J6d8cr0X48?si=aym4IM04JT0Ksu8V",
+          "date": "2023-02-07",
+          "description": "dhdhhdf"
+        }
+      },
+      {
+        "tutorialName": "CSS selectors cơ bản",
+        "video": {
+          "url": "https://youtu.be/hzn_VKpGdTg?si=eqU2H_G5_OFcMurm",
+          "date": "2023-02-09",
+          "description": "dhdhhdf"
+        }
+      },
+      {
+        "session": "4. Một số tricks và tips",
+        "tutorialName": "Các cách căn giữa trong CSS",
+        "video": {
+          "url": "https://youtu.be/I2-m_kWZp_Y?si=Lr3tzTA_UIQ_MAxW",
+          "date": "2023-02-13",
+          "description": "dhdhhdf"
+        }
+      },
+      {
+        "tutorialName": "Hiển thị ảnh dự phòng khi ảnh chính lỗi",
+        "video": {
+          "url": "https://youtu.be/ycb6ZDgX224?si=OvlLWNutSqnSeTV-",
+          "date": "2023-02-10",
+          "description": "dhdhhdf"
+        }
+      }
+    ],
+    "access": "120.312k",
+    "trailer": "src/assets/img/z4778395342877_5752a242307c93528c8d7027838e9b54.jpg"
+  },
+
+  {
+    "courseName": {
+      "name": "Javascript cơ bản",
       "date": "2023-10-18",
       "content": "Course content for Kiến Thức Nhập Môn IT 2."
     },
@@ -68,7 +396,7 @@
   },
   {
     "courseName": {
-      "name": "Kiến Thức Nhập Môn IT 8",
+      "name": "ReactJS",
       "date": "2023-10-18",
       "content": "Course content for Kiến Thức Nhập Môn IT 2."
     },
@@ -77,7 +405,7 @@
   },
   {
     "courseName": {
-      "name": "Kiến Thức Nhập Môn IT 9",
+      "name": " Ubuntu",
       "date": "2023-10-18",
       "content": "Course content for Kiến Thức Nhập Môn IT 2."
     },

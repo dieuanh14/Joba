@@ -1,27 +1,27 @@
 [
   {
     "courseName": {
-      "name": "Kiến Thức Nhập Môn IT 7",
+      "name": "Javascript cơ bản",
       "date": "2023-10-18",
       "content": "Course content for Kiến Thức Nhập Môn IT 2."
     },
     "fee": "500.000VND",
     "discountfee": "299.000VND",
-    "trailer": "src/assets/img/z4778395317768_221677d2d7c20790522f11ec8d23c344.jpg"
+    "trailer": "src/assets/img/z4778395342876_1a68bb10f2b4ec1d34623b0f6f25c9c3.jpg"
   },
   {
     "courseName": {
-      "name": "Kiến Thức Nhập Môn IT 7",
+      "name": "Javascript nâng cao",
       "date": "2023-10-18",
       "content": "Course content for Kiến Thức Nhập Môn IT 2."
     },
     "fee": "500.000VND",
     "discountfee": "299.000VND",
-    "trailer": "src/assets/img/z4778395331877_f7d671cc721b6eaecbd4c7967e5c0fa6.jpg"
+    "trailer": "src/assets/img/z4778395338144_6d51cfe132c8750b234cb0ef131972f5.jpg"
   },
   {
     "courseName": {
-      "name": "Kiến Thức Nhập Môn IT 7",
+      "name": "Javascript Pro",
       "date": "2023-10-18",
       "content": "Course content for Kiến Thức Nhập Môn IT 2."
     },
@@ -31,7 +31,7 @@
   },
   {
     "courseName": {
-      "name": "Kiến Thức Nhập Môn IT 7",
+      "name": "NextJs Pro",
       "date": "2023-10-18",
       "content": "Course content for Kiến Thức Nhập Môn IT 2."
     },

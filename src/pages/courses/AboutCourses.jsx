@@ -21,7 +21,6 @@ const AboutCourses = ({ courses, premiumCourses }) => {
   const handleCourseClick = (selectedCourse) => {
     navigate("/courseContent", { state: { selectedCourse } });
   };
-
   const courseGroups = [];
   for (let i = 0; i < courses.length; i += 4) {
     const group = courses.slice(i, i + 4);
@@ -104,17 +103,16 @@ const AboutCourses = ({ courses, premiumCourses }) => {
                 >
                   {group.map((course, courseIndex) => (
                     <div key={courseIndex}>
-                      <Link to={`/courseContent/${course.courseName.name}`}>
-                        <img
-                          src={course.trailer}
-                          alt=""
-                          style={{
-                            width: "14rem",
-                            height: "7rem",
-                            borderRadius: "10px",
-                          }}
-                        />
-                      </Link>
+                      <img
+                        onClick={() => handleCourseClick(course)}
+                        src={course.trailer}
+                        alt=""
+                        style={{
+                          width: "14rem",
+                          height: "7rem",
+                          borderRadius: "10px",
+                        }}
+                      />
                       <span>{course.courseName.name}</span>
                       <span style={{ display: "flex" }}>
                         <p

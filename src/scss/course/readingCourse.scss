@@ -5,32 +5,42 @@
     text-align: center;
   }
   .back__icon {
-    display: flex;
-    .btn__back {
-      color: red;
-    }
-    svg {
-      height: 1rem;
+    a {
+      display: flex;
+      color: red !important;
+      svg {
+        height: 17px;
+      }
     }
   }
-  .main__reading {
+  .main__reading__course {
     margin-top: 2rem;
     display: grid;
-    grid-template-columns: 2fr 0.75fr;
-    .reading__right {
-      border-radius: 10px;
+    grid-template-columns: 2fr 1fr;
+    .left__reading__course {
+      .warning {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+    .right__reading__course {
+      overflow: scroll;
+      height: 30rem;
+      border-radius: 12px;
       box-shadow: 0px 8px 24px #a8dadc;
       padding: 8px;
-	  display: flex;
-	  flex-direction: column;
-	  gap: 8px;
-	  svg{
-		margin-right: 1rem;
-	  }
-      hr {
-        margin-top: 8px;
-        margin-bottom: 8px;
-        width: 14rem;
+      display: flex;
+      flex-direction: column;
+
+      h4 {
+        padding: 0;
+        text-align: center;
+      }
+      .summary__course {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
       }
     }
   }
