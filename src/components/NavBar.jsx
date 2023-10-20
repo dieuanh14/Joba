@@ -5,7 +5,7 @@ import * as React from "react";
 import Container from "@mui/material/Container";
 import logo from "../assets/logo.png";
 import { NavLink } from "react-router-dom";
-import "./nav.scss";
+import "../scss/nav.scss";
 import { styled } from "@mui/system";
 
 function NavBar() {

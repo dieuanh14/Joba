@@ -1,5 +1,5 @@
 import * as React from "react";
-// import "../../scss/dashboard.scss";
+import "../../scss/dashboard.scss";
 import { Button, Container } from "@mui/material";
 import { Link } from "react-router-dom";
 import "../../components/dashboard/dashboardBody.scss";
@@ -14,6 +14,7 @@ import {
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
 import Calendar from "react-calendar";
+import UserTable from "../../components/UserTable";
 ChartJs.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 
 export default function Dasboard() {
@@ -60,7 +61,7 @@ export default function Dasboard() {
         <h1>Dashboard</h1>
         <div className="nav__header">
           <Button className="income__btn">
-            <Link to="/dashboard">
+            <Link to="/dashboard" style={{ fontSize: "12px" }}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="42"
@@ -73,11 +74,14 @@ export default function Dasboard() {
                   fill="#F1FAEE"
                 />
               </svg>
-              Income
+              User Management
             </Link>
           </Button>
           <Button className="access__btn">
-            <Link to="/dashboard/accessibility">
+            <a
+              href="https://analytics.google.com/analytics/web/#/p410486537/reports/intelligenthome"
+              target="_blank"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="41"
@@ -91,22 +95,11 @@ export default function Dasboard() {
                 />
               </svg>
               Access
-            </Link>
+            </a>
           </Button>
         </div>
-        <div className="main__body">
-          <div className="chart__body">
-            <div className="total">
-              <span>Total: </span>
-              <span>2.000.000 VND </span>
-            </div>
-            <div className="chart">
-              <Bar data={data} options={options} />
-            </div>
-          </div>
-          <div className="calendar__body">
-            <Calendar />
-          </div>
+        <div className="main__table">
+          <UserTable />
         </div>
       </Container>
     </div>

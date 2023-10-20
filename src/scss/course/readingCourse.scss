@@ -1,0 +1,47 @@
+@import "../variable";
+.reading__course {
+  color: $c1-text;
+  h2 {
+    text-align: center;
+  }
+  .back__icon {
+    a {
+      display: flex;
+      color: red !important;
+      svg {
+        height: 17px;
+      }
+    }
+  }
+  .main__reading__course {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    .left__reading__course {
+      .warning {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+    .right__reading__course {
+      overflow: scroll;
+      height: 30rem;
+      border-radius: 12px;
+      box-shadow: 0px 8px 24px #a8dadc;
+      padding: 8px;
+      display: flex;
+      flex-direction: column;
+
+      h4 {
+        padding: 0;
+        text-align: center;
+      }
+      .summary__course {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+  }
+}

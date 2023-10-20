@@ -7,6 +7,8 @@ import { Button } from "@mui/material";
 import "../../scss/login.scss";
 import media from "../../assets/img/morphis-personal-data-protection.png";
 import media1 from "../../assets/img/morphis-blurred-red-star-in-glass.png";
+import Swal from "sweetalert2";
+
 function ResetPwd() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -18,7 +20,11 @@ function ResetPwd() {
     dispatch(resetPassword({ code, newPassword, confirmPassword }))
       .unwrap()
       .then(() => {
-        navigate("/login"); // Navigate to the login page
+        Swal.fire({
+          icon: 'success',
+          text: 'Change Password Successfully!',
+        })
+        navigate("/login"); 
       })
       .catch((error) => {
         console.error("Error resetting the password:", error);
@@ -64,6 +70,7 @@ function ResetPwd() {
             <input
               className="user__name"
               required
+              placeholder="Code"
               type="text"
               value={code}
               onChange={(e) => setCode(e.target.value)}
@@ -71,6 +78,7 @@ function ResetPwd() {
             <input
               className="user__name"
               type="password"
+              placeholder="New Password"
               value={newPassword}
               onChange={(e) => setNewPassword(e.target.value)}
             />
@@ -78,6 +86,7 @@ function ResetPwd() {
             <input
               className="user__name"
               type="password"
+              placeholder="Confirm new password"
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
             />

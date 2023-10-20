@@ -1,0 +1,72 @@
+@import "../variable";
+.course__page {
+  color: $c1-text;
+  .course__title {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    .left__title {
+      p {
+        letter-spacing: 0.7px;
+        line-height: 1.5rem;
+      }
+    }
+    .right__title {
+      display: grid;
+      grid-template-columns: 0.5fr 0.75fr;
+      img {
+        height: 120px;
+        width: 240px;
+      }
+      .right__title__content {
+        list-style-type: none;
+        li {
+          svg {
+            margin-right: 6px;
+          }
+          display: flex;
+          margin-bottom: 12px;
+        }
+      }
+    }
+  }
+  .course__video {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    gap: 2rem;
+    .tutorial__session {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .tutorial-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px;
+    border: 1px solid #a8dadc;
+    box-shadow: 0px 8px 24px #a8dadc;
+    border-radius: 8px;
+  }
+  a {
+    display: flex;
+    margin-top: 1rem;
+  }
+  .tutorial-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+  }
+
+  .tutorial-name {
+    font-weight: 500;
+  }
+
+  .tutorial-duration {
+    font-weight: 400;
+  }
+}

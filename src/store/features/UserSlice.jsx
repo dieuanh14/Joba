@@ -1,26 +1,29 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-export const loginUser = createAsyncThunk("user/loginUser", async (userCredentials) => {
-  try {
-    const response = await axios.post(
-      "https://exe-backend.azurewebsites.net/api/v1/User/Login",
-      userCredentials
-    );
-    console.log("API Response:", response.data); // Add this line to inspect the response structure
-    localStorage.setItem("user", JSON.stringify(response.data));
-    return response.data;
-  } catch (error) {
-    throw error;
+export const loginUser = createAsyncThunk(
+  "user/loginUser",
+  async (userCredentials) => {
+    try {
+      const response = await axios.post(
+        "https://backend-backup.azurewebsites.net/api/v1/User/Login",
+        userCredentials
+      );
+      console.log("API Response:", response.data); // Add this line to inspect the response structure
+      localStorage.setItem("user", JSON.stringify(response.data));
+      return response.data;
+    } catch (error) {
+      throw error;
+    }
   }
-});
+);
 
 export const registerUser = createAsyncThunk(
   "user/registerUser",
   async (userData) => {
     try {
       const response = await axios.post(
-        "https://exe-backend.azurewebsites.net/api/v1/User/Register",
+        "https://backend-backup.azurewebsites.net/api/v1/User/Register",
         userData
       );
       console.log(userData);
@@ -32,22 +35,40 @@ export const registerUser = createAsyncThunk(
     }
   }
 );
+export const fetchUserList = createAsyncThunk(
+  "user/fetchUserList",
+  async () => {
+    try {
+      const response = await axios.get(
+        "https://backend-backup.azurewebsites.net/api/v1/User/GetAllUser"
+      );
+      if (response.status !== 200) {
+        throw new Error("Failed to fetch user list");
+      }
+
+      return response.data;
+    } catch (error) {
+      throw error;
+    }
+  }
+);
 
 const userSlice = createSlice({
   name: "user",
   initialState: {
+    userList: [],
+    status: "idle",
+    error: null,
     role: null,
     loading: false,
     user: {
       email: null,
     },
-    error: null,
     isLoggedIn: false,
     registrationLoading: false,
     registrationError: null,
   },
   reducers: {
-
     loginSuccess: (state) => {
       state.isLoggedIn = true;
       console.log(state.isLoggedIn);
@@ -58,7 +79,6 @@ const userSlice = createSlice({
     setLoggedIn: (state, action) => {
       state.isLoggedIn = action.payload;
     },
-
   },
   extraReducers: (builder) => {
     builder
@@ -95,27 +115,18 @@ const userSlice = createSlice({
         state.registrationLoading = false;
         state.registrationError = action.error.message;
       })
-      // .addCase(loginWithGoogle.pending, (state) => {
-      //   state.loading = true;
-      //   state.user = null;
-      //   state.error = null;
-      // })
-      // .addCase(loginWithGoogle.fulfilled, (state, action) => {
-      //   state.loading = false;
-      //   state.user = action.payload;
-      //   console.log(action.payload);
-      //   state.error = null;
-      //   state.isLoggedIn = true;
-      // })
-      // .addCase(loginWithGoogle.rejected, (state, action) => {
-      //   state.loading = false;
-      //   state.user = null;
-      //   if (action.error.message === "Request failed with status 401") {
-      //     state.error = "access denied! Invalid user";
-      //   } else {
-      //     state.error = action.error.message;
-      //   }
-      // });
+      .addCase(fetchUserList.pending, (state) => {
+        state.status = "loading";
+        state.error = null;
+      })
+      .addCase(fetchUserList.fulfilled, (state, action) => {
+        state.status = "succeeded";
+        state.userList = action.payload;
+      })
+      .addCase(fetchUserList.rejected, (state, action) => {
+        state.status = "failed";
+        state.error = action.error.message;
+      });
   },
 });
 export const { loginSuccess, logoutSuccess, setLoggedIn } = userSlice.actions;

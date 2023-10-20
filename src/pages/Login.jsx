@@ -10,7 +10,7 @@ import { loginUser } from "../store/features/UserSlice";
 import { Link } from "react-router-dom";
 import { GoogleLogin } from "@react-oauth/google";
 import { setLoggedIn } from "../store/features/UserSlice";
-
+import Swal from "sweetalert2";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -18,7 +18,7 @@ const Login = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false); 
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const baseUrl = `https://exe-backend.azurewebsites.net/api/v1/User/LoginWithGoogle`;
+  const baseUrl = `https://backend-backup.azurewebsites.net/api/v1/User/LoginWithGoogle`;
   const handleCallbackResponse = async (response1) => {
     try {
       const response = await fetch(baseUrl, {
@@ -30,17 +30,15 @@ const Login = () => {
           provider: "google",
           idToken: response1.credential,
         }),
-      });
-      console.log(response1);
+      });     
       if (response.ok) {
         dispatch(setLoggedIn(true));
+        Swal.fire({
+          icon: 'success',
+          text: 'Login Successfully!',
+        })
         const responseData = await response.json();
         if (responseData.status === 0) {
-          await Swal.fire({
-            icon: "error",
-            title: "Oops...",
-            text: "Something went wrong! Your account has been suspended",
-          });
           window.location.reload();
         } else {
           localStorage.setItem("user", JSON.stringify(responseData));
@@ -50,8 +48,6 @@ const Login = () => {
             navigate('/');
           }
         }
-        console.log("login data", responseData);
-        console.log("response", response);
       } else {
         await Swal.fire({
           icon: "error",
@@ -78,6 +74,10 @@ const Login = () => {
         setEmail("");
         setPassword("");
         const userResponse = result.payload; 
+        Swal.fire({
+          icon: 'success',
+          text: 'Login Successfully!',
+        })
         if (userResponse.roleName === "Admin") {
           console.log("Admin role detected"); 
           navigate("/dashboard"); 

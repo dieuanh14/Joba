@@ -1,9 +1,32 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import NavBar from "../components/NavBar";
 import "../scss/premium.scss";
 import { Button } from "@mui/material";
-import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { createPaymentUrl } from "../store/features/PaymentSlice";
 function Premium() {
+  const dispatch = useDispatch();
+  const [paymentUrlData, setPaymentUrlData] = useState({
+    orderType: "upgrade",
+    customerName: "Joba upgrade",
+    cost: 290000,
+    orderDescription: "pro",
+  });
+  const paymentUrl = useSelector((state) => state.payment.paymentUrl);
+
+  useEffect(() => {
+    let isRendered = true;
+    if (isRendered && paymentUrl) {
+      window.open(paymentUrl, "_blank");
+    }
+    return () => {
+      isRendered = false;
+    };
+  }, [paymentUrl]);
+
+  const handlePayment = () => {
+    dispatch(createPaymentUrl(paymentUrlData));
+  };
   return (
     <div>
       <NavBar />
@@ -359,8 +382,8 @@ function Premium() {
               </svg>
               Full 7 advanced moocs
             </li>
-            <Button className="btn__pay">
-              <Link to="/payment ">Pay now</Link>
+            <Button className="btn__pay" onClick={handlePayment}>
+              Pay now
             </Button>
           </ul>
         </div>

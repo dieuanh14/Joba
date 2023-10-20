@@ -4,7 +4,7 @@ import Breadcrumbs from "@mui/material/Breadcrumbs";
 import Typography from "@mui/material/Typography";
 import { Link } from "react-router-dom";
 import Container from "@mui/material/Container";
-import "../scss/course.scss";
+import "../scss/course/course.scss";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 function OverallSE() {

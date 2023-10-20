@@ -16,7 +16,7 @@ function ForgotPasswordPage() {
     dispatch(initiatePasswordReset(email))
       .unwrap()
       .then(() => {
-        navigate("/resetPwd"); // Navigate to the reset password page
+        navigate("/resetPwd");
       })
       .catch((error) => {
         console.error("Error initiating password reset:", error);
@@ -47,18 +47,22 @@ function ForgotPasswordPage() {
         <div className="right__login">
           <h3>Forgot Password</h3>
           <div className="input__grp">
-              <input
-                className="user__name"
-                required
-                type="email"
-                value={email}
-				placeholder="Email"
-                onChange={(e) => setEmail(e.target.value)}
-              />
+            <input
+              className="user__name"
+              required
+              type="email"
+              value={email}
+              placeholder="Email"
+              onChange={(e) => setEmail(e.target.value)}
+            />
 
-              <Button type="submit" className="register__btn" onClick={handleForgotPassword}>
-                Submit
-              </Button>
+            <Button
+              type="submit"
+              className="register__btn"
+              onClick={handleForgotPassword}
+            >
+              Submit
+            </Button>
           </div>
         </div>
       </div>

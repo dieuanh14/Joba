@@ -1,13 +1,43 @@
 [
   {
     "courseName": {
-      "name": "Kiến Thức Nhập Môn IT 7",
+      "name": "Javascript cơ bản",
       "date": "2023-10-18",
       "content": "Course content for Kiến Thức Nhập Môn IT 2."
     },
     "fee": "500.000VND",
     "discountfee": "299.000VND",
-    "trailer": "https://upload.wikimedia.org/wikipedia/commons/1/15/Cat_August_2010-4.jpg"
+    "trailer": "src/assets/img/z4778395342876_1a68bb10f2b4ec1d34623b0f6f25c9c3.jpg"
+  },
+  {
+    "courseName": {
+      "name": "Javascript nâng cao",
+      "date": "2023-10-18",
+      "content": "Course content for Kiến Thức Nhập Môn IT 2."
+    },
+    "fee": "500.000VND",
+    "discountfee": "299.000VND",
+    "trailer": "src/assets/img/z4778395338144_6d51cfe132c8750b234cb0ef131972f5.jpg"
+  },
+  {
+    "courseName": {
+      "name": "Javascript Pro",
+      "date": "2023-10-18",
+      "content": "Course content for Kiến Thức Nhập Môn IT 2."
+    },
+    "fee": "500.000VND",
+    "discountfee": "299.000VND",
+    "trailer": "src/assets/img/z4778395343965_f9b55b357ac6b3de90e74bac73d10923.jpg"
+  },
+  {
+    "courseName": {
+      "name": "NextJs Pro",
+      "date": "2023-10-18",
+      "content": "Course content for Kiến Thức Nhập Môn IT 2."
+    },
+    "fee": "500.000VND",
+    "discountfee": "299.000VND",
+    "trailer": "src/assets/img/z4778395343964_9f9e578a96f51f311e2c50a53bf6bba2.jpg"
   },
   {
     "courseName": {
@@ -17,36 +47,6 @@
     },
     "fee": "500.000VND",
     "discountfee": "299.000VND",
-    "trailer": "https://upload.wikimedia.org/wikipedia/commons/1/15/Cat_August_2010-4.jpg"
-  },
-  {
-    "courseName": {
-      "name": "Kiến Thức Nhập Môn IT 7",
-      "date": "2023-10-18",
-      "content": "Course content for Kiến Thức Nhập Môn IT 2."
-    },
-    "fee": "500.000VND",
-    "discountfee": "299.000VND",
-    "trailer": "https://upload.wikimedia.org/wikipedia/commons/1/15/Cat_August_2010-4.jpg"
-  },
-  {
-    "courseName": {
-      "name": "Kiến Thức Nhập Môn IT 7",
-      "date": "2023-10-18",
-      "content": "Course content for Kiến Thức Nhập Môn IT 2."
-    },
-    "fee": "500.000VND",
-    "discountfee": "299.000VND",
-    "trailer": "https://upload.wikimedia.org/wikipedia/commons/1/15/Cat_August_2010-4.jpg"
-  },
-  {
-    "courseName": {
-      "name": "Kiến Thức Nhập Môn IT 7",
-      "date": "2023-10-18",
-      "content": "Course content for Kiến Thức Nhập Môn IT 2."
-    },
-    "fee": "500.000VND",
-    "discountfee": "299.000VND",
-    "trailer": "https://upload.wikimedia.org/wikipedia/commons/1/15/Cat_August_2010-4.jpg"
+    "trailer": "src/assets/img/z4778395343964_9f9e578a96f51f311e2c50a53bf6bba2.jpg"
   }
 ]

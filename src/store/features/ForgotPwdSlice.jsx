@@ -1,10 +1,9 @@
-// passwordResetSlice.js
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 export const resetPassword = createAsyncThunk(
 	'passwordReset/reset',
 	async ({ code, newPassword, confirmPassword }) => {
-	  const apiUrl = 'https://exe-backend.azurewebsites.net/api/v1/User/ResetPassword';
+	  const apiUrl = 'https://backend-backup.azurewebsites.net/api/v1/User/ResetPassword';
 	  const response = await fetch(apiUrl, {
 		method: 'POST',
 		headers: {
@@ -26,7 +25,7 @@ export const resetPassword = createAsyncThunk(
   export const initiatePasswordReset = createAsyncThunk(
   'passwordReset/initiate',
   async (email) => {
-    const apiUrl = `https://exe-backend.azurewebsites.net/api/v1/User/ForgotPassword?email=${email}`;
+    const apiUrl = `https://backend-backup.azurewebsites.net/api/v1/User/ForgotPassword?email=${email}`;
     const response = await fetch(apiUrl, {
       method: 'GET',
       headers: {
@@ -39,7 +38,6 @@ export const resetPassword = createAsyncThunk(
   }
 );
 
-// Create the password reset slice
 const passwordResetSlice = createSlice({
   name: 'passwordReset',
   initialState: { status: 'idle', error: null },

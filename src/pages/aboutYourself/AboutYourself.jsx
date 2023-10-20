@@ -7,7 +7,7 @@ import media1 from "../../assets/img/morphis-megaphone-for-online-marketing.png"
 import media2 from "../../assets/img/morphis-smartphone-settings-and-options.png";
 import media3 from "../../assets/img/morphis-digital-art-online-learning.png";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux"; // Import useSelector hook
+import { useSelector } from "react-redux"; 
 function AboutYourself() {
   const isLoggedIn = useSelector((state) => state.user.isLoggedIn);
 

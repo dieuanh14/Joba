@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import { PrevButton, NextButton } from "./EmblaCarouselButtons";
 import useEmblaCarousel from "embla-carousel-react";
 import { mediaByIndex } from "../media";
-import "../css/embla.scss";
+import "../scss/embla.scss";
 
 const EmblaCarousel = ({ slides }) => {
   if (!slides) {

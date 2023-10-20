@@ -1,6 +1,6 @@
 import React from "react";
 import NavBar from "../components/NavBar";
-import EmblaCarousel from "../js/EmblaCarousel";
+import EmblaCarousel from "../components/EmblaCarousel";
 
 const SLIDES = [
   {

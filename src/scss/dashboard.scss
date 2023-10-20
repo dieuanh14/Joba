@@ -2,7 +2,6 @@
 .dashboard {
   background-image: url(../assets/img/register.jpg);
   height: 250rem;
-  // background-position: center;
   background-size: 100%;
   background-repeat: no-repeat;
 
@@ -30,8 +29,8 @@
     border-radius: 20px;
     margin-left: 2rem;
     width: 11rem;
-    border: 1px solid transparent; /* Set a transparent border */
-    box-shadow: 0 0 10px $c1; /* Apply a box shadow with a blur effect */
+    border: 1px solid transparent; 
+    box-shadow: 0 0 10px $c1; 
     a {
       height: 1.5rem;
       display: flex;
@@ -42,5 +41,11 @@
       height: 23px;
       width: 20px;
     }
+  }
+  .main__table {
+    margin-top: 2rem;
+  }
+  th,td{
+    border-bottom: none;
   }
 }

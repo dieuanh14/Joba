@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import "../scss/register.scss";
-import { TextField, Button } from "@mui/material";
+import {  Button } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { registerUser } from "../store/features/UserSlice";
 import { useNavigate } from "react-router-dom";
 import media from "../assets/img/morphis-reviewing-resumes-of-candidates.png";
 import media1 from "../assets/img/morphis-blurred-red-star-in-glass.png";
 import media2 from "../assets/img/morphis-blurred-blue-star-in-glass.png";
+import Swal from "sweetalert2";
 function Register() {
   const [Username, setUsername] = useState("");
   const [Password, setPassword] = useState("");
@@ -29,7 +30,10 @@ function Register() {
     try {
       const result = await dispatch(registerUser(userData));
       if (registerUser.fulfilled.match(result)) {
-        console.log("Registration successful");
+        Swal.fire({
+          icon: 'success',
+          text: 'Register Successfully!',
+        })
         navigate("/login");
       }
     } catch (error) {
