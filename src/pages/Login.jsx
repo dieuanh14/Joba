@@ -7,8 +7,6 @@ import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { loginUser } from "../store/features/UserSlice";
-import { setAccessToken } from "../store/features/AuthSlice";
-
 import { Link } from "react-router-dom";
 import { GoogleLogin } from "@react-oauth/google";
 import { setLoggedIn } from "../store/features/UserSlice";
@@ -20,7 +18,7 @@ const Login = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false); 
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const baseUrl = `https://exe-backend.azurewebsites.net/api/v1/User/LoginWithGoogle`;
+  const baseUrl = `https://backend-backup.azurewebsites.net/api/v1/User/LoginWithGoogle`;
   const handleCallbackResponse = async (response1) => {
     try {
       const response = await fetch(baseUrl, {
@@ -76,6 +74,10 @@ const Login = () => {
         setEmail("");
         setPassword("");
         const userResponse = result.payload; 
+        Swal.fire({
+          icon: 'success',
+          text: 'Login Successfully!',
+        })
         if (userResponse.roleName === "Admin") {
           console.log("Admin role detected"); 
           navigate("/dashboard"); 

@@ -61,7 +61,7 @@ export default function Dasboard() {
         <h1>Dashboard</h1>
         <div className="nav__header">
           <Button className="income__btn">
-            <Link to="/dashboard">
+            <Link to="/dashboard" style={{ fontSize: "12px" }}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="42"

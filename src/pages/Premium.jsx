@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import NavBar from "../components/NavBar";
 import "../scss/premium.scss";
 import { Button } from "@mui/material";
@@ -8,21 +8,24 @@ function Premium() {
   const dispatch = useDispatch();
   const [paymentUrlData, setPaymentUrlData] = useState({
     orderType: "upgrade",
-    customerName: "da",
+    customerName: "Joba upgrade",
     cost: 290000,
     orderDescription: "pro",
   });
-
   const paymentUrl = useSelector((state) => state.payment.paymentUrl);
-  console.log(paymentUrl);
+
+  useEffect(() => {
+    let isRendered = true;
+    if (isRendered && paymentUrl) {
+      window.open(paymentUrl, "_blank");
+    }
+    return () => {
+      isRendered = false;
+    };
+  }, [paymentUrl]);
 
   const handlePayment = () => {
-    if (paymentUrl) {
-      console.log(paymentUrl);
-      window.open(paymentUrl, "_blank");
-    } else {
-      dispatch(createPaymentUrl(paymentUrlData));
-    }
+    dispatch(createPaymentUrl(paymentUrlData));
   };
   return (
     <div>

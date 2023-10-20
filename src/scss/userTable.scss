@@ -1,0 +1,46 @@
+@import "./variable";
+.table__user {
+  ul {
+    margin-top: 2rem;
+    display: flex;
+    //   justify-content: space-evenly;
+    list-style-type: none;
+    justify-content: center;
+    li {
+      color: $c1-text;
+      padding-right: 2rem;
+    }
+    //   .active {
+    // 	height: 16px;
+    // 	width: 16px;
+    //     background-color: red !important;
+    // 	border-radius: 80%;
+    // 	text-align: center;
+    //   }
+  }
+  .MuiPaper-root {
+    border-radius: 20px;
+    margin-left: 2rem;
+    background-color: #f0fbef;
+    border: 1px solid transparent;
+    box-shadow: 0 0 10px $c1;
+	.MuiTable-root{
+		height: 30rem;
+	}
+  }
+  th{
+	text-align: center;
+	font-weight: 900;
+	color: $c1-text;
+  }
+  .status__btn{
+	background-color: $c1-text;
+	color: white;
+	border-radius: 20px;
+	width: 6rem;
+    height: 2rem;
+  }
+  td{
+    text-align: center;
+  }
+}

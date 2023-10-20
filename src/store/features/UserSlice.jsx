@@ -6,15 +6,11 @@ export const loginUser = createAsyncThunk(
   async (userCredentials) => {
     try {
       const response = await axios.post(
-        "https://exe-backend.azurewebsites.net/api/v1/User/Login",
+        "https://backend-backup.azurewebsites.net/api/v1/User/Login",
         userCredentials
       );
+      console.log("API Response:", response.data); // Add this line to inspect the response structure
       localStorage.setItem("user", JSON.stringify(response.data));
-      // localStorage.setItem("accessToken", response.data.accessToken);
-      // console.log(
-      //   "Access token stored successfully:",
-      //   response.data.accessToken
-      // );
       return response.data;
     } catch (error) {
       throw error;
@@ -27,7 +23,7 @@ export const registerUser = createAsyncThunk(
   async (userData) => {
     try {
       const response = await axios.post(
-        "https://exe-backend.azurewebsites.net/api/v1/User/Register",
+        "https://backend-backup.azurewebsites.net/api/v1/User/Register",
         userData
       );
       console.log(userData);
@@ -41,30 +37,17 @@ export const registerUser = createAsyncThunk(
 );
 export const fetchUserList = createAsyncThunk(
   "user/fetchUserList",
-  async (_, { getState }) => {
-    const { auth } = getState();
-    const accessToken = auth.accessToken;
-    console.log("Fetching user list with accessToken:", accessToken);
-
+  async () => {
     try {
       const response = await axios.get(
-        "https://exe-backend.azurewebsites.net/api/v1/User/GetAllUser",
-        {
-          headers: {
-            Authorization: `Bearer ${accessToken}`,
-          },
-        }
+        "https://backend-backup.azurewebsites.net/api/v1/User/GetAllUser"
       );
-
-      console.log("API response:", response);
-
-      if (!response || response.status !== 200) {
+      if (response.status !== 200) {
         throw new Error("Failed to fetch user list");
       }
 
       return response.data;
     } catch (error) {
-      console.error("Fetch user list error:", error);
       throw error;
     }
   }
@@ -134,6 +117,7 @@ const userSlice = createSlice({
       })
       .addCase(fetchUserList.pending, (state) => {
         state.status = "loading";
+        state.error = null;
       })
       .addCase(fetchUserList.fulfilled, (state, action) => {
         state.status = "succeeded";

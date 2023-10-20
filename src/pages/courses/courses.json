@@ -124,8 +124,7 @@
           "url": "https://www.youtube.com/embed/uz5LIP85J5Y?si=JehPsTKfBaZ_zIsh",
           "date": "2023-10-16",
           "description": "Responsive là một khái niệm trong thiết kế và phát triển trang web, nó đề cập đến khả năng của một trang web hoặc ứng dụng web thích nghi với các kích thước màn hình khác nhau và các thiết bị đa dạng. Mục tiêu của thiết kế responsive là đảm bảo rằng trang web sẽ hiển thị và hoạt động tốt trên cả máy tính, máy tính bảng và điện thoại di động, cũng như trên các loại màn hình khác. ",
-          "operation":"Thiết kế responsive giúp đảm bảo rằng người dùng có trải nghiệm tốt trên mọi loại thiết bị và kích thước màn hình khác nhau, đồng thời cải thiện tối ưu hóa cho công cụ tìm kiếm (SEO) và tạo ra trải nghiệm người dùng thân thiện hơn. "
-       
+          "operation": "Thiết kế responsive giúp đảm bảo rằng người dùng có trải nghiệm tốt trên mọi loại thiết bị và kích thước màn hình khác nhau, đồng thời cải thiện tối ưu hóa cho công cụ tìm kiếm (SEO) và tạo ra trải nghiệm người dùng thân thiện hơn. "
         }
       },
       {
@@ -144,58 +143,63 @@
         "duration": "20 mins",
 
         "video": {
-          "url": "https://youtu.be/XJiq_d0vGCQ?si=OTX2CvdcYl0o-zeD",
+          "url": "https://www.youtube.com/embed/XJiq_d0vGCQ?si=dkkkWzQyFJwUtlhF",
           "date": "2023-02-07",
-          "description": "dhdhhdf"
+          "description": "Viewport là gì? Viewport tạm dịch là khung nhìn, là khu vực có thể nhìn thấy của người dùng về nội dung trong một trang web. Viewport sẽ khác nhau với các thiết bị khác nhau, và sẽ nhỏ hơn trên điện thoại di động so với trên màn hình máy tính. "
         }
       },
       {
         "tutorialName": "Media query (@media)",
         "duration": "20 mins",
         "video": {
-          "url": "https://youtu.be/YgkzJkmDP3U?si=cY__1zLI9mPNJr2S",
+          "url": "https://www.youtube.com/embed/YgkzJkmDP3U?si=k9JrH3rGUe5P4Mpl",
           "date": "2023-02-13",
-          "description": "dhdhhdf"
+          "description": "Media query (truy vấn phương tiện) là một công cụ quan trọng trong thiết kế responsive web, cho phép bạn áp dụng các quy tắc CSS cụ thể dựa trên các đặc điểm của thiết bị và kích thước màn hình. Media query giúp điều chỉnh cách một trang web hiển thị trên các thiết bị và màn hình khác nhau.",
+          "operation": "Bạn định nghĩa một điều kiện dựa trên các đặc điểm như chiều rộng màn hình, tỷ lệ khung hình, độ phân giải, và hướng màn hình, sau đó chỉ định các quy tắc CSS mà bạn muốn áp dụng khi điều kiện đó đúng."
         }
       },
 
       {
         "session": "3. Grid System",
         "tutorialName": "Khái niệm Breakpoints?",
-        "duration": "23 mins",
+        "duration": "10 mins",
         "video": {
-          "url": "https://youtu.be/0i37IU0wjlI?si=i2fbD3TeRI4KVYat",
+          "url": "https://www.youtube.com/embed/0i37IU0wjlI?si=7cWLNXWqCunH0wUZ",
           "date": "2023-02-10",
-          "description": "dhdhhdf"
+          "description": "Breakpoints là các điểm dừng trong thiết kế responsive web, thường được xác định bằng sự thay đổi của đặc điểm như chiều rộng màn hình, độ phân giải, hoặc tỷ lệ khung hình. Breakpoints được sử dụng để định rõ các kích thước màn hình hoặc thiết bị cụ thể mà trang web sẽ thay đổi cách hiển thị của nó để tối ưu hóa trải nghiệm người dùng.",
+          "operation": "Thông qua việc sử dụng media queries trong CSS, bạn có thể xác định các breakpoints và thiết lập quy tắc CSS tương ứng cho mỗi breakpoint. Khi màn hình trình duyệt của người dùng rơi vào một trong các phạm vi kích thước được xác định, trang web sẽ thay đổi tự động để phù hợp với kích thước đó, cung cấp trải nghiệm người dùng tốt hơn."
         }
       },
       {
         "tutorialName": "Hệ thống lưới (Grid system) ",
-        "duration": "10 mins",
+        "duration": "19 mins",
         "video": {
-          "url": "https://youtu.be/lvD5K50TZPk?si=eyqofRyGmyTiNm_n",
+          "url": "https://www.youtube.com/embed/lvD5K50TZPk?si=cWsghm0lgchs9dJu",
           "date": "2023-02-10",
-          "description": "dhdhhdf"
+          "description": "Hệ thống lưới (Grid system) là một phần quan trọng trong thiết kế web và đồ họa, cho phép bạn cắt và sắp xếp các phần tử trên trang web hoặc bố cục bằng cách sử dụng các hàng và cột ảo để tạo cấu trúc trang. Hệ thống lưới giúp tạo ra trang web và bố cục được tổ chức gọn gàng, đồng nhất và dễ quản lý. Các lợi ích của việc sử dụng hệ thống lưới bao gồm:",
+          "operation": "Có nhiều hệ thống lưới khác nhau mà bạn có thể sử dụng trong thiết kế web, bao gồm hệ thống lưới dựa trên các framework như Bootstrap, Foundation, hoặc hệ thống lưới tự tạo dựa trên CSS hoặc CSS preprocessor (như SASS hoặc LESS). Hệ thống lưới cung cấp các lớp CSS hoặc các thuộc tính để bạn có thể áp dụng chúng vào các phần tử HTML để tạo lên cấu trúc lưới dựa trên hàng và cột.",
+          "advantage": "Tổ chức cấu trúc",
+          "advantage1": "Responsive Design",
+          "advantag2": "Cân bằng và Hài hòa",
+          "advantage3": "Tính đồng nhất"
         }
       },
 
       {
         "session": "4. Áp dụng thực tế",
-        "duration": "28 mins",
+        "duration": "1 hour",
         "tutorialName": "Tạo thư viện? ",
         "video": {
-          "url": "https://youtu.be/ScZaj1eG7DQ?si=YninL1aRcYK7A9NL",
-          "date": "2023-02-10",
-          "description": "dhdhhdf"
+          "url": "https://www.youtube.com/embed/lJworR_9WRk?si=BUTl8F2BrbBtaK9z",
+          "date": "2023-02-10"
         }
       },
       {
         "duration": "13 mins 50s",
         "tutorialName": "Tạo đối tượng Grid ",
         "video": {
-          "url": "https://youtu.be/SZXvXXb_7aA?si=ZpyVGwz4BGWsf8YP",
-          "date": "2023-02-10",
-          "description": "dhdhhdf"
+          "url": "https://www.youtube.com/embed/SZXvXXb_7aA?si=-1xIAc_A6_af7nvl",
+          "date": "2023-02-10"
         }
       }
     ],
@@ -314,35 +318,38 @@
         "session": "1. Bắt đầu",
         "tutorialName": "Tìm hiều về HTML và CSS",
         "video": {
-          "url": "https://youtu.be/4J6d8cr0X48?si=aym4IM04JT0Ksu8V",
+          "url": "https://www.youtube.com/embed/zwsPND378OQ?si=kIPuoobw1GX8AEP4",
           "date": "2023-02-07",
-          "description": "dhdhhdf"
+          "description": "HTML (Hypertext Markup Language) và CSS (Cascading Style Sheets) là hai ngôn ngữ cơ bản trong phát triển trang web. Chúng thường được sử dụng cùng nhau để tạo và trình bày trang web.",
+          "operation": "HTML và CSS thường là hai phần quan trọng của bất kỳ dự án phát triển trang web nào và cung cấp cơ sở cho việc hiển thị nội dung trên mạng."
         }
       },
       {
         "tutorialName": "Sử dụng CSS cơ bản trong HTML",
         "video": {
-          "url": "https://youtu.be/hzn_VKpGdTg?si=eqU2H_G5_OFcMurm",
+          "url": "https://www.youtube.com/embed/NsSsJTg29oE?si=Yld4064_cDHtZnuc",
           "date": "2023-02-09",
-          "description": "dhdhhdf"
+          "description": "CSS là một ngôn ngữ định kiểu được sử dụng để định dạng nội dung HTML. CSS có thể được sử dụng để thay đổi màu sắc, kích thước, vị trí và các thuộc tính khác của các phần tử HTML."
         }
       },
       {
         "session": "2. Làm quen với HTML",
         "tutorialName": "Cấu trúc của 1 file HTML ",
         "video": {
-          "url": "https://youtu.be/LYnrFSGLCl8?si=PCeL1RN0-W9uaqT2",
+          "url": "https://www.youtube.com/embed/LYnrFSGLCl8?si=jVSHmpBwtvRPIISZ",
           "date": "2023-10-16",
-          "description": "dhdhhdf"
+          "description": "File HTML là một tập tin văn bản, trong đó các thẻ HTML được sử dụng để hiển thị nội dung trang web.",
+          "operation": "Cấu trúc file HTML là một phần quan trọng của lập trình web. Bằng cách hiểu cấu trúc file HTML, bạn có thể tạo các trang web đẹp và hấp dẫn."
         }
       },
 
       {
         "tutorialName": "Các thẻ HTML thông dụng",
         "video": {
-          "url": "https://youtu.be/AzmdwZ6e_aM?si=h7hyOsoQhn10Q9P6",
+          "url": "https://www.youtube.com/embed/AzmdwZ6e_aM?si=_yd3KHOWGJb46anB",
           "date": "2023-10-16",
-          "description": "dhdhhdf"
+          "description": "Các thẻ HTML được sử dụng để hiển thị nội dung trang web. Mỗi thẻ HTML có hai phần: thẻ mở và thẻ đóng. Thẻ mở bắt đầu một phần tử HTML, trong khi thẻ đóng kết thúc phần tử HTML đó.",
+          "operation": "Ví dụ, thẻ <p> được sử dụng để hiển thị một đoạn văn bản. Thẻ mở <p> bắt đầu một đoạn văn bản, trong khi thẻ đóng </p> kết thúc đoạn văn bản đó."
         }
       },
 
@@ -358,9 +365,9 @@
       {
         "tutorialName": "CSS selectors cơ bản",
         "video": {
-          "url": "https://youtu.be/hzn_VKpGdTg?si=eqU2H_G5_OFcMurm",
+          "url": "https://www.youtube.com/embed/hzn_VKpGdTg?si=UEkWVyZz567qtun8",
           "date": "2023-02-09",
-          "description": "dhdhhdf"
+          "description": "CSS selectors (bộ chọn CSS) là các quy tắc được sử dụng để xác định các phần tử HTML mà bạn muốn áp dụng các quy tắc CSS."
         }
       },
       {
@@ -375,9 +382,9 @@
       {
         "tutorialName": "Hiển thị ảnh dự phòng khi ảnh chính lỗi",
         "video": {
-          "url": "https://youtu.be/ycb6ZDgX224?si=OvlLWNutSqnSeTV-",
+          "url": "https://www.youtube.com/embed/ycb6ZDgX224?si=Jl-4qwrxsq-86Nas",
           "date": "2023-02-10",
-          "description": "dhdhhdf"
+          "description": "Hiển thị ảnh dự phòng là một kỹ thuật hữu ích để đảm bảo rằng người dùng luôn có thể xem hình ảnh trên trang web của bạn. Bằng cách sử dụng một trong hai phương pháp được đề cập ở trong bài này, bạn có thể đảm bảo rằng người dùng luôn có thể xem hình ảnh, ngay cả khi hình ảnh chính không tải được."
         }
       }
     ],
