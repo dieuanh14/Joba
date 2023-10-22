@@ -30,9 +30,9 @@
         "tutorialName": "Domain - tên miền",
         "time": "12 mins",
         "video": {
-          "url": "https://www.youtube.com/embed/M62l1xA5Eu8?si=HUnRhK3yMX7qFVBX",
+          "url": "https://www.youtube.com/embed/M62l1xA5Eu8?si=8kfwDUNTEGn7fcZx" ,
           "date": "2023-10-21",
-          "description": "second",
+          "description": "Mục đích chính của tên miền là để cung cấp một hình thức đại diện, hay nói cách khác, dùng những tên dễ nhận biết, thay cho những tài nguyên Internet mà đa số được đánh địa chỉ bằng số.",
           "operation": " sddddddddderver chấp nhận tất cả các yêu cầu hợp lệ từ mọi nơi khác nhau trên Internet, sau đó trả kết quả về máy tính đã gửi yêu cầu đó. Máy tính được coi là máy khách khi chúng làm nhiệm vụ gửi yêu cầu đến các máy chủ và đợi câu trả lời được gửi về.  Để máy khách và máy chủ có thể giao tiếp được với nhau thì giữa chúng phải có một chuẩn nhất định, và chuẩn đó được gọi là giao thức.    Một số giao thức được sử dụng phổ biến hiện nay như: HTTPS, TCP/IP, FTP,...     ",
           "advantage": "Giúp chúng ta có thể làm việc trên bất kì một máy tính nào có hỗ trợ giao thức truyền thông.",
           "advantage1": "Có thể có nhiều server cùng làm một dịch vụ",
@@ -419,4 +419,5 @@
     "access": "95.732k",
     "trailer": "src/assets/img/z4778395338780_bb863178799bbbfaf32f79de2849ff20.jpg"
   }
+  
 ]

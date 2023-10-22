@@ -9,7 +9,7 @@ export const loginUser = createAsyncThunk(
         "https://backend-backup.azurewebsites.net/api/v1/User/Login",
         userCredentials
       );
-      console.log("API Response:", response.data); // Add this line to inspect the response structure
+      console.log("API Response:", response.data); 
       localStorage.setItem("user", JSON.stringify(response.data));
       return response.data;
     } catch (error) {

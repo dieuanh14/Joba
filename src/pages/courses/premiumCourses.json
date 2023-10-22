@@ -2,9 +2,100 @@
   {
     "courseName": {
       "name": "Javascript cơ bản",
-      "date": "2023-10-18",
-      "content": "Course content for Kiến Thức Nhập Môn IT 2."
+      "date": "2023-10-15",
+      "level": "Basic",
+      "video": 4,
+      "reading": 2,
+      "time": "2 hours",
+      "content": "Học Javascript cơ bản phù hợp cho người chưa từng học lập trình. Hãy cùng JOBA khám phá “thế giới” của JavaScript và trau dồi thêm nhiều kiến thức bổ ích về “thế giới” này nhé."
     },
+    "tutorial": [
+      {
+        "session": "1. Giới thiệu",
+        "tutorialName": "Lời khuyên trước khóa học",
+        "time": "10 mins",
+        "video": {
+          "url": "https://www.youtube.com/embed/0SJE9dYdpps?si=HqGPjYoGs1vcxHgb",
+          "date": "2023-10-20",
+          "description": "JavaScript là một ngôn ngữ lập trình được sử dụng để tạo các trang web tương tác và các ứng dụng web. Nó được phát triển bởi Brendan Eich tại Netscape Communications Corporation vào năm 1995. JavaScript là một ngôn ngữ lập trình phía máy khách, có nghĩa là nó chạy trên trình duyệt của người dùng.",
+          "operation": "Là một ngôn ngữ lập trình phía máy khách: JavaScript chạy trên trình duyệt của người dùng, không phải trên máy chủ. Điều này làm cho nó trở thành một lựa chọn tốt để tạo các trang web tương tác.",
+          "advantage": "Thêm tính tương tác vào trang web, chẳng hạn như menu thả xuống, hộp thoại và biểu mẫu.",
+          "advantage1": "Kiểm tra dữ liệu người dùng nhập vào, Truy cập và thao tác với dữ liệu từ cơ sở dữ liệu.",
+          "advantage2": "Xử lý các sự kiện, chẳng hạn như nhấp chuột và nhấn phím.",
+          "advantage3": "JavaScript là một ngôn ngữ lập trình phổ biến và được sử dụng rộng rãi trong phát triển web. Nó là một ngôn ngữ dễ học và có thể được sử dụng để tạo các trang web và ứng dụng web hấp dẫn và tương tác.",
+          "disadvantage": "Vấn đề bảo mật dữ liệu thông tin đôi khi còn chưa được an toàn lắm. "
+        }
+      },
+      {
+        "tutorialName": "Cài đặt môi trường",
+        "time": "10 mins",
+        "video": {
+          "url": "https://www.youtube.com/embed/efI98nT8Ffo?si=MdCt88ET5V6ux9Ax",
+          "date": "2023-10-20",
+          "description": "JavaScript là một ngôn ngữ lập trình được sử dụng để tạo các trang web tương tác và các ứng dụng web. Nó được phát triển bởi Brendan Eich tại Netscape Communications Corporation vào năm 1995. JavaScript là một ngôn ngữ lập trình phía máy khách, có nghĩa là nó chạy trên trình duyệt của người dùng.",
+          "operation": "Là một ngôn ngữ lập trình phía máy khách: JavaScript chạy trên trình duyệt của người dùng, không phải trên máy chủ. Điều này làm cho nó trở thành một lựa chọn tốt để tạo các trang web tương tác.",
+          "advantage": "Thêm tính tương tác vào trang web, chẳng hạn như menu thả xuống, hộp thoại và biểu mẫu.",
+          "advantage1": "Kiểm tra dữ liệu người dùng nhập vào, Truy cập và thao tác với dữ liệu từ cơ sở dữ liệu.",
+          "advantage2": "Xử lý các sự kiện, chẳng hạn như nhấp chuột và nhấn phím.",
+          "advantage3": "JavaScript là một ngôn ngữ lập trình phổ biến và được sử dụng rộng rãi trong phát triển web. Nó là một ngôn ngữ dễ học và có thể được sử dụng để tạo các trang web và ứng dụng web hấp dẫn và tương tác.",
+          "disadvantage": "Vấn đề bảo mật dữ liệu thông tin đôi khi còn chưa được an toàn lắm. "
+        }
+      },
+      {
+        "session": "2. Biến, comments, built-in",
+        "tutorialName": "Cú pháp comments là gì?",
+        "time": "10 mins",
+        "video": {
+          "url": "https://www.youtube.com/embed/zoELAirXMJY?si=QvXxrBf7lI54LPD4",
+          "date": "2023-10-20",
+          "description": "Trong một đoạn code dài, sẽ có vô cùng nhiều dòng code với nhiều chức năng khác nhau. Chính vì vậy, việc comment sẽ giúp bạn và đồng đội hiểu được một cách nhanh chóng về đoạn code, từ đó, giúp cho việc code hiệu quả hơn"
+        }
+      },
+      {
+        "tutorialName": "Thuật ngữ Built-in là gì?",
+        "time": "10 mins",
+        "video": {
+          "url": "https://www.youtube.com/embed/rSV33HGotgE?si=54y7ZMDqVS5NlDXA",
+          "date": "2023-10-20",
+          "description": "Hàm built-in là các hàm được tích hợp sẵn trong JavaScript. Các hàm này có sẵn để sử dụng mà không cần phải định nghĩa lại.",
+          "operation": "Một số hàm built-in phổ biến trong JavaScript bao gồm: console.log(), Math.random(), etc"
+        }
+      },
+      {
+        "session": "3. Các bài thực hành ",
+        "tutorialName": "Xây dựng Tabs UI",
+        "time": "10 mins",
+        "video": {
+          "url": "https://www.youtube.com/embed/oYC6wGu-sWo?si=k2EJhuod5iks9Ghv",
+          "date": "2023-10-20"
+        }
+      },
+      {
+        "tutorialName": "Cách làm Toast Message",
+        "time": "10 mins",
+        "video": {
+          "url": "https://www.youtube.com/embed/7c7ABhaQJGM?si=joo1x8z4RQzAWLch",
+          "date": "2023-10-20"
+        }
+      },
+      {
+        "session": "4. Form validation  ",
+        "tutorialName": "Xử lý báo lỗi cơ bản",
+        "time": "10 mins",
+        "video": {
+          "url": "https://www.youtube.com/embed/ZdvRm1bfGAk?si=tmZyn6ybgwjPOKZv",
+          "date": "2023-10-20"
+        }
+      },
+      {
+        "tutorialName": "Review, sửa một số lỗi",
+        "time": "10 mins",
+        "video": {
+          "url": "https://www.youtube.com/embed/zoELAirXMJY?si=QvXxrBf7lI54LPD4",
+          "date": "2023-10-20"
+        }
+      }
+    ],
     "fee": "500.000VND",
     "discountfee": "299.000VND",
     "trailer": "src/assets/img/z4778395342876_1a68bb10f2b4ec1d34623b0f6f25c9c3.jpg"
@@ -32,16 +123,6 @@
   {
     "courseName": {
       "name": "NextJs Pro",
-      "date": "2023-10-18",
-      "content": "Course content for Kiến Thức Nhập Môn IT 2."
-    },
-    "fee": "500.000VND",
-    "discountfee": "299.000VND",
-    "trailer": "src/assets/img/z4778395343964_9f9e578a96f51f311e2c50a53bf6bba2.jpg"
-  },
-  {
-    "courseName": {
-      "name": "Kiến Thức Nhập Môn IT 7",
       "date": "2023-10-18",
       "content": "Course content for Kiến Thức Nhập Môn IT 2."
     },
