@@ -6,6 +6,7 @@ export const CourseContent = () => {
   const location = useLocation();
   const { state } = location || {};
   const selectedCourse = state && state.selectedCourse;
+  console.log(selectedCourse);
   if (selectedCourse) {
     return (
       <div className="course__page">
@@ -111,15 +112,12 @@ export const CourseContent = () => {
                 selectedCourse.tutorial.map((tutorial, index) =>
                   index % 2 === 0 ? (
                     <div key={index} className="course__video-row">
-                    <div className="tutorial-link">
-                      {tutorial.session}
-                      </div>
+                      <div className="tutorial-link">{tutorial.session}</div>
                       <Link
                         to="/readingCourse"
                         state={{
                           selectedTutorial: tutorial,
                         }}
-                      
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -130,7 +128,6 @@ export const CourseContent = () => {
                         >
                           <path d="M7.125 13.775L13.775 9.5L7.125 5.225V13.775Z" />
                         </svg>
-
                         <span className="tutorial-info">
                           <span
                             className={`tutorial-name ${
@@ -146,8 +143,6 @@ export const CourseContent = () => {
                       </Link>
                       {index + 1 < selectedCourse.tutorial.length && (
                         <div className="course__video-row">
-                          {/* Tutorial at odd index */}
-                          {/* {selectedCourse.tutorial[index + 1].session} */}
                           <Link
                             to="/readingCourse"
                             state={{
