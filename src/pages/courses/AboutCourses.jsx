@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import NavBar from "../../components/NavBar";
 import { Container } from "@mui/material";
 import "../../scss/course/course.scss";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const AboutCourses = ({ courses, premiumCourses }) => {
   const navigate = useNavigate();
@@ -113,6 +113,7 @@ const AboutCourses = ({ courses, premiumCourses }) => {
                         }}
                       />
                       <span>{course.courseName.name}</span>
+                      <Link to='/payment'>
                       <span style={{ display: "flex" }}>
                         <p
                           style={{
@@ -124,6 +125,7 @@ const AboutCourses = ({ courses, premiumCourses }) => {
                         </p>
                         <p style={{ color: "red" }}>{course.discountfee}</p>
                       </span>
+                      </Link>
                     </div>
                   ))}
                 </div>

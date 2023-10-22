@@ -1,6 +1,6 @@
 import React from "react";
 import NavBar from "../components/NavBar";
-import welcome from "../assets/welcome.png";
+import welcome from "../assets/img/Phân tích, tk hệ thống.gif";
 import star from "../assets/star.png";
 import "../scss/nav.scss";
 import Button from "@mui/material/Button";
