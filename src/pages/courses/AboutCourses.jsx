@@ -150,7 +150,7 @@ import "../../scss/course/course.scss";
 import { useNavigate, Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchPaymentStatus } from "../../store/features/UserSlice";
-const baseUrl = "/assets"; // Adjust this to match your path structure
+const baseUrl = "src/assets"; 
 const AboutCourses = ({ courses, premiumCourses, userId }) => {
   const paymentStatus = useSelector((state) => state.user.paymentStatus);
   console.log(paymentStatus);
