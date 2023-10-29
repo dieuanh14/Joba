@@ -202,7 +202,7 @@ const AboutCourses = ({ courses, premiumCourses, userId }) => {
                   {group.map((course, courseIndex) => (
                     <div key={courseIndex}>
                       <img
-                        src={course.trailer}
+                        src={`${baseUrl}/${course.trailer}`}
                         onClick={() => handleCourseClick(course)}
                         style={{
                           width: "14rem",
@@ -286,7 +286,7 @@ const AboutCourses = ({ courses, premiumCourses, userId }) => {
           </div>
         ) : (
           <Link to="/payment">
-            <h4 style={{textAlign:'center',marginTop:'4rem'}}>
+            <h4 style={{ textAlign: "center", marginTop: "4rem" }}>
               You are using trial. Please upgrade to premium to explore more !!!{" "}
             </h4>
           </Link>
