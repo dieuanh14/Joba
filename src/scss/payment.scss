@@ -1,6 +1,9 @@
 @import "./variable";
 .payment {
+  margin-top: 3rem;
   img {
+
+
     left: 3%;
     position: relative;
     height: 25rem;
@@ -12,11 +15,19 @@
     flex-direction: column;
     gap: 3rem;
     .code {
+      position: relative;
+      height: 23rem;
+      width: 24rem;
+      left: 2%;
+      top: 18%;
+    }
+    .qr__bar {
+      left: 41%;
+      transform: rotate(-8deg);
       position: absolute;
       height: 20rem;
       width: 20rem;
-      left: 42%;
-      top: 29%;
+      top: 28%;
     }
   }
 }

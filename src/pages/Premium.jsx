@@ -4,6 +4,10 @@ import "../scss/premium.scss";
 import { Button } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { createPaymentUrl } from "../store/features/PaymentSlice";
+import vnpay from "../assets/img/vnpay.png";
+import momo from "../assets/img/MoMo_Logo 1.png";
+import { Link } from "react-router-dom";
+
 function Premium() {
   const dispatch = useDispatch();
   const [paymentUrlData, setPaymentUrlData] = useState({
@@ -382,9 +386,18 @@ function Premium() {
               </svg>
               Full 7 advanced moocs
             </li>
-            <Button className="btn__pay" onClick={handlePayment}>
-              Pay now
-            </Button>
+            <div className="btn__payment">
+              <Button className="btn__pay" onClick={handlePayment}>
+                <img src={vnpay} alt="" />
+                Pay now
+              </Button>
+              <Link to="/payment">
+                <Button className="btn__pay" onClick={handlePayment}>
+                  <img src={momo} alt="" />
+                  Pay now
+                </Button>
+              </Link>
+            </div>
           </ul>
         </div>
       </div>

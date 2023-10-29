@@ -12,8 +12,8 @@ const valueToIcon = {
   75: " 🥰",
 };
 
-function TestYourself(props) { // Pass props as an argument
-  const { question } = props; // Destructure question from props
+function TestYourself(props) { 
+  const { question } = props; 
   const [value, setValue] = useState(0);
 
   const handleChange = (event, newValue) => {

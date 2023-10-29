@@ -50,7 +50,7 @@ const questions = [
 ];
 function TestYourselfCarousel() {
   const [isLastSlide, setIsLastSlide] = useState(false);
-  const [userAnswers, setUserAnswers] = useState({}); // Define userAnswers state
+  const [userAnswers, setUserAnswers] = useState({}); 
   const navigate = useNavigate();
 
   const handleSlideChange = (index) => {
@@ -96,7 +96,7 @@ function TestYourselfCarousel() {
               tabIndex={0}
               aria-label={`${label} ${index + 1}`}
             >
-              {"." + index}
+              { + index}
             </span>
           );
         }}
