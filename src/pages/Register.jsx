@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import "../scss/register.scss";
-import {  Button } from "@mui/material";
+import { Button } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { registerUser } from "../store/features/UserSlice";
 import { useNavigate } from "react-router-dom";
 import media from "../assets/img/morphis-reviewing-resumes-of-candidates.png";
 import media1 from "../assets/img/morphis-blurred-red-star-in-glass.png";
 import media2 from "../assets/img/morphis-blurred-blue-star-in-glass.png";
+import { useSelector } from "react-redux";
 import Swal from "sweetalert2";
 function Register() {
+  const { loading, error } = useSelector((state) => state.user);
   const [Username, setUsername] = useState("");
   const [Password, setPassword] = useState("");
   const [Email, setEmail] = useState("");
@@ -31,9 +33,9 @@ function Register() {
       const result = await dispatch(registerUser(userData));
       if (registerUser.fulfilled.match(result)) {
         Swal.fire({
-          icon: 'success',
-          text: 'Register Successfully!',
-        })
+          icon: "success",
+          text: "Register Successfully!",
+        });
         navigate("/login");
       }
     } catch (error) {
@@ -104,12 +106,11 @@ function Register() {
                   className="register__btn"
                   style={{ margin: "0 auto" }}
                 >
-                  Register
+                  {loading ? "Loading..." : "Register"}
                 </Button>
               </form>
             </div>
           </div>
-          {/* Rest of the code */}
         </div>
       </div>
     </>

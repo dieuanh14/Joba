@@ -9,7 +9,6 @@ export const loginUser = createAsyncThunk(
         "https://backend-backup.azurewebsites.net/api/v1/User/Login",
         userCredentials
       );
-      console.log("API Response:", response.data); 
       localStorage.setItem("user", JSON.stringify(response.data));
       return response.data;
     } catch (error) {
@@ -52,6 +51,44 @@ export const fetchUserList = createAsyncThunk(
     }
   }
 );
+export const deleteUser = createAsyncThunk(
+  "user/deleteUser",
+  async (userId, { rejectWithValue }) => {
+    try {
+      const response = await axios.delete(
+        `https://backend-backup.azurewebsites.net/api/v1/User/BanUser/${userId}`,
+       
+      );
+      if (response.status === 204) {
+        return userId;
+      } else {
+        return rejectWithValue("Failed to delete user");
+      }
+    } catch (error) {
+      return rejectWithValue("Failed to delete user");
+    }
+  }
+);
+export const fetchPaymentStatus = createAsyncThunk(
+  "user/fetchPaymentStatus",
+  async (userId, { rejectWithValue }) => {
+    console.log(userId)
+    try {
+      const response = await axios.get(
+        `https://backend-backup.azurewebsites.net/api/v1/User/GetUserById?userId=${userId}`
+      );
+      console.log(response)
+
+      if (response.status === 200) {
+        return response.data; 
+      } else {
+        return rejectWithValue("Failed to fetch payment status");
+      }
+    } catch (error) {
+      return rejectWithValue("Failed to fetch payment status");
+    }
+  }
+);
 
 const userSlice = createSlice({
   name: "user",
@@ -61,6 +98,7 @@ const userSlice = createSlice({
     error: null,
     role: null,
     loading: false,
+    paymentStatus: null,
     user: {
       email: null,
     },
@@ -126,6 +164,36 @@ const userSlice = createSlice({
       .addCase(fetchUserList.rejected, (state, action) => {
         state.status = "failed";
         state.error = action.error.message;
+      })
+      .addCase(deleteUser.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(deleteUser.fulfilled, (state, action) => {
+        state.loading = false;
+        state.error = null;
+        if (Array.isArray(state.user)) {
+          state.user = state.user.filter(
+            (users) => users.id !== action.payload.id
+          );
+        }
+      })
+
+      .addCase(deleteUser.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.error.msg;
+      })
+      .addCase(fetchPaymentStatus.pending, (state) => {
+        state.status = "loading";
+        state.error = null;
+      })
+      .addCase(fetchPaymentStatus.fulfilled, (state, action) => {
+        state.status = "succeeded";
+        state.paymentStatus = action.payload;
+      })
+      .addCase(fetchPaymentStatus.rejected, (state, action) => {
+        state.status = "failed";
+        state.error = action.payload;
       });
   },
 });

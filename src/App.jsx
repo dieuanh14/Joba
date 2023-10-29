@@ -21,7 +21,6 @@ import MajorMobile from "./pages/aboutYourself/MajorMobile";
 import MajorBA from "./pages/aboutYourself/MajorBA";
 import MajorSE from "./pages/aboutYourself/MajorSE";
 import Dasboard from "./pages/dashboard/Dashboard";
-import Accessibility from "./pages/dashboard/Accessibility";
 import TestYourselfCarousel from "./pages/testYourself/TestYourselfCarousel";
 import FailureResult from "./pages/testYourself/FailureResult";
 import ReactGA from "react-ga";
@@ -42,7 +41,6 @@ function App() {
         <Route path="/forgotPwd" element={<ForgotPwd />} />
         <Route path="/resetPwd" element={<ResetPwd />} />
         <Route path="/dashboard" element={<Dasboard />} />
-        <Route path="/dashboard/accessibility" element={<Accessibility />} />
         <Route path="/major" element={<Major />} />
         <Route path="/course" element={<Course />} />
         <Route path="/courseContent" element={<CourseContent />} />
@@ -82,6 +80,7 @@ function App() {
             <AboutCourses courses={courses} premiumCourses={premiumCourses} />
           }
         />
+
         <Route path="/aboutCourse/overallSE" element={<OverallSE />} />
         <Route
           path="/aboutCourse/overallSE/definitionSE"

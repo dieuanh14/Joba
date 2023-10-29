@@ -12,8 +12,6 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
-import { Bar } from "react-chartjs-2";
-import Calendar from "react-calendar";
 import UserTable from "../../components/UserTable";
 ChartJs.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 

@@ -1,4 +1,4 @@
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import "../scss/login.scss";
 import media from "../assets/img/morphis-reviewing-resumes-of-candidates.png";
 import media1 from "../assets/img/morphis-blurred-red-star-in-glass.png";
@@ -15,7 +15,7 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { loading, error } = useSelector((state) => state.user);
-  const [isLoggedIn, setIsLoggedIn] = useState(false); 
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const baseUrl = `https://backend-backup.azurewebsites.net/api/v1/User/LoginWithGoogle`;
@@ -30,22 +30,22 @@ const Login = () => {
           provider: "google",
           idToken: response1.credential,
         }),
-      });     
+      });
       if (response.ok) {
         dispatch(setLoggedIn(true));
         Swal.fire({
-          icon: 'success',
-          text: 'Login Successfully!',
-        })
+          icon: "success",
+          text: "Login Successfully!",
+        });
         const responseData = await response.json();
         if (responseData.status === 0) {
           window.location.reload();
         } else {
           localStorage.setItem("user", JSON.stringify(responseData));
           if (responseData.roleName === "Admin") {
-            navigate('/dashboard'); 
+            navigate("/dashboard");
           } else {
-            navigate('/');
+            navigate("/");
           }
         }
       } else {
@@ -61,7 +61,6 @@ const Login = () => {
     }
   };
 
-  
   const handleLogin = async (e) => {
     e.preventDefault();
     let userCredentials = {
@@ -73,23 +72,29 @@ const Login = () => {
       if (loginUser.fulfilled.match(result)) {
         setEmail("");
         setPassword("");
-        const userResponse = result.payload; 
+        const userResponse = result.payload;
         Swal.fire({
-          icon: 'success',
-          text: 'Login Successfully!',
-        })
+          icon: "success",
+          text: "Login Successfully!",
+        });
         if (userResponse.roleName === "Admin") {
-          console.log("Admin role detected"); 
-          navigate("/dashboard"); 
+          console.log("Admin role detected");
+          navigate("/dashboard");
         } else {
-          navigate("/"); 
+          navigate("/");
         }
+      } else {
+        await Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Something went wrong! Your account has been suspended",
+        });
+        window.location.reload();
       }
     } catch (error) {
       console.error("Login Error:", error);
     }
   };
-  
 
   return (
     <>
@@ -146,7 +151,12 @@ const Login = () => {
                 </span>
                 <span>
                   <Link
-                    style={{ color: "#F1FAEE", textAlign: "center",textDecoration:'underline',marginTop:'4px' }}
+                    style={{
+                      color: "#F1FAEE",
+                      textAlign: "center",
+                      textDecoration: "underline",
+                      marginTop: "4px",
+                    }}
                     to="/forgotPwd"
                   >
                     Forgot password
