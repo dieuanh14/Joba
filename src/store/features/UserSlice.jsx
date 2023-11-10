@@ -10,6 +10,7 @@ export const loginUser = createAsyncThunk(
         userCredentials
       );
       localStorage.setItem("user", JSON.stringify(response.data));
+      console.log(response.data)
       return response.data;
     } catch (error) {
       throw error;
@@ -56,8 +57,7 @@ export const deleteUser = createAsyncThunk(
   async (userId, { rejectWithValue }) => {
     try {
       const response = await axios.delete(
-        `https://backend-backup.azurewebsites.net/api/v1/User/BanUser/${userId}`,
-       
+        `https://backend-backup.azurewebsites.net/api/v1/User/BanUser/${userId}`
       );
       if (response.status === 204) {
         return userId;
@@ -69,6 +69,7 @@ export const deleteUser = createAsyncThunk(
     }
   }
 );
+
 export const fetchPaymentStatus = createAsyncThunk(
   "user/fetchPaymentStatus",
   async (userId, { rejectWithValue }) => {
@@ -80,7 +81,7 @@ export const fetchPaymentStatus = createAsyncThunk(
       console.log(response)
 
       if (response.status === 200) {
-        return response.data; 
+        return response.data;
       } else {
         return rejectWithValue("Failed to fetch payment status");
       }
@@ -89,6 +90,7 @@ export const fetchPaymentStatus = createAsyncThunk(
     }
   }
 );
+
 
 const userSlice = createSlice({
   name: "user",
@@ -116,6 +118,9 @@ const userSlice = createSlice({
     },
     setLoggedIn: (state, action) => {
       state.isLoggedIn = action.payload;
+    },
+    setPaymentStatus: (state, action) => {
+      state.paymentStatus = action.payload;
     },
   },
   extraReducers: (builder) => {
@@ -183,19 +188,21 @@ const userSlice = createSlice({
         state.loading = false;
         state.error = action.error.msg;
       })
+      
       .addCase(fetchPaymentStatus.pending, (state) => {
-        state.status = "loading";
+        state.status = null;
         state.error = null;
       })
       .addCase(fetchPaymentStatus.fulfilled, (state, action) => {
-        state.status = "succeeded";
-        state.paymentStatus = action.payload;
+        state.status = action.payload;
+        state.error = null;
       })
       .addCase(fetchPaymentStatus.rejected, (state, action) => {
-        state.status = "failed";
-        state.error = action.payload;
+        state.status = null;
+        state.error = action.error.message;
       });
   },
 });
-export const { loginSuccess, logoutSuccess, setLoggedIn } = userSlice.actions;
+export const { loginSuccess, logoutSuccess, setLoggedIn,setPaymentStatus } = userSlice.actions;
+
 export default userSlice.reducer;

@@ -113,17 +113,19 @@ const Login = () => {
             <div className="input__grp">
               <form action="" onSubmit={handleLogin}>
                 <input
+
+                  autoComplete="username"
                   className="user__name"
                   required
                   type="email"
                   value={email}
-                  autoComplete
                   placeholder="Your mail"
                   onChange={(e) => setEmail(e.target.value)}
                 />
                 <input
                   className="password"
                   label="Password"
+
                   type="password"
                   value={password}
                   placeholder="Password"

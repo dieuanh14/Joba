@@ -68,12 +68,14 @@ function Register() {
                   fullWidth
                   placeholder="Username"
                   value={Username}
+                  autoComplete="username" 
                   onChange={(e) => setUsername(e.target.value)}
                 />
 
                 <input
                   className="user__name"
                   required
+                  autoComplete="username" 
                   fullWidth
                   type="date"
                   value={Birthday}
