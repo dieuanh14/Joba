@@ -27,7 +27,13 @@ function NavBar() {
               <NavLink className="nav_content" to="/course">
                 Courses
               </NavLink>
-
+              <NavLink
+                className="nav_content"
+                to="/yourself1/overallMajor"
+                activeClassName="active-link"
+              >
+                About IT
+              </NavLink>
               <NavLink
                 style={{ display: "flex", alignItems: "center" }}
                 className="nav_content"
