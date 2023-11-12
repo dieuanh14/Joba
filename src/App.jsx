@@ -32,6 +32,7 @@ import premiumCourses from "./pages/courses/premiumCourses.json";
 import ReadingCourse from "./pages/courses/ReadingCourse";
 import ReadMore from "./pages/courses/ReadMore";
 import PaymentProcess from "./pages/PaymentProcess";
+import PaymentSucess from "./pages/PaymentSucess";
 function App() {
   const TRACKING_ID = "UA-288460125-1";
   ReactGA.initialize(TRACKING_ID);
@@ -49,6 +50,8 @@ function App() {
         <Route path="/readMore" element={<ReadMore />} />
         <Route path="/premium" element={<Premium />} />
         <Route path="/paymentProcess" element={<PaymentProcess />} />
+        <Route path="/paymentSucess" element={<PaymentSucess />} />
+
         <Route path="/aboutSE" element={<AboutSE />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />

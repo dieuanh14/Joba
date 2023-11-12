@@ -34,10 +34,9 @@ function TestResult() {
         <div className="result__content">
           <ul>
             <li>
-              {" "}
               Thông qua các thông tin được chúng tôi tiếp nhận thông qua bài
-              kiểm tra vừa rồi, bạn - Vừng A Dính có những yếu tố cơ bản để có
-              thể bước vào thế giới công nghệ, coding, bug và phần mềm.
+              kiểm tra vừa rồi, bạn có những yếu tố cơ bản để có thể bước vào
+              thế giới công nghệ, coding, bug và phần mềm.
             </li>
             <li>
               Logic, cẩn thận, kiên trì, chăm chỉ là những yếu tố cần thiết
@@ -66,10 +65,10 @@ function TestResult() {
       </div>
       <div className="result__btn">
         <Button className="btn__home">
-          <Link to='/'>Home</Link>
+          <Link to="/">Home</Link>
         </Button>
         <Button className="btn__course">
-          <Link to='/course'>Learning path</Link>
+          <Link to="/course">Learning path</Link>
         </Button>
       </div>
     </div>

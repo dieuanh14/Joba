@@ -60,11 +60,11 @@ function TestYourselfCarousel() {
   const handleSubmission = () => {
     const answeredQuestions = Object.keys(userAnswers).length;
     const fiftyPercentCount = Object.values(userAnswers).filter(
-      (value) => value === 50
+      (value) => value >= 50
     ).length;
     console.log(answeredQuestions);
     console.log(fiftyPercentCount);
-    if (answeredQuestions === 10 && fiftyPercentCount >= 8) {
+    if (answeredQuestions >= 5 && fiftyPercentCount >= 5) {
       console.log("User met the criteria.");
       navigate("/testResult");
     } else {
@@ -100,7 +100,7 @@ function TestYourselfCarousel() {
             </span>
           );
         }}
-        onChange={handleSlideChange} // Track slide changes
+        onChange={handleSlideChange} 
       >
         {questions.map((question) => (
           <div key={question.id}>
@@ -108,7 +108,7 @@ function TestYourselfCarousel() {
           </div>
         ))}
       </Carousel>
-      {isLastSlide && ( // Render submit button if it's the last slide
+      {isLastSlide && ( 
         <Button
           type="submit"
           style={{
